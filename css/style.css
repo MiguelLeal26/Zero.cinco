@@ -1198,3 +1198,15 @@ html body .hero-title span {
   font-size: 1.6rem !important;
   line-height: 1.2 !important;
 }
+
+*,
+*::before,
+*::after,
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'Montserrat', sans-serif !important;
+}
