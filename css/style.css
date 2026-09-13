@@ -1034,6 +1034,10 @@ img {
     margin: 0 auto 2rem auto;
   }
 
+  .hero-title {
+    font-size: 2.2rem !important;
+  }
+
   .hero-tags {
     justify-content: center;
   }
