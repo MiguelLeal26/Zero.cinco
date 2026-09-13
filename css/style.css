@@ -1188,3 +1188,13 @@ html body .hero-title span {
   font-size: 1.8rem !important;
   line-height: 1.2 !important;
 }
+
+.hero-subtitle,
+.hero-subtitle span,
+.hero p,
+.hero h1,
+.hero-title,
+.hero-title span {
+  font-size: 1.6rem !important;
+  line-height: 1.2 !important;
+}
