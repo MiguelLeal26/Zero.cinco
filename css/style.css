@@ -1197,16 +1197,35 @@ html body .hero-title span {
 .hero-title span {
   font-size: 1.6rem !important;
   line-height: 1.2 !important;
-}
 
-*,
-*::before,
-*::after,
-html,
-body,
-button,
-input,
-select,
-textarea {
-  font-family: 'Montserrat', sans-serif !important;
-}
+  *,
+  *::before,
+  *::after,
+  html,
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
+  /* Remove o negrito pesado do título do hero */
+  .hero-title,
+  h1.hero-title {
+    font-weight: 400 !important;
+  }
+
+
+  /* Garante que o texto em destaque (em vermelho) também não fique em negrito exagerado */
+  .hero-title span,
+  .highlight-red {
+    font-weight: 500 !important;
+    /* Espessura média leve para destacar sem pesar */
+  }
+
+  /* Opcional: ajustar o peso da logo */
+  .logo-text,
+  .brand-logo {
+    font-weight: 500 !important;
+  }
