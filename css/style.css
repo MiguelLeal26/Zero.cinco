@@ -1176,8 +1176,8 @@ img {
 }
 
 .hero-title,
-.hero-title h1,
-h1.hero-title {
-  font-size: 2.2rem !important;
+h1.hero-title,
+.hero-title span {
+  font-size: 1.8rem !important;
   line-height: 1.2 !important;
 }
