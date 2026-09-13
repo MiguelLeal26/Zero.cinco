@@ -1,0 +1,140 @@
+/* ==========================================================================
+   ZERO.CINCO CREATIVE STUDIO - PALETA OFICIAL DE CORES & DESIGN TOKENS
+   Baseado na identidade visual oficial da Zero.Cinco
+   ========================================================================== */
+
+:root {
+  /* --- 1. PALETA OFICIAL DE CORES --- */
+  --color-primary: #E22228;        /* Vermelho principal */
+  --color-primary-dark: #BE2429;   /* Vermelho escuro */
+  --color-primary-deep: #7F1C1D;   /* Vermelho profundo */
+  --color-primary-light: #EB4A43;  /* Vermelho vivo claro */
+  --color-secondary: #C73C37;      /* Vermelho médio */
+  --color-burnt-red: #C7594D;      /* Vermelho queimado */
+  --color-accent: #DC7969;         /* Coral avermelhado */
+  --color-accent-light: #D89B8E;   /* Rosa queimado claro */
+  --color-surface-tint: #E3BEB4;   /* Rosa muito claro */
+  --color-surface-warm: #F5E8E3;   /* Quase branco rosado */
+  --color-terracotta: #99443D;     /* Terracota escuro */
+  --color-rose: #B27569;           /* Rosé / marrom claro */
+
+  /* --- 2. MAPEAMENTO ESTRUTURAL (DARK THEME - DEFAULT) --- */
+  --red-primary: var(--color-primary);
+  --red-dark: var(--color-primary-dark);
+  --red-deep: var(--color-primary-deep);
+  --red-light: var(--color-primary-light);
+  --red-secondary: var(--color-secondary);
+  --red-accent: var(--color-accent);
+  --red-accent-light: var(--color-accent-light);
+  --surface-tint: var(--color-surface-tint);
+  --surface-warm: var(--color-surface-warm);
+  --terracotta: var(--color-terracotta);
+  --rose: var(--color-rose);
+  --burnt-red: var(--color-burnt-red);
+
+  --red-glow: rgba(226, 34, 40, 0.4);
+  --red-glow-subtle: rgba(226, 34, 40, 0.12);
+
+  /* Top Bar Red Gradient */
+  --top-bar-bg: linear-gradient(90deg, #BE2429 0%, #E22228 50%, #7F1C1D 100%);
+  --top-bar-text: #FFFFFF;
+
+  /* Dark Theme Surfaces (Deep Obsidian with Warm Undertone) */
+  --bg-main: #0B0B0E;
+  --bg-surface: #141318;
+  --bg-surface-elevated: #1B1820;
+  --bg-surface-card: #16141B;
+  --bg-glass: rgba(11, 11, 14, 0.92);
+  --bg-glass-card: rgba(27, 24, 32, 0.75);
+
+  /* Dark Theme Typography */
+  --text-primary: #FFFFFF;
+  --text-secondary: #E3BEB4;
+  --text-muted: #D89B8E;
+  --text-dim: #99443D;
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(227, 190, 180, 0.12);
+  --border-glass: rgba(227, 190, 180, 0.18);
+  --border-red: rgba(226, 34, 40, 0.35);
+  --border-red-active: #E22228;
+
+  /* Gradients */
+  --gradient-red-primary: linear-gradient(135deg, #EB4A43 0%, #E22228 50%, #BE2429 100%);
+  --gradient-red-subtle: linear-gradient(180deg, rgba(226, 34, 40, 0.12) 0%, rgba(226, 34, 40, 0.02) 100%);
+
+  /* Typography - Fonte Oficial: Montserrat */
+  --font-display: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-body: 'Montserrat', system-ui, -apple-system, sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 30px rgba(226, 34, 40, 0.35);
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+}
+
+/* ==========================================================================
+   3. MODO CLARO - SISTEMA VISUAL ELEGANTE, PROFISSIONAL E MODERNO
+   Fundo derivado de #F5E8E3, cards em branco puro/rosado e botões #E22228
+   ========================================================================== */
+[data-theme="light"] {
+  /* Warm Rosy Alabaster Base */
+  --bg-main: #FAF5F2;              /* Variação extremamente clara e suave de #F5E8E3 */
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-surface-card: #FFFFFF;
+  --bg-glass: rgba(250, 245, 242, 0.94);
+  --bg-glass-card: rgba(255, 255, 255, 0.98);
+
+  /* Light Theme Typography - Contrastante, Elegante e Leve */
+  --text-primary: #211213;         /* Terracota Noir profundo para leitura nítida */
+  --text-secondary: #5C3835;       /* Marrom café quente */
+  --text-muted: #8C5B54;          /* Terracota suave */
+  --text-dim: #B27569;            /* Rosé auxiliar */
+
+  /* Borders & Dividers */
+  --border-subtle: #EADBDA;
+  --border-glass: #E3BEB4;
+  --border-red: rgba(226, 34, 40, 0.35);
+  --border-red-active: #E22228;
+
+  /* Brand Accents for Light Mode */
+  --red-primary: #E22228;
+  --red-dark: #BE2429;
+  --red-deep: #7F1C1D;
+  --red-light: #EB4A43;
+  --red-glow: rgba(226, 34, 40, 0.25);
+  --red-glow-subtle: rgba(226, 34, 40, 0.08);
+
+  /* Top Bar in Light Theme */
+  --top-bar-bg: linear-gradient(90deg, #BE2429 0%, #E22228 50%, #7F1C1D 100%);
+  --top-bar-text: #FFFFFF;
+
+  /* Soft Warm Shadows */
+  --shadow-sm: 0 2px 8px rgba(127, 28, 29, 0.04);
+  --shadow-md: 0 8px 24px rgba(127, 28, 29, 0.07);
+  --shadow-lg: 0 16px 40px rgba(127, 28, 29, 0.10);
+  --shadow-glow: 0 4px 20px rgba(226, 34, 40, 0.2);
+}

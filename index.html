@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZERO.CINCO | Audiovisual, Eventos & Redes Sociais</title>
+  <meta name="description"
+    content="Estúdio criativo especializado em casamentos, pré-wedding, 15 anos, inaugurações de lojas e gestão de redes sociais. Estética de cinema e linguagem jovem.">
+  <meta name="keywords"
+    content="ZERO.CINCO, videomaker casamento, pre-wedding, storymaker, 15 anos, inauguracao lojas, social media sp, audiovisual sp">
+
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ZERO.CINCO | Audiovisual & Creative Studio">
+  <meta property="og:description" content="Audiovisual com olhar de cinema e energia jovem.">
+
+  <!-- Google Fonts: Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,800&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+  <!-- ==================== FAIXA SUPERIOR EM VERMELHO ==================== -->
+  <div class="top-red-bar" id="topRedBar">
+    <div class="container top-red-bar-container">
+      <div class="top-red-bar-content">
+        <span class="top-bar-badge">AGENDA ABERTA 2026 / 2027</span>
+        <span class="top-bar-text">Atendimento exclusivo para <strong>Casamentos, 15 Anos, Formaturas, Lojas &
+            Marcas</strong></span>
+      </div>
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20equipe%20ZERO.CINCO!%20Gostaria%20de%20consultar%20disponibilidade%20de%20data."
+        target="_blank" class="top-bar-link">
+        <span>Garantir Minha Data</span>
+        <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo" aria-label="ZERO.CINCO Home">
+        <span class="logo-text">ZERO<span class="brand-dot">.</span>CINCO</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#occasions" class="nav-link"><span class="nav-dot"></span>Especialidades</a>
+        <a href="#portfolio" class="nav-link"><span class="nav-dot"></span>Portfólio</a>
+        <a href="#packages" class="nav-link"><span class="nav-dot"></span>Planos</a>
+        <a href="#calculator" class="nav-link"><span class="nav-dot"></span>Orçamento Rápido</a>
+        <a href="#faq" class="nav-link"><span class="nav-dot"></span>Dúvidas</a>
+
+        <!-- Mobile Drawer Theme Switcher -->
+        <div class="mobile-theme-switch-row">
+          <span class="mobile-theme-label">Tema da Página</span>
+          <button type="button" class="theme-toggle-btn mobile-theme-btn" id="mobileThemeToggle"
+            aria-label="Alternar Modo Claro/Escuro">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+            <span class="theme-text-status">Modo Claro</span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Switcher (Claro / Escuro) -->
+        <button type="button" class="theme-toggle-btn" id="themeToggle" aria-label="Alternar Tema Claro/Escuro"
+          title="Alternar Modo Claro / Escuro">
+          <!-- Sun Icon (for Light Mode) -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+          <!-- Moon Icon (for Dark Mode) -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+        </button>
+
+        <a href="#calculator" class="btn btn-primary">
+          <span class="btn-dot"></span>
+          Montar Orçamento
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-section" id="hero">
+    <!-- Architectural Background 05 Watermark -->
+    <div class="hero-watermark-05" aria-hidden="true">05</div>
+
+    <div class="container hero-centered-box">
+      <div class="badge-tag">
+        <span class="dot"></span> ORÇAMENTOS ABERTOS PARA 2026 / 2027
+      </div>
+
+
+      <h1 class="hero-title">
+        EU TE AMO <span class="highlight-red">MUITÃOZÃO ALÉM</span> DO TAMANHÃO DO UNIVERSO
+        .
+      </h1>
+
+      <p class="hero-desc">
+        A <strong>ZERO.CINCO</strong> une a agilidade da cultura digital com acabamento cinematográfico. Produções
+        autorais para <strong>Casamentos, Pré-Wedding, 15 Anos, Inaugurações de Lojas e Redes Sociais</strong>.
+      </p>
+
+      <div class="hero-tags">
+        <span class="hero-tag-item"><i data-lucide="heart"></i> Casamentos & Pré-Wedding</span>
+        <span class="hero-tag-item"><i data-lucide="sparkles"></i> 15 Anos & Formaturas</span>
+        <span class="hero-tag-item"><i data-lucide="store"></i> Inauguração de Lojas</span>
+        <span class="hero-tag-item"><i data-lucide="zap"></i> Storymaker ao Vivo</span>
+        <span class="hero-tag-item"><i data-lucide="video"></i> Vídeos & Reels 4K</span>
+      </div>
+
+      <div class="hero-cta-group">
+        <a href="#calculator" class="btn btn-primary btn-lg">
+          <span class="btn-dot"></span>
+          Calcular Meu Orçamento
+        </a>
+        <a href="#portfolio" class="btn btn-secondary btn-lg">
+          <i data-lucide="camera" class="btn-icon"></i>
+          Ver Portfólio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTINUOUS BRAND TICKER RIBBON ==================== -->
+  <div class="brand-ticker-strip" aria-hidden="true">
+    <div class="ticker-track">
+      <div class="ticker-content">
+        <span>ZERO.CINCO</span>
+        <span class="ticker-dot">●</span>
+        <span>05</span>
+        <span class="ticker-dot">●</span>
+        <span>FILMES & REELS 4K</span>
+        <span class="ticker-dot">●</span>
+        <span>TEASER 24H</span>
+        <span class="ticker-dot">●</span>
+        <span>CASAMENTOS & BODAS</span>
+        <span class="ticker-dot">●</span>
+        <span>STORYMAKER AO VIVO</span>
+        <span class="ticker-dot">●</span>
+        <span>15 ANOS & FORMATURAS</span>
+        <span class="ticker-dot">●</span>
+        <span>INAUGURAÇÃO DE LOJAS</span>
+        <span class="ticker-dot">●</span>
+        <span>GESTÃO DE REDES SOCIAIS</span>
+        <span class="ticker-dot">●</span>
+      </div>
+      <div class="ticker-content">
+        <span>ZERO.CINCO</span>
+        <span class="ticker-dot">●</span>
+        <span>05</span>
+        <span class="ticker-dot">●</span>
+        <span>FILMES & REELS 4K</span>
+        <span class="ticker-dot">●</span>
+        <span>TEASER 24H</span>
+        <span class="ticker-dot">●</span>
+        <span>CASAMENTOS & BODAS</span>
+        <span class="ticker-dot">●</span>
+        <span>STORYMAKER AO VIVO</span>
+        <span class="ticker-dot">●</span>
+        <span>15 ANOS & FORMATURAS</span>
+        <span class="ticker-dot">●</span>
+        <span>INAUGURAÇÃO DE LOJAS</span>
+        <span class="ticker-dot">●</span>
+        <span>GESTÃO DE REDES SOCIAIS</span>
+        <span class="ticker-dot">●</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== OCCASIONS & SERVICES ==================== -->
+  <section class="section" id="occasions">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag"><span class="dot"></span> Nossas Especialidades</div>
+        <h2 class="section-title">O que a <span class="text-highlight">ZERO.CINCO</span> produz</h2>
+        <p class="section-subtitle">Técnica profissional, direção leve e equipamentos de ponta para cada momento.</p>
+      </div>
+
+      <div class="occasions-grid">
+        <!-- Occasion 1: Casamentos -->
+        <div class="occasion-card">
+          <div class="occasion-img-wrap">
+            <img src="assets/images/wedding.jpg" alt="Casamento" loading="lazy">
+          </div>
+          <div class="occasion-body">
+            <h3 class="occasion-title">Casamentos & Bodas</h3>
+            <p class="occasion-desc">Filmes modernos, sem poses engessadas. Cobertura completa com Storymaker em tempo
+              real e entrega de teaser no mesmo dia.</p>
+            <div class="occasion-tags">
+              <span class="occasion-tag-chip">Teaser 24h</span>
+              <span class="occasion-tag-chip">Vídeo Cinema 4K</span>
+              <span class="occasion-tag-chip">Stories ao Vivo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Occasion 2: Pré-Wedding -->
+        <div class="occasion-card">
+          <div class="occasion-img-wrap">
+            <img src="assets/images/prewedding.jpg" alt="Ensaio Pré-Wedding" loading="lazy">
+          </div>
+          <div class="occasion-body">
+            <h3 class="occasion-title">Ensaio Pré-Wedding</h3>
+            <p class="occasion-desc">Sessão autoral e intimista ao pôr do sol. Direção espontânea para fotos em alta
+              resolução e vídeo Save the Date.</p>
+            <div class="occasion-tags">
+              <span class="occasion-tag-chip">Save the Date</span>
+              <span class="occasion-tag-chip">Golden Hour</span>
+              <span class="occasion-tag-chip">Imagens com Drone</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Occasion 3: 15 Anos -->
+        <div class="occasion-card">
+          <div class="occasion-img-wrap">
+            <img src="assets/images/debutante.jpg" alt="15 Anos e Formaturas" loading="lazy">
+          </div>
+          <div class="occasion-body">
+            <h3 class="occasion-title">15 Anos & Formaturas</h3>
+            <p class="occasion-desc">Energia pura na pista de dança! Reels sincronizados com o beat da música e fotos
+              espontâneas cheias de emoção.</p>
+            <div class="occasion-tags">
+              <span class="occasion-tag-chip">Reels no Beat</span>
+              <span class="occasion-tag-chip">Drops na Pista</span>
+              <span class="occasion-tag-chip">Fotos Espontâneas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Occasion 4: Inaugurações & Lojas -->
+        <div class="occasion-card">
+          <div class="occasion-img-wrap">
+            <img src="assets/images/inauguration.jpg" alt="Inauguração de Lojas" loading="lazy">
+          </div>
+          <div class="occasion-body">
+            <h3 class="occasion-title">Inaugurações & Lojas</h3>
+            <p class="occasion-desc">Lançamento de lojas, corte de fita e ativações comerciais com conteúdo estratégico
+              para tráfego local e redes.</p>
+            <div class="occasion-tags">
+              <span class="occasion-tag-chip">Vídeo Inauguração</span>
+              <span class="occasion-tag-chip">Reels para Ads</span>
+              <span class="occasion-tag-chip">Fachada & Interior</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Occasion 5: Chá Revelação -->
+        <div class="occasion-card">
+          <div class="occasion-img-wrap">
+            <img src="assets/images/reveal.jpg" alt="Chá Revelação e Comemorações" loading="lazy">
+          </div>
+          <div class="occasion-body">
+            <h3 class="occasion-title">Chá Revelação & Família</h3>
+            <p class="occasion-desc">A contagem regressiva, a fumaça colorida e o choro de alegria eternizados em um
+              clipe emocionante para as redes.</p>
+            <div class="occasion-tags">
+              <span class="occasion-tag-chip">Momento da Revelação</span>
+              <span class="occasion-tag-chip">Drone 4K</span>
+              <span class="occasion-tag-chip">Clipe Emocional</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Occasion 6: Social Media -->
+        <div class="occasion-card">
+          <div class="occasion-img-wrap">
+            <img src="assets/images/commercial.jpg" alt="Social Media e Marcas" loading="lazy">
+          </div>
+          <div class="occasion-body">
+            <h3 class="occasion-title">Social Media & Marcas</h3>
+            <p class="occasion-desc">Gestão estratégica contínua de redes sociais com captação presencial de vídeos,
+              roteiros virais e relatórios mensais.</p>
+            <div class="occasion-tags">
+              <span class="occasion-tag-chip">Planejamento 360</span>
+              <span class="occasion-tag-chip">Gravação Semanal</span>
+              <span class="occasion-tag-chip">Roteirização</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PORTFOLIO SECTION ==================== -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag"><span class="dot"></span> Galeria</div>
+        <h2 class="section-title">Portfólio <span class="text-highlight">Selecionado</span></h2>
+        <p class="section-subtitle">Trabalhos reais em foto, vídeo e storymaking sem poluição visual.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="weddings">Casamentos & Pré-Wedding</button>
+        <button class="filter-btn" data-filter="social_events">15 Anos & Formaturas</button>
+        <button class="filter-btn" data-filter="commercial_openings">Lojas & Marcas</button>
+        <button class="filter-btn" data-filter="celebrations">Chá Revelação</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="portfolio-grid" id="portfolioGrid">
+        <!-- Rendered by gallery.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="modal-backdrop" id="portfolioModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modalClose" aria-label="Fechar modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal-media-wrap">
+        <img src="" alt="Trabalho em destaque" id="modalImage">
+      </div>
+      <div class="modal-info-wrap">
+        <div>
+          <span class="portfolio-category-tag" id="modalCategory">Categoria</span>
+          <h3 class="portfolio-title" id="modalTitle" style="font-size: 1.5rem; margin-top: 0.5rem; color: #FFF;">Título
+            do Projeto</h3>
+          <p style="color: var(--red-primary); font-weight: 700; font-size: 0.92rem; margin-bottom: 1rem;"
+            id="modalClient">Cliente</p>
+          <p id="modalDesc"
+            style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; color: var(--text-secondary);">
+            Descrição...</p>
+        </div>
+        <div>
+          <a href="#calculator" class="btn btn-primary" style="width: 100%;"
+            onclick="document.getElementById('portfolioModal').classList.remove('open')">
+            <i data-lucide="sparkles" class="btn-icon"></i>
+            Quero um Projeto Assim
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PACKAGES SECTION ==================== -->
+  <section class="section" id="packages">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag"><span class="dot"></span> Pacotes Especiais</div>
+        <h2 class="section-title">Formatos de <span class="text-highlight">Contratação</span></h2>
+        <p class="section-subtitle">Pacotes prontos para simplificar a sua escolha.</p>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Package 1 -->
+        <div class="package-card">
+          <h3 class="package-name">Starter Essencial</h3>
+          <p class="package-audience">Para aniversários, ensaios individuais e pequenos eventos.</p>
+          <div class="package-price-wrap">
+            <span class="package-price">R$ 1.490</span>
+            <span class="package-period">/evento</span>
+          </div>
+          <div class="package-features">
+            <div class="package-feature-item"><i data-lucide="check"></i> Cobertura de até 3 horas</div>
+            <div class="package-feature-item"><i data-lucide="check"></i> 3 Reels editados com áudio em alta</div>
+            <div class="package-feature-item"><i data-lucide="check"></i> 25 Fotos tratadas em alta resolução</div>
+            <div class="package-feature-item"><i data-lucide="check"></i> Stories em tempo real</div>
+          </div>
+          <a href="#calculator" class="btn btn-secondary">Escolher Starter</a>
+        </div>
+
+        <!-- Package 2 (Featured) -->
+        <div class="package-card featured">
+          <div class="package-ribbon">Mais Escolhido</div>
+          <h3 class="package-name">Casamentos & 15 Anos VIP</h3>
+          <p class="package-audience">Cobertura completa para casais e debutantes com impacto cinematográfico.</p>
+          <div class="package-price-wrap">
+            <span class="package-price">R$ 2.990</span>
+            <span class="package-period">/evento completo</span>
+          </div>
+          <div class="package-features">
+            <div class="package-feature-item"><i data-lucide="check"></i> Making of + Cerimônia + Festa</div>
+            <div class="package-feature-item"><i data-lucide="check"></i> Storymaker dedicado com posts ao vivo</div>
+            <div class="package-feature-item"><i data-lucide="check"></i> Teaser emocionante entregue na madrugada</div>
+            <div class="package-feature-item"><i data-lucide="check"></i> Filme completo 4K Cinema com Drone</div>
+            <div class="package-feature-item"><i data-lucide="check"></i> Galeria completa de fotos tratadas</div>
+          </div>
+          <a href="#calculator" class="btn btn-primary">Contratar VIP</a>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="package-card">
+          <h3 class="package-name">Empresas & Lojas</h3>
+          <p class="package-audience">Para inaugurações comerciais, redes e marcas em expansão.</p>
+          <div class="package-price-wrap">
+            <span class="package-price">R$ 4.500</span>
+            <span class="package-period">/sob medida</span>
+          </div>
+          <div class="package-features">
+            <div class="package-feature-item"><i data-lucide="check"></i> Squad audiovisual dedicado</div>
+            <div class="package-feature-item"><i data-lucide="check"></i> Vídeos comerciais para tráfego pago</div>
+            <div class="package-feature-item"><i data-lucide="check"></i> Entrevistas com microfone sem fio</div>
+            <div class="package-feature-item"><i data-lucide="check"></i> Drops diários de Reels</div>
+          </div>
+          <a href="#calculator" class="btn btn-secondary">Solicitar Personalizado</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3-STEP CALCULATOR + INTERACTIVE CREATOR PHONE (#calculator) ==================== -->
+  <section class="section" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag"><span class="dot"></span> Orçamento Inteligente</div>
+        <h2 class="section-title">Monte sua estimativa em <span class="text-highlight">3 passos simples</span></h2>
+        <p class="section-subtitle">Simule seu projeto e visualize ao lado como seu conteúdo é entregue em tempo real.
+        </p>
+      </div>
+
+      <div class="clean-calc-wrapper">
+        <div class="calc-steps-content">
+          <!-- Step 1: Tipo de Evento / Serviço -->
+          <div class="calc-step-group">
+            <div class="calc-step-header">
+              <span class="calc-step-num">1</span>
+              <span>Tipo de Evento ou Serviço:</span>
+            </div>
+            <div class="calc-pills-row">
+              <button type="button" class="calc-pill-btn calc-pill-event active" data-event="casamento">
+                <i data-lucide="heart" class="btn-icon"></i>
+                Casamento & Pré-Wedding
+              </button>
+              <button type="button" class="calc-pill-btn calc-pill-event" data-event="debutante">
+                <i data-lucide="sparkles" class="btn-icon"></i>
+                15 Anos / Aniversário
+              </button>
+              <button type="button" class="calc-pill-btn calc-pill-event" data-event="formatura">
+                <i data-lucide="award" class="btn-icon"></i>
+                Formatura & Festa
+              </button>
+              <button type="button" class="calc-pill-btn calc-pill-event" data-event="corporativo">
+                <i data-lucide="store" class="btn-icon"></i>
+                Corporativo & Lojas
+              </button>
+              <button type="button" class="calc-pill-btn calc-pill-event" data-event="socialmedia">
+                <i data-lucide="share-2" class="btn-icon"></i>
+                Social Media (Mensal)
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Duração / Cobertura -->
+          <div class="calc-step-group">
+            <div class="calc-step-header">
+              <span class="calc-step-num">2</span>
+              <span>Duração da Cobertura:</span>
+            </div>
+            <div class="calc-pills-row">
+              <button type="button" class="calc-pill-btn calc-pill-duration" data-duration="essencial">
+                <i data-lucide="clock" class="btn-icon"></i>
+                Cobertura Essencial (até 3h)
+              </button>
+              <button type="button" class="calc-pill-btn calc-pill-duration active" data-duration="meio">
+                <i data-lucide="zap" class="btn-icon"></i>
+                Meio Período (até 6h)
+              </button>
+              <button type="button" class="calc-pill-btn calc-pill-duration" data-duration="completo">
+                <i data-lucide="sun" class="btn-icon"></i>
+                Dia Completo (até 10h)
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Opcionais -->
+          <div class="calc-step-group">
+            <div class="calc-step-header">
+              <span class="calc-step-num">3</span>
+              <span>Adicionais Opcionais:</span>
+            </div>
+            <div class="calc-addons-grid">
+              <label class="calc-addon-pill">
+                <input type="checkbox" value="drone">
+                <span>Imagens Aéreas com Drone 4K (+R$ 350)</span>
+              </label>
+              <label class="calc-addon-pill selected">
+                <input type="checkbox" value="sameDay" checked>
+                <span>Reels / Teaser no Mesmo Dia (+R$ 300)</span>
+              </label>
+              <label class="calc-addon-pill">
+                <input type="checkbox" value="album">
+                <span>Álbum Impresso / Ensaio Extra (+R$ 450)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary & WhatsApp Action -->
+        <div class="clean-calc-summary">
+          <div>
+            <h3 class="calc-summary-head">Resumo da Proposta</h3>
+            <div class="calc-summary-details">
+              <div class="calc-summary-row">
+                <span>Evento:</span>
+                <strong id="calcSummaryEvent">Casamento & Pré-Wedding</strong>
+              </div>
+              <div class="calc-summary-row">
+                <span>Duração:</span>
+                <strong id="calcSummaryDuration">Meio Período (até 6h)</strong>
+              </div>
+              <div style="margin-top: 0.5rem;">
+                <span
+                  style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Opcionais:</span>
+                <ul class="calc-addons-list" id="calcSummaryAddons">
+                  <li>+ Reels / Teaser no Mesmo Dia</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="calc-total-section">
+              <span class="calc-total-label">Estimativa Inicial:</span>
+              <div class="calc-total-value" id="calcFinalPrice">R$ 3.000</div>
+            </div>
+
+            <a href="#" class="btn btn-whatsapp" id="calcSendWhatsApp" style="width: 100%;">
+              <i data-lucide="message-circle" class="btn-icon"></i>
+              Enviar Orçamento para o WhatsApp
+            </a>
+            <p class="calc-note-clean">*Valores preliminares. Alinhamos todos os detalhes exclusivos no atendimento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS SECTION ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag"><span class="dot"></span> Depoimentos</div>
+        <h2 class="section-title">O que dizem os <span class="text-highlight">nossos clientes</span></h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            "Fizemos o Pré-Wedding e a cobertura do casamento. As fotos ao pôr do sol ficaram perfeitas e o teaser na
+            madrugada surpreendeu todos os convidados!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">ML</div>
+            <div>
+              <div class="author-name">Mariana & Lucas</div>
+              <div class="author-role">Noivos • Casamento em SP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            "A festa de 15 anos da minha filha foi um espetáculo. Os reels da pista de dança viralizaram e o clipe
+            emocionante nos fez chorar."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CM</div>
+            <div>
+              <div class="author-name">Carla Medeiros</div>
+              <div class="author-role">Mãe da Debutante Beatriz</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            "A inauguração da nossa loja lotou graças aos vídeos do Zero.Cinco. Agilidade e bom gosto em cada detalhe."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AG</div>
+            <div>
+              <div class="author-name">Aurora Group</div>
+              <div class="author-role">Inauguração Boutique & Café</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ SECTION ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag"><span class="dot"></span> FAQ</div>
+        <h2 class="section-title">Perguntas <span class="text-highlight">Frequentes</span></h2>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item active">
+          <button class="faq-question">
+            Como funciona o Storymaker em tempo real?
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Um profissional fica dedicado exclusivamente a captar bastidores e momentos espontâneos, postando stories
+              e drops de vídeo durante o próprio evento.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Qual é o prazo médio de entrega?
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Stories e teasers rápidos em até 24 horas. Vídeos completos e fotos tratadas em até 5 a 10 dias úteis.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Como funciona a reserva da data?
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>A data é confirmada com sinal de reserva via Pix ou cartão. O restante pode ser parcelado até a data do
+              evento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section class="section" id="contact" style="padding-bottom: 5.5rem;">
+    <div class="container contact-grid">
+      <div>
+        <div class="badge-tag"><span class="dot"></span> Contato Direto</div>
+        <h2 class="section-title" style="margin-bottom: 1.25rem;">Vamos criar uma narrativa <span
+            class="text-highlight">marcante</span> juntos?</h2>
+        <p style="margin-bottom: 2rem;">
+          Tire dúvidas, confira a disponibilidade da sua data ou solicite uma proposta personalizada com a equipe da
+          ZERO.CINCO.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
+            <i data-lucide="map-pin" style="color: var(--red-primary); width: 20px; height: 20px;"></i>
+            <span style="font-size: 0.95rem; color: var(--text-primary);">São Paulo / SP • Disponível para coberturas em
+              todo o Brasil</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
+            <i data-lucide="instagram" style="color: var(--red-primary); width: 20px; height: 20px;"></i>
+            <span style="font-size: 0.95rem; color: var(--text-primary);">@zerocinco.studio</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3 style="font-size: 1.3rem; margin-bottom: 1.25rem; color: var(--text-primary);">Envie sua Mensagem</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label class="form-label" for="clientName">Seu Nome / Marca</label>
+            <input type="text" id="clientName" class="form-input" placeholder="Ex: Mariana Silva" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="clientEventType">Ocasião / Evento</label>
+            <select id="clientEventType" class="form-select" required>
+              <option value="Casamento & Pré-Wedding">Casamento & Pré-Wedding</option>
+              <option value="15 Anos / Aniversário">15 Anos / Aniversário</option>
+              <option value="Formatura">Formatura</option>
+              <option value="Inauguração de Loja / Corporativo">Inauguração de Loja / Corporativo</option>
+              <option value="Chá Revelação">Chá Revelação</option>
+              <option value="Social Media & Vídeos">Social Media & Vídeos</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="clientDetails">Mensagem Breve</label>
+            <textarea id="clientDetails" class="form-textarea"
+              placeholder="Descreva a data prevista ou o que você precisa..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+            <span class="btn-dot"></span>
+            Enviar Mensagem para o WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="brand-logo" aria-label="ZERO.CINCO Home">
+            <span class="logo-text">ZERO<span class="brand-dot">.</span>CINCO</span>
+          </a>
+          <p>Estúdio criativo especializado em Casamentos, Pré-Wedding, 15 Anos, Lojas e Redes Sociais. Audiovisual com
+            olhar de cinema e energia jovem.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Especialidades</h4>
+          <div class="footer-links">
+            <a href="#occasions">Casamentos</a>
+            <a href="#occasions">Pré-Wedding</a>
+            <a href="#occasions">15 Anos & Festas</a>
+            <a href="#occasions">Inaugurações</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navegação</h4>
+          <div class="footer-links">
+            <a href="#hero">Início</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#calculator">Orçamento</a>
+            <a href="#packages">Planos</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contato</h4>
+          <div class="footer-links">
+            <a href="https://wa.me/5511999999999" target="_blank">WhatsApp Direto</a>
+            <a href="#">Instagram @zerocinco.studio</a>
+            <a href="mailto:contato@zerocinco.studio">contato@zerocinco.studio</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ZERO.CINCO. Todos os direitos reservados.</p>
+        <p>A identidade visual transformada em experiência digital.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20equipe%20ZERO.CINCO!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+    class="floating-whatsapp" target="_blank" aria-label="Falar pelo WhatsApp">
+    <div class="floating-whatsapp-badge">1</div>
+    <i data-lucide="message-circle" style="width: 30px; height: 30px;"></i>
+  </a>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/gallery.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
