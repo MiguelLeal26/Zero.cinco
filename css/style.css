@@ -1181,3 +1181,10 @@ h1.hero-title,
   font-size: 1.8rem !important;
   line-height: 1.2 !important;
 }
+
+html body .hero-title,
+html body h1.hero-title,
+html body .hero-title span {
+  font-size: 1.8rem !important;
+  line-height: 1.2 !important;
+}
