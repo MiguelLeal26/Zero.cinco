@@ -1219,3 +1219,10 @@ select,
 textarea {
   font-family: 'Montserrat', sans-serif !important;
 }
+
+.hero-ticker,
+.ticker-band,
+.marquee,
+.ticker-wrapper {
+  display: none !important;
+}
