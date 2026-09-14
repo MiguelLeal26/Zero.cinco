@@ -1226,3 +1226,7 @@ textarea {
 .ticker-wrapper {
   display: none !important;
 }
+
+.brand-ticker-strip {
+  display: none !important;
+}
