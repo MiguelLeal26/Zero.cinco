@@ -1,117 +1,111 @@
-/* ==========================================================================
-   ZERO.CINCO CREATIVE STUDIO - MINIMALIST 3-STEP BUDGET ESTIMATOR
-   ========================================================================== */
+document.addEventListener("DOMContentLoaded", function () {
+  // Configurações de Preços e Valores
+  const config = {
+    whatsappNumber: "5585987398992",
+    events: {
+      "casamento": { name: "Casamento & Pré-Wedding", price: 2000 },
+      "debutante": { name: "15 Anos / Aniversário", price: 1500 },
+      "formatura": { name: "Formatura & Festa", price: 1800 },
+      "corporativo": { name: "Corporativo & Lojas", price: 1200 },
+      "socialmedia": { name: "Social Media (Mensal)", price: 2500 }
+    },
+    durations: {
+      "3h": { name: "Cobertura Essencial (até 3h)", price: 400 },
+      "6h": { name: "Meio Período (até 6h)", price: 700 },
+      "10h": { name: "Dia Completo (até 10h)", price: 1200 }
+    }
+  };
 
-const calcConfig = {
-  events: {
-    casamento: { name: "Casamento & Bodas", base: 1800 },
-    debutante: { name: "15 Anos / Aniversário", base: 1400 },
-    formatura: { name: "Formatura & Festa", base: 1300 },
-    corporativo: { name: "Corporativo & Lojas", base: 1100 },
-    socialmedia: { name: "Social Media (Mensal)", base: 1200 }
-  },
-  durations: {
-    essencial: { name: "Cobertura Essencial (até 3h)", multiplier: 1.0 },
-    meio: { name: "Meio Período (até 6h)", multiplier: 1.5 },
-    completo: { name: "Dia Completo (até 10h)", multiplier: 2.1 }
-  },
-  addons: {
-    drone: { name: "Imagens Aéreas com Drone 4K", price: 350 },
-    sameDay: { name: "Reels / Teaser no Mesmo Dia", price: 300 },
-    album: { name: "Álbum Impresso / Ensaio Extra", price: 450 }
-  },
-  whatsappNumber: "5585987398992"
-};
+  // Função principal de recálculo
+  function updateCalculator() {
+    // 1. Pega evento ativo
+    const activeEvent = document.querySelector('.calc-pill-event.active');
+    const eventKey = activeEvent ? activeEvent.getAttribute('data-event') : 'casamento';
+    const eventData = config.events[eventKey] || config.events['casamento'];
 
+    // 2. Pega duração ativa
+    const activeDuration = document.querySelector('.calc-pill-duration.active');
+    const durationKey = activeDuration ? activeDuration.getAttribute('data-duration') : '6h';
+    const durationData = config.durations[durationKey] || config.durations['6h'];
 
-function initMinimalCalculator() {
-  const eventPills = document.querySelectorAll('.calc-pill-event');
-  const durationPills = document.querySelectorAll('.calc-pill-duration');
-  const addonChecks = document.querySelectorAll('.calc-addon-pill input');
-  const summaryEvent = document.getElementById('calcSummaryEvent');
-  const summaryDuration = document.getElementById('calcSummaryDuration');
-  const summaryAddonsList = document.getElementById('calcSummaryAddons');
-  const priceDisplay = document.getElementById('calcFinalPrice');
-  const whatsappBtn = document.getElementById('calcSendWhatsApp');
+    // 3. Soma Base
+    let total = eventData.price + durationData.price;
+    let selectedAddons = [];
 
-  let selectedEvent = 'casamento';
-  let selectedDuration = 'meio';
-
-  function update() {
-    const eventInfo = calcConfig.events[selectedEvent] || calcConfig.events.casamento;
-    const durationInfo = calcConfig.durations[selectedDuration] || calcConfig.durations.meio;
-
-    let total = Math.round(eventInfo.base * durationInfo.multiplier);
-    const activeAddons = [];
-
-    addonChecks.forEach(cb => {
-      const parentLabel = cb.closest('.calc-addon-pill');
-      if (cb.checked) {
-        if (parentLabel) parentLabel.classList.add('selected');
-        const key = cb.value;
-        const add = calcConfig.addons[key];
-        if (add) {
-          total += add.price;
-          activeAddons.push(add.name);
-        }
-      } else {
-        if (parentLabel) parentLabel.classList.remove('selected');
-      }
+    // 4. Soma Adicionais
+    document.querySelectorAll('.calc-addon-pill input[type="checkbox"]:checked, .calc-addon-card input[type="checkbox"]:checked').forEach(chk => {
+      const price = parseFloat(chk.getAttribute('data-price') || 0);
+      const labelText = chk.closest('label') ? chk.closest('label').innerText.split('(+')[0].trim() : 'Adicional';
+      total += price;
+      selectedAddons.push(labelText);
     });
 
-    // Update Summary Texts
-    if (summaryEvent) summaryEvent.textContent = eventInfo.name;
-    if (summaryDuration) summaryDuration.textContent = durationInfo.name;
+    // 5. Atualiza Interface (Procura pelos elementos por ID ou Classe)
+    const summaryEvent = document.getElementById('calcSummaryEvent') || document.getElementById('summary-event');
+    const summaryDuration = document.getElementById('calcSummaryDuration') || document.getElementById('summary-duration');
+    const summaryAddons = document.getElementById('calcSummaryAddons') || document.getElementById('summary-addons');
+    const summaryPrice = document.getElementById('calcSummaryPrice') || document.getElementById('summary-price');
+    const btnWhatsapp = document.getElementById('calcSendWhatsapp') || document.getElementById('btn-whatsapp') || document.querySelector('.calc-summary-card a');
 
-    if (summaryAddonsList) {
-      if (activeAddons.length > 0) {
-        summaryAddonsList.innerHTML = activeAddons.map(a => `<li>+ ${a}</li>`).join('');
+    if (summaryEvent) summaryEvent.innerText = eventData.name;
+    if (summaryDuration) summaryDuration.innerText = durationData.name;
+
+    if (summaryPrice) {
+      summaryPrice.innerText = `R$ ${total.toLocaleString("pt-BR")}`;
+    }
+
+    if (summaryAddons) {
+      if (selectedAddons.length > 0) {
+        summaryAddons.innerHTML = selectedAddons.map(item => `<li>+ ${item}</li>`).join('');
       } else {
-        summaryAddonsList.innerHTML = `<li style="color: var(--text-dim);">Nenhum opcional selecionado</li>`;
+        summaryAddons.innerHTML = '<li style="color:#aaa; font-style:italic;">Nenhum opcional selecionado</li>';
       }
     }
 
-    if (priceDisplay) {
-      priceDisplay.textContent = `R$ ${total.toLocaleString('pt-BR')}`;
-    }
-
-    // Build WhatsApp Link
-    if (whatsappBtn) {
-      const addonsText = activeAddons.length > 0
-        ? `%0A*Opcionais:*%0A` + activeAddons.map(a => `• ${a}`).join('%0A')
-      const msg = `Olá, equipe Zero.Cinco!%0AGostaria de solicitar uma proposta com base na estimativa do site:%0A%0A*Tipo de Evento:* ${eventInfo.name}%0A*Duração:* ${durationInfo.name}${addonsText}%0A%0A*Estimativa:* R$ ${total.toLocaleString('pt-BR')}%0A%0APodemos conversar sobre a data?`;
-
-      whatsappBtn.href = `https://wa.me/${calcConfig.whatsappNumber}?text=${msg}`;
-      whatsappBtn.target = "_blank";
+    // 6. Atualiza Link do WhatsApp
+    if (btnWhatsapp) {
+      const addonsText = selectedAddons.length > 0 ? selectedAddons.join(', ') : 'Nenhum';
+      const message = encodeURIComponent(
+        `Olá! Gostaria de um orçamento feito pelo site:\n\n` +
+        `• *Evento/Serviço:* ${eventData.name}\n` +
+        `• *Duração:* ${durationData.name}\n` +
+        `• *Opcionais:* ${addonsText}\n` +
+        `• *Estimativa:* R$ ${total.toLocaleString("pt-BR")}`
+      );
+      btnWhatsapp.href = `https://wa.me/${config.whatsappNumber}?text=${message}`;
+      btnWhatsapp.target = "_blank";
     }
   }
 
-  // Event Listeners for Step 1
-  eventPills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      eventPills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-      selectedEvent = pill.getAttribute('data-event');
-      update();
+  // --- EVENT LISTENERS (Captura de Cliques) ---
+
+  // Cliques no Tipo de Evento
+  document.querySelectorAll('.calc-pill-event').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelectorAll('.calc-pill-event').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      updateCalculator();
     });
   });
 
-  // Event Listeners for Step 2
-  durationPills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      durationPills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-      selectedDuration = pill.getAttribute('data-duration');
-      update();
+  // Cliques na Duração da Cobertura
+  document.querySelectorAll('.calc-pill-duration').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelectorAll('.calc-pill-duration').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      updateCalculator();
     });
   });
 
-  // Event Listeners for Step 3
-  addonChecks.forEach(cb => {
-    cb.addEventListener('change', update);
+  // Checkboxes dos Opcionais
+  document.querySelectorAll('.calc-addon-pill input, .calc-addon-card input').forEach(chk => {
+    chk.addEventListener('change', function () {
+      updateCalculator();
+    });
   });
 
-  update();
-}
-
-document.addEventListener('DOMContentLoaded', initMinimalCalculator);
+  // Executa ao carregar para calcular estado inicial
+  updateCalculator();
+});
