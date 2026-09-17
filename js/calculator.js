@@ -20,7 +20,7 @@ const calcConfig = {
     sameDay: { name: "Reels / Teaser no Mesmo Dia", price: 300 },
     album: { name: "Álbum Impresso / Ensaio Extra", price: 450 }
   },
-  whatsappNumber: "5511999999999"
+  whatsappNumber: "5585987398992"
 };
 
 function initMinimalCalculator() {
