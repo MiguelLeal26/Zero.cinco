@@ -23,6 +23,7 @@ const calcConfig = {
   whatsappNumber: "5585987398992"
 };
 
+
 function initMinimalCalculator() {
   const eventPills = document.querySelectorAll('.calc-pill-event');
   const durationPills = document.querySelectorAll('.calc-pill-duration');
