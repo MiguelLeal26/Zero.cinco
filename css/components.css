@@ -1467,3 +1467,88 @@
                                                                                   stroke: #ff4d4d !important;
                                                                                   font-weight: 600 !important;
                                                                                 }
+
+                                                                                /* =========================================================
+   Ajustes da Calculadora para o Modo Escuro (Dark Mode)
+   ========================================================= */
+
+                                                                                /* Painel Lateral do Resumo no Dark Mode */
+                                                                                body.dark-mode .clean-calc-summary,
+                                                                                [data-theme="dark"] .clean-calc-summary {
+                                                                                  background-color: #1a1a24 !important;
+                                                                                  border-color: #2a2a3a !important;
+                                                                                }
+
+                                                                                body.dark-mode .calc-summary-title,
+                                                                                [data-theme="dark"] .calc-summary-title {
+                                                                                  color: #ffffff !important;
+                                                                                }
+
+                                                                                body.dark-mode .calc-summary-label,
+                                                                                [data-theme="dark"] .calc-summary-label {
+                                                                                  color: #e2e8f0 !important;
+                                                                                }
+
+                                                                                body.dark-mode .calc-summary-details p,
+                                                                                body.dark-mode .calc-summary-details strong,
+                                                                                body.dark-mode .calc-summary-addons-list li,
+                                                                                [data-theme="dark"] .calc-summary-details p,
+                                                                                [data-theme="dark"] .calc-summary-details strong,
+                                                                                [data-theme="dark"] .calc-summary-addons-list li {
+                                                                                  color: #cbd5e1 !important;
+                                                                                }
+
+                                                                                body.dark-mode .calc-price-label,
+                                                                                [data-theme="dark"] .calc-price-label {
+                                                                                  color: #94a3b8 !important;
+                                                                                }
+
+                                                                                body.dark-mode .calc-summary-price,
+                                                                                [data-theme="dark"] .calc-summary-price {
+                                                                                  color: #ffffff !important;
+                                                                                }
+
+                                                                                body.dark-mode .calc-disclaimer,
+                                                                                body.dark-mode .calc-bottom-disclaimer,
+                                                                                [data-theme="dark"] .calc-disclaimer,
+                                                                                [data-theme="dark"] .calc-bottom-disclaimer {
+                                                                                  color: #94a3b8 !important;
+                                                                                }
+
+                                                                                /* Botões não selecionados no Dark Mode */
+                                                                                body.dark-mode .calc-pill-btn,
+                                                                                body.dark-mode .calc-addon-card,
+                                                                                [data-theme="dark"] .calc-pill-btn,
+                                                                                [data-theme="dark"] .calc-addon-card {
+                                                                                  background-color: #1a1a24 !important;
+                                                                                  border-color: #2e2e3e !important;
+                                                                                  color: #cbd5e1 !important;
+                                                                                }
+
+                                                                                body.dark-mode .calc-pill-btn i,
+                                                                                body.dark-mode .calc-pill-btn svg,
+                                                                                [data-theme="dark"] .calc-pill-btn i,
+                                                                                [data-theme="dark"] .calc-pill-btn svg {
+                                                                                  color: #cbd5e1 !important;
+                                                                                  stroke: #cbd5e1 !important;
+                                                                                }
+
+                                                                                /* Botões SELECIONADOS no Dark Mode (Vermelho sutil com alto contraste) */
+                                                                                body.dark-mode .calc-pill-btn.active,
+                                                                                body.dark-mode .calc-addon-card:has(input:checked),
+                                                                                body.dark-mode .calc-addon-card.active,
+                                                                                [data-theme="dark"] .calc-pill-btn.active,
+                                                                                [data-theme="dark"] .calc-addon-card:has(input:checked),
+                                                                                [data-theme="dark"] .calc-addon-card.active {
+                                                                                  background-color: rgba(255, 77, 77, 0.15) !important;
+                                                                                  border-color: #ff4d4d !important;
+                                                                                  color: #ff6b6b !important;
+                                                                                }
+
+                                                                                body.dark-mode .calc-pill-btn.active i,
+                                                                                body.dark-mode .calc-pill-btn.active svg,
+                                                                                [data-theme="dark"] .calc-pill-btn.active i,
+                                                                                [data-theme="dark"] .calc-pill-btn.active svg {
+                                                                                  color: #ff6b6b !important;
+                                                                                  stroke: #ff6b6b !important;
+                                                                                }
