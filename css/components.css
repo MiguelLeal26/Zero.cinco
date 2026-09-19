@@ -1340,3 +1340,33 @@
                                                                                   margin-bottom: 0;
                                                                                   width: 100%;
                                                                                 }
+
+                                                                                /* Estado Ativo/Selecionado dos Botões (Tipo de Evento e Duração) */
+                                                                                .calc-pill-btn.active,
+                                                                                .calc-pill-event.active,
+                                                                                .calc-pill-duration.active {
+                                                                                  border-color: #ff4d4d !important;
+                                                                                  background-color: #fff5f5 !important;
+                                                                                  color: #ff4d4d !important;
+                                                                                  font-weight: 600 !important;
+                                                                                }
+
+                                                                                /* Ícone do botão ativo em vermelho */
+                                                                                .calc-pill-btn.active i,
+                                                                                .calc-pill-btn.active svg {
+                                                                                  color: #ff4d4d !important;
+                                                                                  stroke: #ff4d4d !important;
+                                                                                }
+
+                                                                                /* Estado Selecionado dos Cards de Opcionais (Step 3) */
+                                                                                .calc-addon-card.active,
+                                                                                .calc-addon-card:has(input:checked) {
+                                                                                  border-color: #ff4d4d !important;
+                                                                                  background-color: #fff5f5 !important;
+                                                                                  color: #ff4d4d !important;
+                                                                                }
+
+                                                                                /* Checkbox em vermelho quando marcado */
+                                                                                .calc-addon-card input[type="checkbox"]:checked {
+                                                                                  accent-color: #ff4d4d;
+                                                                                }
