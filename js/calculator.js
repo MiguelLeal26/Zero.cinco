@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "socialmedia": { name: "Social Media (Mensal)", price: 2500 }
     },
     durations: {
-      "3h": { name: "Cobertura Essencial (até 3h)", price: 400 },
-      "6h": { name: "Meio Período (até 6h)", price: 700 },
-      "10h": { name: "Dia Completo (até 10h)", price: 1200 }
+      "3h": { name: "Cobertura Essencial (até 3h)", percentage: 0.10 },
+      "6h": { name: "Meio Período (até 6h)", percentage: 0.15 },
+      "10h": { name: "Dia Completo (até 10h)", percentage: 0.20 }
     }
   };
 
@@ -37,16 +37,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const durationKey = activeDuration ? activeDuration.getAttribute('data-duration') : '6h';
     const durationData = config.durations[durationKey] || config.durations['6h'];
 
-    // 3. Soma inicial
-    let total = eventData.price + durationData.price;
+    // 3. Soma dos Adicionais Opcionais
+    let addonsTotal = 0;
     let selectedAddons = [];
 
-    // 4. Soma adicionais e ajusta estado visual
     const calcSection = document.getElementById('calculator') || document;
     const allAddonCheckboxes = calcSection.querySelectorAll('.calc-addon-pill input[type="checkbox"], .calc-addon-card input[type="checkbox"]');
 
     allAddonCheckboxes.forEach(chk => {
-      // Garante que a classe visual selected/active acompanha o checkbox
       toggleAddonVisualState(chk);
 
       if (chk.checked) {
@@ -61,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }
 
-        total += price;
+        addonsTotal += price;
 
         if (parentCard) {
           const cleanName = parentCard.innerText.split('(+')[0].split('(+R$')[0].trim();
@@ -69,6 +67,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     });
+
+    // 4. Cálculo final com a porcentagem da duração
+    const subtotalBase = eventData.price + addonsTotal;
+    const durationExtra = subtotalBase * durationData.percentage;
+    const total = subtotalBase + durationExtra;
 
     // 5. Atualiza o resumo visual
     const summaryEvent = document.getElementById('calcSummaryEvent') || document.getElementById('summary-event');
@@ -92,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // 6. Atualiza o link do WhatsApp
+    // 6. Atualiza a mensagem do WhatsApp
     if (btnWhatsapp) {
       const addonsText = selectedAddons.length > 0 ? selectedAddons.join(', ') : 'Nenhum';
       const message = encodeURIComponent(
@@ -100,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `• *Evento/Serviço:* ${eventData.name}\n` +
         `• *Duração:* ${durationData.name}\n` +
         `• *Opcionais:* ${addonsText}\n` +
-        `• *Estimativa:* R$ ${total.toLocaleString("pt-BR")}`
+        `• *Estimativa Final:* R$ ${total.toLocaleString("pt-BR")}`
       );
       btnWhatsapp.href = `https://wa.me/${config.whatsappNumber}?text=${message}`;
       btnWhatsapp.target = "_blank";
