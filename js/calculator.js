@@ -28,21 +28,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateCalculator() {
     // 1. Evento ativo
-    const activeEvent = document.querySelector('.calc-pill-event.active');
-    const eventKey = activeEvent ? activeEvent.getAttribute('data-event') : 'casamento';
+    const activeEvent = document.querySelector('.calc-pill-event.active') || document.querySelector('[data-event].active');
+    let eventKey = 'casamento';
+    if (activeEvent) {
+      eventKey = activeEvent.getAttribute('data-event') || 'casamento';
+      if (!config.events[eventKey]) {
+        const txt = activeEvent.innerText.toLowerCase();
+        if (txt.includes('15') || txt.includes('aniversário')) eventKey = 'debutante';
+        else if (txt.includes('formatura')) eventKey = 'formatura';
+        else if (txt.includes('corporativo')) eventKey = 'corporativo';
+        else if (txt.includes('social')) eventKey = 'socialmedia';
+        else eventKey = 'casamento';
+      }
+    }
     const eventData = config.events[eventKey] || config.events['casamento'];
 
     // 2. Duração ativa
-    const activeDuration = document.querySelector('.calc-pill-duration.active');
-    const durationKey = activeDuration ? activeDuration.getAttribute('data-duration') : '6h';
-    const durationData = config.durations[durationKey] || config.durations['6h'];
+    const activeDuration = document.querySelector('.calc-pill-duration.active') || document.querySelector('[data-duration].active');
+    let durationKey = '6h';
+
+    if (activeDuration) {
+      const attr = activeDuration.getAttribute('data-duration') || '';
+      const txt = activeDuration.innerText.toLowerCase();
+
+      if (attr === 'essencial' || attr === '3h' || txt.includes('3h') || txt.includes('essencial')) {
+        durationKey = '3h';
+      } else if (attr === 'completo' || attr === '10h' || txt.includes('10h') || txt.includes('completo')) {
+        durationKey = '10h';
+      } else {
+        durationKey = '6h';
+      }
+    }
+
+    const durationData = config.durations[durationKey];
 
     // 3. Soma dos Adicionais Opcionais
     let addonsTotal = 0;
     let selectedAddons = [];
 
     const calcSection = document.getElementById('calculator') || document;
-    const allAddonCheckboxes = calcSection.querySelectorAll('.calc-addon-pill input[type="checkbox"], .calc-addon-card input[type="checkbox"]');
+    const allAddonCheckboxes = calcSection.querySelectorAll('input[type="checkbox"]');
 
     allAddonCheckboxes.forEach(chk => {
       toggleAddonVisualState(chk);
@@ -68,10 +93,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // 4. Cálculo final com a porcentagem da duração
+    // 4. Cálculo final
     const subtotalBase = eventData.price + addonsTotal;
     const durationExtra = subtotalBase * durationData.percentage;
-    const total = subtotalBase + durationExtra;
+    const total = Math.round(subtotalBase + durationExtra);
 
     // 5. Atualiza o resumo visual
     const summaryEvent = document.getElementById('calcSummaryEvent') || document.getElementById('summary-event');
@@ -110,29 +135,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // --- LISTENERS DE CLIQUE ---
+  // --- LISTENERS DE CLIQUE GENÉRICOS ---
 
-  // Eventos
-  document.querySelectorAll('.calc-pill-event').forEach(btn => {
-    btn.addEventListener('click', function (e) {
+  // Captura cliques nos botões de Evento e Duração mesmo com classes diferentes
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+
+    // Se for botão de duração
+    if (btn.classList.contains('calc-pill-duration') || btn.hasAttribute('data-duration')) {
       e.preventDefault();
-      document.querySelectorAll('.calc-pill-event').forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
+      const parentGroup = btn.closest('.calc-pills-row') || btn.parentElement;
+      if (parentGroup) {
+        parentGroup.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+      }
+      btn.classList.add('active');
       updateCalculator();
-    });
+    }
+
+    // Se for botão de evento
+    if (btn.classList.contains('calc-pill-event') || btn.hasAttribute('data-event')) {
+      e.preventDefault();
+      const parentGroup = btn.closest('.calc-pills-row') || btn.parentElement;
+      if (parentGroup) {
+        parentGroup.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+      }
+      btn.classList.add('active');
+      updateCalculator();
+    }
   });
 
-  // Duração
-  document.querySelectorAll('.calc-pill-duration').forEach(btn => {
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelectorAll('.calc-pill-duration').forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      updateCalculator();
-    });
-  });
-
-  // Opcionais (Checkboxes)
+  // Checkboxes
   const calcSection = document.getElementById('calculator') || document;
   calcSection.addEventListener('change', function (e) {
     if (e.target && e.target.type === 'checkbox') {
