@@ -388,228 +388,155 @@
   </section>
 
   <!-- ==================== 3-STEP CALCULATOR + INTERACTIVE CREATOR PHONE (#calculator) ==================== -->
-  <div class="clean-calc-wrapper">
-    <div class="calc-steps-content">
-      <!-- Step 1: Tipo de Evento / Serviço -->
-      <div class="calc-step-group">
-        <div class="calc-step-header">
-          <span class="calc-step-num">1</span>
-          <span>Tipo de Evento ou Serviço:</span>
-        </div>
-        <div class="calc-pills-row">
-          <button type="button" class="calc-pill-btn calc-pill-event active" data-event="casamento">
-            <i data-lucide="heart" class="btn-icon"></i> Casamento &amp; Pré-Wedding
-          </button>
-          <button type="button" class="calc-pill-btn calc-pill-event" data-event="debutante">
-            <i data-lucide="sparkles" class="btn-icon"></i> 15 Anos / Aniversário
-          </button>
-          <button type="button" class="calc-pill-btn calc-pill-event" data-event="formatura">
-            <i data-lucide="graduation-cap" class="btn-icon"></i> Formatura &amp; Festa
-          </button>
-          <button type="button" class="calc-pill-btn calc-pill-event" data-event="corporativo">
-            <i data-lucide="store" class="btn-icon"></i> Corporativo &amp; Lojas
-          </button>
-          <button type="button" class="calc-pill-btn calc-pill-event" data-event="socialmedia">
-            <i data-lucide="share-2" class="btn-icon"></i> Social Media (Mensal)
-          </button>
-        </div>
+  <section class="section" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag"><span class="dot"></span> Orçamento Inteligente</div>
+        <h2 class="section-title">Monte sua estimativa em <span class="text-highlight">3 passos simples</span></h2>
+        <p class="section-subtitle">Simule seu projeto e visualize ao lado como seu conteúdo é entregue em tempo real.
+        </p>
       </div>
 
-      <!-- Step 2: Duração da Cobertura -->
-      <div class="calc-step-group">
-        <div class="calc-step-header">
-          <span class="calc-step-num">2</span>
-          <span>Duração da Cobertura:</span>
-        </div>
-        <div class="calc-pills-row">
-          <button type="button" class="calc-pill-btn calc-pill-duration active" data-duration="3h">
-            <i data-lucide="clock" class="btn-icon"></i> Cobertura Essencial (até 3h)
-          </button>
-          <button type="button" class="calc-pill-btn calc-pill-duration" data-duration="6h">
-            <i data-lucide="zap" class="btn-icon"></i> Meio Período (até 6h)
-          </button>
-          <button type="button" class="calc-pill-btn calc-pill-duration" data-duration="10h">
-            <i data-lucide="sun" class="btn-icon"></i> Dia Completo (até 10h)
-          </button>
-        </div>
-      </div>
+      <div class="clean-calc-wrapper">
+        <div class="calc-steps-content">
+          <!-- Step 1 -->
+          <div class="calc-step-group">
+            <div class="calc-step-header">
+              <span class="calc-step-num">1</span>
+              <span>Tipo de Evento ou Serviço:</span>
+            </div>
+            <div class="calc-pills-row">
+              <button type="button" class="calc-pill-btn calc-pill-event active" data-event="casamento">
+                <i data-lucide="heart" class="btn-icon"></i> Casamento &amp; Pré-Wedding
+              </button>
+              <button type="button" class="calc-pill-btn calc-pill-event" data-event="debutante">
+                <i data-lucide="sparkles" class="btn-icon"></i> 15 Anos / Aniversário
+              </button>
+              <button type="button" class="calc-pill-btn calc-pill-event" data-event="formatura">
+                <i data-lucide="graduation-cap" class="btn-icon"></i> Formatura &amp; Festa
+              </button>
+              <button type="button" class="calc-pill-btn calc-pill-event" data-event="corporativo">
+                <i data-lucide="store" class="btn-icon"></i> Corporativo &amp; Lojas
+              </button>
+              <button type="button" class="calc-pill-btn calc-pill-event" data-event="socialmedia">
+                <i data-lucide="share-2" class="btn-icon"></i> Social Media (Mensal)
+              </button>
+            </div>
+          </div>
 
-      <!-- Step 3: Adicionais Opcionais -->
-      <div class="calc-step-group">
-        <div class="calc-step-header">
-          <span class="calc-step-num">3</span>
-          <span>Adicionais Opcionais:</span>
+          <!-- Step 2 -->
+          <div class="calc-step-group">
+            <div class="calc-step-header">
+              <span class="calc-step-num">2</span>
+              <span>Duração da Cobertura:</span>
+            </div>
+            <div class="calc-pills-row">
+              <button type="button" class="calc-pill-btn calc-pill-duration active" data-duration="3h">
+                <i data-lucide="clock" class="btn-icon"></i> Cobertura Essencial (até 3h)
+              </button>
+              <button type="button" class="calc-pill-btn calc-pill-duration" data-duration="6h">
+                <i data-lucide="zap" class="btn-icon"></i> Meio Período (até 6h)
+              </button>
+              <button type="button" class="calc-pill-btn calc-pill-duration" data-duration="10h">
+                <i data-lucide="sun" class="btn-icon"></i> Dia Completo (até 10h)
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="calc-step-group">
+            <div class="calc-step-header">
+              <span class="calc-step-num">3</span>
+              <span>Adicionais Opcionais:</span>
+            </div>
+            <div class="calc-addons-grid">
+              <label class="calc-addon-card">
+                <input type="checkbox" data-price="350">
+                <span>Imagens Aéreas com Drone 4K (+R$ 350)</span>
+              </label>
+              <label class="calc-addon-card">
+                <input type="checkbox" data-price="300">
+                <span>Reels / Teaser no Mesmo Dia (+R$ 300)</span>
+              </label>
+              <label class="calc-addon-card">
+                <input type="checkbox" data-price="450">
+                <span>Álbum Impresso / Ensaio Extra (+R$ 450)</span>
+              </label>
+            </div>
+          </div>
         </div>
-        <div class="calc-addons-grid">
-          <label class="calc-addon-card">
-            <input type="checkbox" data-price="350">
-            <span>Imagens Aéreas com Drone 4K (+R$ 350)</span>
-          </label>
-          <label class="calc-addon-card">
-            <input type="checkbox" data-price="300">
-            <span>Reels / Teaser no Mesmo Dia (+R$ 300)</span>
-          </label>
-          <label class="calc-addon-card">
-            <input type="checkbox" data-price="450">
-            <span>Álbum Impresso / Ensaio Extra (+R$ 450)</span>
-          </label>
+
+        <!-- Resumo Lateral Único -->
+        <div class="clean-calc-summary">
+          <h3 class="calc-summary-title">Resumo da Proposta</h3>
+          <div class="calc-summary-details">
+            <p><span class="calc-summary-label">Evento:</span> <strong id="calcSummaryEvent">Casamento &amp;
+                Pré-Wedding</strong></p>
+            <p><span class="calc-summary-label">Duração:</span> <strong id="calcSummaryDuration">Cobertura Essencial
+                (até 3h)</strong></p>
+            <div class="calc-addons-block">
+              <span class="calc-summary-label">Opcionais:</span>
+              <ul id="calcSummaryAddons" class="calc-summary-addons-list">
+                <li class="empty-addon">Nenhum opcional selecionado</li>
+              </ul>
+            </div>
+          </div>
+          <div class="calc-summary-footer">
+            <span class="calc-price-label">ESTIMATIVA INICIAL:</span>
+            <div id="calcSummaryPrice" class="calc-summary-price">R$ 0</div>
+            <a id="calcSendWhatsapp" href="#" target="_blank" class="btn-whatsapp-calc-side">
+              Enviar Orçamento para o WhatsApp
+            </a>
+            <small class="calc-disclaimer">*Valores preliminares. Alinhamos todos os detalhes exclusivos no
+              atendimento.</small>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Resumo da Proposta (Painel Lateral Único) -->
-    <div class="clean-calc-summary">
-      <h3 class="calc-summary-title">Resumo da Proposta</h3>
-      <div class="calc-summary-details">
-        <p><span class="calc-summary-label">Evento:</span> <strong id="calcSummaryEvent">Casamento &amp;
-            Pré-Wedding</strong></p>
-        <p><span class="calc-summary-label">Duração:</span> <strong id="calcSummaryDuration">Cobertura Essencial (até
-            3h)</strong></p>
-        <div class="calc-addons-block">
-          <span class="calc-summary-label">Opcionais:</span>
-          <ul id="calcSummaryAddons" class="calc-summary-addons-list">
-            <li class="empty-addon">Nenhum opcional selecionado</li>
-          </ul>
-        </div>
-      </div>
-      <div class="calc-summary-footer">
-        <span class="calc-price-label">ESTIMATIVA INICIAL:</span>
-        <div id="calcSummaryPrice" class="calc-summary-price">R$ 0</div>
-        <a id="calcSendWhatsapp" href="#" target="_blank" class="btn-whatsapp-calc-side">
-          Enviar Orçamento para o WhatsApp
-        </a>
-        <small class="calc-disclaimer">*Valores preliminares. Alinhamos todos os detalhes exclusivos no
-          atendimento.</small>
-      </div>
+  <div class="calc-summary-details">
+    <p>
+      <span class="calc-summary-label">Evento:</span>
+      <strong id="calcSummaryEvent">Social Media (Mensal)</strong>
+    </p>
+    <p>
+      <span class="calc-summary-label">Duração:</span>
+      <strong id="calcSummaryDuration">Meio Período (até 6h)</strong>
+    </p>
+
+    <div class="calc-addons-block">
+      <span class="calc-summary-label">Opcionais:</span>
+      <ul id="calcSummaryAddons" class="calc-summary-addons-list">
+        <li class="empty-addon">Nenhum opcional selecionado</li>
+      </ul>
     </div>
   </div>
 
+  <div class="calc-summary-footer">
+    <span class="calc-price-label">ESTIMATIVA INICIAL:</span>
+    <div id="calcSummaryPrice" class="calc-summary-price">R$ 0</div>
+    <a id="calcSendWhatsapp" href="#" target="_blank" class="btn-whatsapp-calc">
+      <i class="fab fa-whatsapp"></i> Enviar Orçamento para o WhatsApp
+    </a>
+    <small class="calc-disclaimer">*Valores preliminares. Alinhamos todos os detalhes exclusivos no
+      atendimento.</small>
+  </div>
+  </div>
 
-  </section>
 
-
-  <div class="clean-calc-wrapper">
-    <div class="calc-steps-content">
-      <!-- Step 1: Tipo de Evento / Serviço -->
-      <div class="calc-step-group">
-        <div class="calc-step-header">
-          <span class="calc-step-num">1</span>
-          <span>Tipo de Evento ou Serviço:</span>
-        </div>
-        <div class="calc-pills-row">
-          <button type="button" class="calc-pill-btn calc-pill-event active" data-event="casamento">
-            <i data-lucide="heart" class="btn-icon"></i>
-            Casamento & Pré-Wedding
-          </button>
-          <button type="button" class="calc-pill-btn calc-pill-event" data-event="debutante">
-            <i data-lucide="sparkles" class="btn-icon"></i>
-            15 Anos / Aniversário
-          </button>
-          <button type="button" class="calc-pill-btn calc-pill-event" data-event="formatura">
-            <i data-lucide="award" class="btn-icon"></i>
-            Formatura & Festa
-          </button>
-          <button type="button" class="calc-pill-btn calc-pill-event" data-event="corporativo">
-            <i data-lucide="store" class="btn-icon"></i>
-            Corporativo & Lojas
-          </button>
-          <button type="button" class="calc-pill-btn calc-pill-event" data-event="socialmedia">
-            <i data-lucide="share-2" class="btn-icon"></i>
-            Social Media (Mensal)
-          </button>
-        </div>
-      </div>
-
-      <!-- Step 2: Duração / Cobertura -->
-      <div class="calc-step-group">
-        <div class="calc-step-header">
-          <span class="calc-step-num">2</span>
-          <span>Duração da Cobertura:</span>
-        </div>
-        <div class="calc-pills-row">
-          <button type="button" class="calc-pill-btn calc-pill-duration" data-duration="essencial">
-            <i data-lucide="clock" class="btn-icon"></i>
-            Cobertura Essencial (até 3h)
-          </button>
-          <button type="button" class="calc-pill-btn calc-pill-duration active" data-duration="meio">
-            <i data-lucide="zap" class="btn-icon"></i>Meio Período (até 6h)
-          </button>
-          <button type="button" class="calc-pill-btn calc-pill-duration" data-duration="completo">
-            <i data-lucide="sun" class="btn-icon"></i>
-            Dia Completo (até 10h)
-          </button>
-        </div>
-      </div>
-
-      <!-- Step 3: Opcionais -->
-      <div class="calc-step-group">
-        <div class="calc-step-header">
-          <span class="calc-step-num">3</span>
-          <span>Adicionais Opcionais:</span>
-        </div>
-        <div class="calc-addons-grid">
-          <label class="calc-addon-pill">
-            <input type="checkbox" value="drone">
-            <span>Imagens Aéreas com Drone 4K (+R$ 350)</span>
-          </label>
-          <label class="calc-addon-pill">
-            <input type="checkbox" value="sameDay">
-            <span>Reels / Teaser no Mesmo Dia (+R$ 300)</span>
-          </label>
-          <label class="calc-addon-pill">
-            <input type="checkbox" value="album">
-            <span>Álbum Impresso / Ensaio Extra (+R$ 450)</span>
-          </label>
-        </div>
-      </div>
+  <div>
+    <div class="calc-total-section">
+      <span class="calc-total-label">Estimativa Inicial:</span>
+      <div class="calc-summary-price" id="calcSummaryPrice">R$ 3.000</div>
     </div>
 
-    <!-- Summary & WhatsApp Action -->
-    <div class="calc-summary-card">
-      <h3 class="calc-summary-title">Resumo da Proposta</h3>
-
-      <div class="calc-summary-details">
-        <p>
-          <span class="calc-summary-label">Evento:</span>
-          <strong id="calcSummaryEvent">Social Media (Mensal)</strong>
-        </p>
-        <p>
-          <span class="calc-summary-label">Duração:</span>
-          <strong id="calcSummaryDuration">Meio Período (até 6h)</strong>
-        </p>
-
-        <div class="calc-addons-block">
-          <span class="calc-summary-label">Opcionais:</span>
-          <ul id="calcSummaryAddons" class="calc-summary-addons-list">
-            <li class="empty-addon">Nenhum opcional selecionado</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="calc-summary-footer">
-        <span class="calc-price-label">ESTIMATIVA INICIAL:</span>
-        <div id="calcSummaryPrice" class="calc-summary-price">R$ 0</div>
-        <a id="calcSendWhatsapp" href="#" target="_blank" class="btn-whatsapp-calc">
-          <i class="fab fa-whatsapp"></i> Enviar Orçamento para o WhatsApp
-        </a>
-        <small class="calc-disclaimer">*Valores preliminares. Alinhamos todos os detalhes exclusivos no
-          atendimento.</small>
-      </div>
-    </div>
-
-
-    <div>
-      <div class="calc-total-section">
-        <span class="calc-total-label">Estimativa Inicial:</span>
-        <div class="calc-summary-price" id="calcSummaryPrice">R$ 3.000</div>
-      </div>
-
-      <a href="#" class="btn btn-whatsapp" id="calcSendWhatsApp" style="width: 100%;">
-        <i data-lucide="message-circle" class="btn-icon"></i>
-        Enviar Orçamento para o WhatsApp
-      </a>
-      <p class="calc-note-clean">*Valores preliminares. Alinhamos todos os detalhes exclusivos no atendimento.</p>
-    </div>
+    <a href="#" class="btn btn-whatsapp" id="calcSendWhatsApp" style="width: 100%;">
+      <i data-lucide="message-circle" class="btn-icon"></i>
+      Enviar Orçamento para o WhatsApp
+    </a>
+    <p class="calc-note-clean">*Valores preliminares. Alinhamos todos os detalhes exclusivos no atendimento.</p>
+  </div>
   </div>
   </div>
   </div>
