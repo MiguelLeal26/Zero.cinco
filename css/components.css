@@ -1656,3 +1656,52 @@
                                                                                   color: #ff6b6b !important;
                                                                                   stroke: #ff6b6b !important;
                                                                                 }
+
+                                                                                /* Padronização dos textos e ícones não selecionados com o padrão do Tópico 3 */
+                                                                                .calc-pill-btn,
+                                                                                .calc-pill-btn span,
+                                                                                body.dark-mode .calc-pill-btn,
+                                                                                body.dark-mode .calc-pill-btn span,
+                                                                                [data-theme="dark"] .calc-pill-btn,
+                                                                                [data-theme="dark"] .calc-pill-btn span {
+                                                                                  color: #8892b0 !important;
+                                                                                  /* Cor exata e tom suave do tópico 3 */
+                                                                                  font-size: 0.88rem !important;
+                                                                                  font-weight: 400 !important;
+                                                                                  opacity: 0.85 !important;
+                                                                                }
+
+                                                                                /* Cor dos ícones dos botões acompanhando a mesma opacidade do texto */
+                                                                                .calc-pill-btn i,
+                                                                                .calc-pill-btn svg,
+                                                                                body.dark-mode .calc-pill-btn i,
+                                                                                body.dark-mode .calc-pill-btn svg,
+                                                                                [data-theme="dark"] .calc-pill-btn i,
+                                                                                [data-theme="dark"] .calc-pill-btn svg {
+                                                                                  color: #8892b0 !important;
+                                                                                  stroke: #8892b0 !important;
+                                                                                  opacity: 0.85 !important;
+                                                                                }
+
+                                                                                /* Garante o destaque em vermelho e opacidade 100% apenas ao selecionar */
+                                                                                .calc-pill-btn.active,
+                                                                                .calc-pill-btn.active span,
+                                                                                body.dark-mode .calc-pill-btn.active,
+                                                                                body.dark-mode .calc-pill-btn.active span,
+                                                                                [data-theme="dark"] .calc-pill-btn.active,
+                                                                                [data-theme="dark"] .calc-pill-btn.active span {
+                                                                                  color: #ff6b6b !important;
+                                                                                  font-weight: 600 !important;
+                                                                                  opacity: 1 !important;
+                                                                                }
+
+                                                                                .calc-pill-btn.active i,
+                                                                                .calc-pill-btn.active svg,
+                                                                                body.dark-mode .calc-pill-btn.active i,
+                                                                                body.dark-mode .calc-pill-btn.active svg,
+                                                                                [data-theme="dark"] .calc-pill-btn.active i,
+                                                                                [data-theme="dark"] .calc-pill-btn.active svg {
+                                                                                  color: #ff6b6b !important;
+                                                                                  stroke: #ff6b6b !important;
+                                                                                  opacity: 1 !important;
+                                                                                }
