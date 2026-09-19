@@ -1399,3 +1399,42 @@
                                                                                 strong {
                                                                                   font-family: 'Montserrat', sans-serif !important;
                                                                                 }
+
+                                                                                /* Importação forçada da fonte Montserrat */
+                                                                                @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+                                                                                /* Padronização Total de Fontes */
+                                                                                *,
+                                                                                *::before,
+                                                                                *::after,
+                                                                                body,
+                                                                                button,
+                                                                                input,
+                                                                                label,
+                                                                                span,
+                                                                                p,
+                                                                                div,
+                                                                                h1,
+                                                                                h2,
+                                                                                h3,
+                                                                                strong {
+                                                                                  font-family: 'Montserrat', sans-serif !important;
+                                                                                }
+
+                                                                                /* Estilo dos Cards de Adicionais (Step 3) - Selecionado */
+                                                                                .calc-addon-card {
+                                                                                  font-family: 'Montserrat', sans-serif !important;
+                                                                                  transition: all 0.2s ease;
+                                                                                }
+
+                                                                                .calc-addon-card:has(input:checked),
+                                                                                .calc-addon-card.active {
+                                                                                  border-color: #ff4d4d !important;
+                                                                                  background-color: #fff5f5 !important;
+                                                                                  color: #ff4d4d !important;
+                                                                                  font-weight: 600 !important;
+                                                                                }
+
+                                                                                .calc-addon-card input[type="checkbox"]:checked {
+                                                                                  accent-color: #ff4d4d !important;
+                                                                                }
