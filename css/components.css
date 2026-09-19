@@ -1438,3 +1438,32 @@
                                                                                 .calc-addon-card input[type="checkbox"]:checked {
                                                                                   accent-color: #ff4d4d !important;
                                                                                 }
+
+                                                                                /* Equalização perfeita de tamanho, cor e peso entre todos os botões e opcionais */
+                                                                                .calc-pill-btn,
+                                                                                .calc-addon-card,
+                                                                                .calc-addon-card span {
+                                                                                  font-size: 0.88rem !important;
+                                                                                  color: #5c6b73 !important;
+                                                                                  font-weight: 500 !important;
+                                                                                }
+
+                                                                                /* Garante que o ícone acompanhe a mesma cor suave dos textos */
+                                                                                .calc-pill-btn i,
+                                                                                .calc-pill-btn svg {
+                                                                                  color: #5c6b73 !important;
+                                                                                  stroke: #5c6b73 !important;
+                                                                                }
+
+                                                                                /* Preserva o vermelho em destaque apenas quando selecionado */
+                                                                                .calc-pill-btn.active,
+                                                                                .calc-pill-btn.active i,
+                                                                                .calc-pill-btn.active svg,
+                                                                                .calc-addon-card:has(input:checked),
+                                                                                .calc-addon-card:has(input:checked) span,
+                                                                                .calc-addon-card.active,
+                                                                                .calc-addon-card.active span {
+                                                                                  color: #ff4d4d !important;
+                                                                                  stroke: #ff4d4d !important;
+                                                                                  font-weight: 600 !important;
+                                                                                }
