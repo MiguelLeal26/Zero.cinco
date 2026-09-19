@@ -15,6 +15,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
+  function toggleAddonVisualState(chk) {
+    const parentLabel = chk.closest('label');
+    if (parentLabel) {
+      if (chk.checked) {
+        parentLabel.classList.add('selected', 'active');
+      } else {
+        parentLabel.classList.remove('selected', 'active');
+      }
+    }
+  }
+
   function updateCalculator() {
     // 1. Evento ativo
     const activeEvent = document.querySelector('.calc-pill-event.active');
@@ -26,38 +37,40 @@ document.addEventListener("DOMContentLoaded", function () {
     const durationKey = activeDuration ? activeDuration.getAttribute('data-duration') : '6h';
     const durationData = config.durations[durationKey] || config.durations['6h'];
 
-    // 3. Soma inicial (Evento + Duração)
+    // 3. Soma inicial
     let total = eventData.price + durationData.price;
     let selectedAddons = [];
 
-    // 4. Captura TODOS os checkboxes marcados na seção da calculadora
+    // 4. Soma adicionais e ajusta estado visual
     const calcSection = document.getElementById('calculator') || document;
-    const checkedBoxes = calcSection.querySelectorAll('input[type="checkbox"]:checked');
+    const allAddonCheckboxes = calcSection.querySelectorAll('.calc-addon-pill input[type="checkbox"], .calc-addon-card input[type="checkbox"]');
 
-    checkedBoxes.forEach(chk => {
-      // Tenta obter o preço via data-price ou extrair do texto do card
-      let price = parseFloat(chk.getAttribute('data-price') || chk.value || 0);
+    allAddonCheckboxes.forEach(chk => {
+      // Garante que a classe visual selected/active acompanha o checkbox
+      toggleAddonVisualState(chk);
 
-      // Se o atributo data-price não estiver definido no HTML, extrai do texto (+R$ XXX)
-      const parentCard = chk.closest('label') || chk.closest('div');
-      if (!price && parentCard) {
-        const text = parentCard.innerText;
-        const match = text.match(/\+\s*R\$\s*(\d+)/i);
-        if (match) {
-          price = parseFloat(match[1]);
+      if (chk.checked) {
+        let price = parseFloat(chk.getAttribute('data-price') || chk.value || 0);
+        const parentCard = chk.closest('label') || chk.closest('div');
+
+        if (!price && parentCard) {
+          const text = parentCard.innerText;
+          const match = text.match(/\+\s*R\$\s*(\d+)/i);
+          if (match) {
+            price = parseFloat(match[1]);
+          }
         }
-      }
 
-      total += price;
+        total += price;
 
-      // Extrai o nome limpo do opcional
-      if (parentCard) {
-        const cleanName = parentCard.innerText.split('(+')[0].split('(+R$')[0].trim();
-        selectedAddons.push(cleanName);
+        if (parentCard) {
+          const cleanName = parentCard.innerText.split('(+')[0].split('(+R$')[0].trim();
+          selectedAddons.push(cleanName);
+        }
       }
     });
 
-    // 5. Atualiza elementos visuais na tela
+    // 5. Atualiza o resumo visual
     const summaryEvent = document.getElementById('calcSummaryEvent') || document.getElementById('summary-event');
     const summaryDuration = document.getElementById('calcSummaryDuration') || document.getElementById('summary-duration');
     const summaryAddons = document.getElementById('calcSummaryAddons') || document.getElementById('summary-addons');
@@ -79,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // 6. Atualiza mensagem do WhatsApp
+    // 6. Atualiza o link do WhatsApp
     if (btnWhatsapp) {
       const addonsText = selectedAddons.length > 0 ? selectedAddons.join(', ') : 'Nenhum';
       const message = encodeURIComponent(
@@ -94,9 +107,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // --- EVENT LISTENERS ---
+  // --- LISTENERS DE CLIQUE ---
 
-  // Cliques em Eventos
+  // Eventos
   document.querySelectorAll('.calc-pill-event').forEach(btn => {
     btn.addEventListener('click', function (e) {
       e.preventDefault();
@@ -106,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Cliques em Duração
+  // Duração
   document.querySelectorAll('.calc-pill-duration').forEach(btn => {
     btn.addEventListener('click', function (e) {
       e.preventDefault();
@@ -116,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Mudança em qualquer Checkbox dentro da calculadora
+  // Opcionais (Checkboxes)
   const calcSection = document.getElementById('calculator') || document;
   calcSection.addEventListener('change', function (e) {
     if (e.target && e.target.type === 'checkbox') {
@@ -124,6 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Execução inicial
+  // Atualização inicial
   updateCalculator();
 });
