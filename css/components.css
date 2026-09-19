@@ -1370,3 +1370,32 @@
                                                                                 .calc-addon-card input[type="checkbox"]:checked {
                                                                                   accent-color: #ff4d4d;
                                                                                 }
+
+                                                                                /* Padronização Global com Montserrat */
+                                                                                :root {
+                                                                                  --font-main: 'Montserrat', sans-serif;
+                                                                                  --font-heading: 'Montserrat', sans-serif;
+                                                                                }
+
+                                                                                * {
+                                                                                  font-family: 'Montserrat', sans-serif !important;
+                                                                                }
+
+                                                                                body,
+                                                                                button,
+                                                                                input,
+                                                                                select,
+                                                                                textarea,
+                                                                                h1,
+                                                                                h2,
+                                                                                h3,
+                                                                                h4,
+                                                                                h5,
+                                                                                h6,
+                                                                                p,
+                                                                                span,
+                                                                                a,
+                                                                                li,
+                                                                                strong {
+                                                                                  font-family: 'Montserrat', sans-serif !important;
+                                                                                }
