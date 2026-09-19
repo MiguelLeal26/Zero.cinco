@@ -963,3 +963,128 @@
                                                                                   margin: 0 !important;
                                                                                   padding: 0 !important;
                                                                                 }
+
+                                                                                /* Cartão do Resumo */
+                                                                                .calc-summary-card {
+                                                                                  background: #ffffff;
+                                                                                  border: 1px solid #ffe5e5;
+                                                                                  border-radius: 16px;
+                                                                                  padding: 24px;
+                                                                                  display: flex;
+                                                                                  flex-direction: column;
+                                                                                  gap: 16px;
+                                                                                }
+
+                                                                                .calc-summary-title {
+                                                                                  font-size: 1.25rem;
+                                                                                  font-weight: 700;
+                                                                                  color: #111111;
+                                                                                  margin: 0;
+                                                                                  padding-bottom: 12px;
+                                                                                  border-bottom: 1px solid #f0f0f0;
+                                                                                }
+
+                                                                                .calc-summary-details {
+                                                                                  display: flex;
+                                                                                  flex-direction: column;
+                                                                                  gap: 12px;
+                                                                                }
+
+                                                                                .calc-summary-details p {
+                                                                                  display: flex !important;
+                                                                                  align-items: baseline !important;
+                                                                                  gap: 6px !important;
+                                                                                  margin: 0 !important;
+                                                                                  padding: 0 !important;
+                                                                                  font-size: 0.95rem;
+                                                                                  color: #444444;
+                                                                                }
+
+                                                                                /* Rótulos "Evento:", "Duração:" e "Opcionais:" em NEGRITO */
+                                                                                .calc-summary-label {
+                                                                                  font-weight: 700 !important;
+                                                                                  color: #222222 !important;
+                                                                                }
+
+                                                                                /* Textos selecionados em fonte NORMAL (sem negrito) */
+                                                                                #calcSummaryEvent,
+                                                                                #calcSummaryDuration,
+                                                                                .calc-summary-details strong {
+                                                                                  font-weight: 400 !important;
+                                                                                  color: #555555 !important;
+                                                                                }
+
+                                                                                /* Bloco de Opcionais */
+                                                                                .calc-addons-block {
+                                                                                  display: flex;
+                                                                                  flex-direction: column;
+                                                                                  gap: 6px;
+                                                                                  margin-top: 4px;
+                                                                                }
+
+                                                                                .calc-summary-addons-list {
+                                                                                  list-style: none !important;
+                                                                                  padding: 0 0 0 8px !important;
+                                                                                  margin: 0 !important;
+                                                                                  border-left: 2px solid #e0e0e0;
+                                                                                }
+
+                                                                                .calc-summary-addons-list li {
+                                                                                  font-weight: 400 !important;
+                                                                                  font-size: 0.9rem;
+                                                                                  color: #666666;
+                                                                                  margin-bottom: 4px;
+                                                                                }
+
+                                                                                .calc-summary-addons-list li.empty-addon {
+                                                                                  font-style: italic;
+                                                                                  color: #aaaaaa;
+                                                                                }
+
+                                                                                /* Rodapé com Preço e Botão */
+                                                                                .calc-summary-footer {
+                                                                                  margin-top: auto;
+                                                                                  padding-top: 16px;
+                                                                                  border-top: 1px solid #f0f0f0;
+                                                                                  display: flex;
+                                                                                  flex-direction: column;
+                                                                                  gap: 8px;
+                                                                                }
+
+                                                                                .calc-price-label {
+                                                                                  font-size: 0.75rem;
+                                                                                  font-weight: 600;
+                                                                                  color: #888888;
+                                                                                  letter-spacing: 0.5px;
+                                                                                  text-transform: uppercase;
+                                                                                }
+
+                                                                                .calc-summary-price {
+                                                                                  font-size: 1.5rem;
+                                                                                  font-weight: 700;
+                                                                                  color: #222222;
+                                                                                }
+
+                                                                                .btn-whatsapp-calc {
+                                                                                  display: inline-flex;
+                                                                                  align-items: center;
+                                                                                  justify-content: center;
+                                                                                  gap: 8px;
+                                                                                  background-color: #25d366;
+                                                                                  color: #ffffff !important;
+                                                                                  font-weight: 600;
+                                                                                  padding: 12px 16px;
+                                                                                  border-radius: 8px;
+                                                                                  text-decoration: none;
+                                                                                  transition: background-color 0.2s ease;
+                                                                                }
+
+                                                                                .btn-whatsapp-calc:hover {
+                                                                                  background-color: #1eb857;
+                                                                                }
+
+                                                                                .calc-disclaimer {
+                                                                                  font-size: 0.75rem;
+                                                                                  color: #999999;
+                                                                                  line-height: 1.3;
+                                                                                }

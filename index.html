@@ -474,43 +474,52 @@
         </div>
 
         <!-- Summary & WhatsApp Action -->
-        <div class="clean-calc-summary">
-          <div>
-            <div class="calc-summary-details">
-              <p>
-                <span class="calc-summary-label">Evento:</span>
-                <strong id="calcSummaryEvent">Corporativo & Lojas</strong>
-              </p>
-              <p>
-                <span class="calc-summary-label">Duração:</span>
-                <strong id="calcSummaryDuration">Meio Período (até 6h)</strong>
-              </p>
+        <div class="calc-summary-card">
+          <h3 class="calc-summary-title">Resumo da Proposta</h3>
+
+          <div class="calc-summary-details">
+            <p>
+              <span class="calc-summary-label">Evento:</span>
+              <strong id="calcSummaryEvent">Social Media (Mensal)</strong>
+            </p>
+            <p>
+              <span class="calc-summary-label">Duração:</span>
+              <strong id="calcSummaryDuration">Meio Período (até 6h)</strong>
+            </p>
+
+            <div class="calc-addons-block">
+              <span class="calc-summary-label">Opcionais:</span>
+              <ul id="calcSummaryAddons" class="calc-summary-addons-list">
+                <li class="empty-addon">Nenhum opcional selecionado</li>
+              </ul>
             </div>
-
           </div>
-          <div style="margin-top: 0.5rem;">
-            <span
-              style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Opcionais:</span>
-            <ul class="calc-addons-list" id="calcSummaryAddons">
-              <li>+ Reels / Teaser no Mesmo Dia</li>
-            </ul>
+
+          <div class="calc-summary-footer">
+            <span class="calc-price-label">ESTIMATIVA INICIAL:</span>
+            <div id="calcSummaryPrice" class="calc-summary-price">R$ 0</div>
+            <a id="calcSendWhatsapp" href="#" target="_blank" class="btn-whatsapp-calc">
+              <i class="fab fa-whatsapp"></i> Enviar Orçamento para o WhatsApp
+            </a>
+            <small class="calc-disclaimer">*Valores preliminares. Alinhamos todos os detalhes exclusivos no
+              atendimento.</small>
           </div>
         </div>
-      </div>
 
-      <div>
-        <div class="calc-total-section">
-          <span class="calc-total-label">Estimativa Inicial:</span>
-          <div class="calc-summary-price" id="calcSummaryPrice">R$ 3.000</div>
+
+        <div>
+          <div class="calc-total-section">
+            <span class="calc-total-label">Estimativa Inicial:</span>
+            <div class="calc-summary-price" id="calcSummaryPrice">R$ 3.000</div>
+          </div>
+
+          <a href="#" class="btn btn-whatsapp" id="calcSendWhatsApp" style="width: 100%;">
+            <i data-lucide="message-circle" class="btn-icon"></i>
+            Enviar Orçamento para o WhatsApp
+          </a>
+          <p class="calc-note-clean">*Valores preliminares. Alinhamos todos os detalhes exclusivos no atendimento.</p>
         </div>
-
-        <a href="#" class="btn btn-whatsapp" id="calcSendWhatsApp" style="width: 100%;">
-          <i data-lucide="message-circle" class="btn-icon"></i>
-          Enviar Orçamento para o WhatsApp
-        </a>
-        <p class="calc-note-clean">*Valores preliminares. Alinhamos todos os detalhes exclusivos no atendimento.</p>
       </div>
-    </div>
     </div>
     </div>
   </section>
