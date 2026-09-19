@@ -397,129 +397,128 @@
         </p>
       </div>
 
-      <div class="clean-calc-wrapper">
-        <div class="calc-steps-content">
-          <!-- Step 1: Tipo de Evento / Serviço -->
-          <div class="calc-step-group">
-            <div class="calc-step-header">
-              <span class="calc-step-num">1</span>
-              <span>Tipo de Evento ou Serviço:</span>
-            </div>
-            <div class="calc-pills-row">
-              <button type="button" class="calc-pill-btn calc-pill-event active" data-event="casamento">
-                <i data-lucide="heart" class="btn-icon"></i>
-                Casamento & Pré-Wedding
-              </button>
-              <button type="button" class="calc-pill-btn calc-pill-event" data-event="debutante">
-                <i data-lucide="sparkles" class="btn-icon"></i>
-                15 Anos / Aniversário
-              </button>
-              <button type="button" class="calc-pill-btn calc-pill-event" data-event="formatura">
-                <i data-lucide="award" class="btn-icon"></i>
-                Formatura & Festa
-              </button>
-              <button type="button" class="calc-pill-btn calc-pill-event" data-event="corporativo">
-                <i data-lucide="store" class="btn-icon"></i>
-                Corporativo & Lojas
-              </button>
-              <button type="button" class="calc-pill-btn calc-pill-event" data-event="socialmedia">
-                <i data-lucide="share-2" class="btn-icon"></i>
-                Social Media (Mensal)
-              </button>
-            </div>
-          </div>
+      /* Cartão Lateral de Resumo */
+      .calc-summary-card {
+      background: #ffffff;
+      border: 1px solid #ffe5e5;
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      height: 100%;
+      }
 
-          <!-- Step 2: Duração / Cobertura -->
-          <div class="calc-step-group">
-            <div class="calc-step-header">
-              <span class="calc-step-num">2</span>
-              <span>Duração da Cobertura:</span>
-            </div>
-            <div class="calc-pills-row">
-              <button type="button" class="calc-pill-btn calc-pill-duration" data-duration="essencial">
-                <i data-lucide="clock" class="btn-icon"></i>
-                Cobertura Essencial (até 3h)
-              </button>
-              <button type="button" class="calc-pill-btn calc-pill-duration active" data-duration="meio">
-                <i data-lucide="zap" class="btn-icon"></i>Meio Período (até 6h)
-              </button>
-              <button type="button" class="calc-pill-btn calc-pill-duration" data-duration="completo">
-                <i data-lucide="sun" class="btn-icon"></i>
-                Dia Completo (até 10h)
-              </button>
-            </div>
-          </div>
+      .calc-summary-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #111111;
+      margin: 0;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #f0f0f0;
+      }
 
-          <!-- Step 3: Opcionais -->
-          <div class="calc-step-group">
-            <div class="calc-step-header">
-              <span class="calc-step-num">3</span>
-              <span>Adicionais Opcionais:</span>
-            </div>
-            <div class="calc-addons-grid">
-              <label class="calc-addon-pill">
-                <input type="checkbox" value="drone">
-                <span>Imagens Aéreas com Drone 4K (+R$ 350)</span>
-              </label>
-              <label class="calc-addon-pill">
-                <input type="checkbox" value="sameDay">
-                <span>Reels / Teaser no Mesmo Dia (+R$ 300)</span>
-              </label>
-              <label class="calc-addon-pill">
-                <input type="checkbox" value="album">
-                <span>Álbum Impresso / Ensaio Extra (+R$ 450)</span>
-              </label>
-            </div>
-          </div>
-        </div>
+      .calc-summary-details p {
+      display: flex !important;
+      align-items: baseline !important;
+      gap: 6px !important;
+      margin: 8px 0 !important;
+      font-size: 0.95rem;
+      }
 
-        <!-- Summary & WhatsApp Action -->
-        <div class="calc-summary-card">
-          <h3 class="calc-summary-title">Resumo da Proposta</h3>
+      .calc-summary-label {
+      font-weight: 700 !important;
+      color: #222222 !important;
+      }
 
-          <div class="calc-summary-details">
-            <p>
-              <span class="calc-summary-label">Evento:</span>
-              <strong id="calcSummaryEvent">Social Media (Mensal)</strong>
-            </p>
-            <p>
-              <span class="calc-summary-label">Duração:</span>
-              <strong id="calcSummaryDuration">Meio Período (até 6h)</strong>
-            </p>
+      #calcSummaryEvent,
+      #calcSummaryDuration,
+      .calc-summary-details strong {
+      font-weight: 400 !important;
+      color: #555555 !important;
+      }
 
-            <div class="calc-addons-block">
-              <span class="calc-summary-label">Opcionais:</span>
-              <ul id="calcSummaryAddons" class="calc-summary-addons-list">
-                <li class="empty-addon">Nenhum opcional selecionado</li>
-              </ul>
-            </div>
-          </div>
+      .calc-addons-block {
+      margin-top: 10px;
+      }
 
-          <div class="calc-summary-footer">
-            <span class="calc-price-label">ESTIMATIVA INICIAL:</span>
-            <div id="calcSummaryPrice" class="calc-summary-price">R$ 0</div>
-            <a id="calcSendWhatsapp" href="#" target="_blank" class="btn-whatsapp-calc">
-              <i class="fab fa-whatsapp"></i> Enviar Orçamento para o WhatsApp
-            </a>
-            <small class="calc-disclaimer">*Valores preliminares. Alinhamos todos os detalhes exclusivos no
-              atendimento.</small>
-          </div>
-        </div>
+      .calc-summary-addons-list {
+      list-style: none !important;
+      padding: 0 0 0 8px !important;
+      margin: 6px 0 0 0 !important;
+      border-left: 2px solid #e0e0e0;
+      }
 
+      .calc-summary-addons-list li {
+      font-weight: 400 !important;
+      font-size: 0.9rem;
+      color: #666666;
+      margin-bottom: 4px;
+      }
 
-        <div>
-          <div class="calc-total-section">
-            <span class="calc-total-label">Estimativa Inicial:</span>
-            <div class="calc-summary-price" id="calcSummaryPrice">R$ 3.000</div>
-          </div>
+      .calc-summary-addons-list li.empty-addon {
+      font-style: italic;
+      color: #aaaaaa;
+      }
 
-          <a href="#" class="btn btn-whatsapp" id="calcSendWhatsApp" style="width: 100%;">
-            <i data-lucide="message-circle" class="btn-icon"></i>
-            Enviar Orçamento para o WhatsApp
-          </a>
-          <p class="calc-note-clean">*Valores preliminares. Alinhamos todos os detalhes exclusivos no atendimento.</p>
-        </div>
-      </div>
+      .calc-summary-footer {
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      }
+
+      .calc-price-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #888888;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      }
+
+      .calc-summary-price {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #111111;
+      }
+
+      .btn-whatsapp-calc {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: #25d366;
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      width: 100%;
+      }
+
+      .btn-whatsapp-calc:hover {
+      background-color: #1eb857;
+      transform: translateY(-1px);
+      }
+
+      .whatsapp-icon {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      }
+
+      .calc-disclaimer {
+      font-size: 0.72rem;
+      color: #999999;
+      line-height: 1.3;
+      }
+
+    </div>
     </div>
     </div>
   </section>
