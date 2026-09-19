@@ -1331,3 +1331,12 @@
                                                                                   width: 22px;
                                                                                   height: 22px;
                                                                                 }
+
+                                                                                .calc-bottom-disclaimer {
+                                                                                  text-align: center;
+                                                                                  font-size: 0.8rem;
+                                                                                  color: #888888;
+                                                                                  margin-top: 20px;
+                                                                                  margin-bottom: 0;
+                                                                                  width: 100%;
+                                                                                }
