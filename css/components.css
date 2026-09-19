@@ -918,3 +918,48 @@
                                                                                   margin-left: 4px !important;
                                                                                   display: inline !important;
                                                                                 }
+
+                                                                                /* Estilização e alinhamento do Resumo da Proposta */
+                                                                                .calc-summary-details p,
+                                                                                .calc-summary-item,
+                                                                                .calc-summary-line {
+                                                                                  display: flex !important;
+                                                                                  justify-content: flex-start !important;
+                                                                                  align-items: baseline !important;
+                                                                                  gap: 6px !important;
+                                                                                  margin: 6px 0 !important;
+                                                                                  text-align: left !important;
+                                                                                  font-weight: 400 !important;
+                                                                                }
+
+                                                                                /* Alinhamento e Negrito do Resumo da Proposta */
+                                                                                .calc-summary-details p,
+                                                                                .calc-summary-item,
+                                                                                .calc-summary-line {
+                                                                                  display: flex !important;
+                                                                                  justify-content: flex-start !important;
+                                                                                  align-items: baseline !important;
+                                                                                  gap: 6px !important;
+                                                                                  margin: 8px 0 !important;
+                                                                                  text-align: left !important;
+                                                                                }
+
+                                                                                /* "Evento:" e "Duração:" ficam em negrito */
+                                                                                .calc-summary-label,
+                                                                                .calc-summary-details span,
+                                                                                .calc-summary-item span {
+                                                                                  font-weight: 700 !important;
+                                                                                  color: var(--text-color, #222) !important;
+                                                                                }
+
+                                                                                /* O texto selecionado (ex: Corporativo & Lojas) fica sem negrito e colado */
+                                                                                #calcSummaryEvent,
+                                                                                #calcSummaryDuration,
+                                                                                #summary-event,
+                                                                                #summary-duration,
+                                                                                .calc-summary-details strong,
+                                                                                .calc-summary-item strong {
+                                                                                  font-weight: 400 !important;
+                                                                                  margin: 0 !important;
+                                                                                  padding: 0 !important;
+                                                                                }
