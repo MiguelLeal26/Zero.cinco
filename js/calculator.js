@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     durations: {
       "3h": { name: "Cobertura Essencial (até 3h)", percentage: 0.10 },
-      "6h": { name: "Meio Período (até 6h)", percentage: 0.15 },
-      "10h": { name: "Dia Completo (até 10h)", percentage: 0.20 }
+      "6h": { name: "Meio Período (até 6h)", percentage: 0.20 },
+      "10h": { name: "Dia Completo (até 10h)", percentage: 0.30 }
     }
   };
 
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // 4. Cálculo final
+    // 4. Cálculo final (Subtotal Base + Porcentagem da Duração)
     const subtotalBase = eventData.price + addonsTotal;
     const durationExtra = subtotalBase * durationData.percentage;
     const total = Math.round(subtotalBase + durationExtra);
@@ -137,12 +137,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // --- LISTENERS DE CLIQUE GENÉRICOS ---
 
-  // Captura cliques nos botões de Evento e Duração mesmo com classes diferentes
   document.addEventListener('click', function (e) {
     const btn = e.target.closest('button');
     if (!btn) return;
 
-    // Se for botão de duração
+    // Botões de Duração
     if (btn.classList.contains('calc-pill-duration') || btn.hasAttribute('data-duration')) {
       e.preventDefault();
       const parentGroup = btn.closest('.calc-pills-row') || btn.parentElement;
@@ -153,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
       updateCalculator();
     }
 
-    // Se for botão de evento
+    // Botões de Evento
     if (btn.classList.contains('calc-pill-event') || btn.hasAttribute('data-event')) {
       e.preventDefault();
       const parentGroup = btn.closest('.calc-pills-row') || btn.parentElement;
@@ -165,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Checkboxes
+  // Checkboxes dos Opcionais
   const calcSection = document.getElementById('calculator') || document;
   calcSection.addEventListener('change', function (e) {
     if (e.target && e.target.type === 'checkbox') {
@@ -173,6 +172,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Atualização inicial
+  // Inicialização
   updateCalculator();
 });
