@@ -105,8 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const summaryPrice = document.getElementById('calcSummaryPrice') || document.getElementById('summary-price');
     const btnWhatsapp = document.getElementById('calcSendWhatsapp') || document.getElementById('btn-whatsapp') || document.querySelector('.calc-summary-card a');
 
-    if (summaryEvent) summaryEvent.innerText = eventData.name;
-    if (summaryDuration) summaryDuration.innerText = durationData.name;
+    if (summaryEvent) summaryEvent.innerText = eventData.name.trim();
+    if (summaryDuration) summaryDuration.innerText = durationData.name.trim();
 
     if (summaryPrice) {
       summaryPrice.innerText = `R$ ${total.toLocaleString("pt-BR")}`;
@@ -135,13 +135,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // --- LISTENERS DE CLIQUE GENÉRICOS ---
-
+  // --- LISTENERS DE CLIQUE ---
   document.addEventListener('click', function (e) {
     const btn = e.target.closest('button');
     if (!btn) return;
 
-    // Botões de Duração
     if (btn.classList.contains('calc-pill-duration') || btn.hasAttribute('data-duration')) {
       e.preventDefault();
       const parentGroup = btn.closest('.calc-pills-row') || btn.parentElement;
@@ -152,7 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
       updateCalculator();
     }
 
-    // Botões de Evento
     if (btn.classList.contains('calc-pill-event') || btn.hasAttribute('data-event')) {
       e.preventDefault();
       const parentGroup = btn.closest('.calc-pills-row') || btn.parentElement;
@@ -164,7 +161,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Checkboxes dos Opcionais
   const calcSection = document.getElementById('calculator') || document;
   calcSection.addEventListener('change', function (e) {
     if (e.target && e.target.type === 'checkbox') {
@@ -172,6 +168,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Inicialização
   updateCalculator();
 });

@@ -871,3 +871,30 @@
                                                                                   margin-left: 0 !important;
                                                                                   padding-left: 0 !important;
                                                                                 }
+
+                                                                                /* Correção de alinhamento do Resumo */
+                                                                                .calc-summary-item,
+                                                                                .calc-summary-line,
+                                                                                .calc-summary-details p {
+                                                                                  display: flex !important;
+                                                                                  justify-content: flex-start !important;
+                                                                                  align-items: baseline !important;
+                                                                                  gap: 6px !important;
+                                                                                  margin: 4px 0 !important;
+                                                                                  text-align: left !important;
+                                                                                  white-space: normal !important;
+                                                                                }
+
+                                                                                .calc-summary-item span,
+                                                                                .calc-summary-line span,
+                                                                                .calc-summary-details p span {
+                                                                                  display: inline-block !important;
+                                                                                  min-width: 65px !important;
+                                                                                }
+
+                                                                                .calc-summary-item strong,
+                                                                                .calc-summary-line strong,
+                                                                                .calc-summary-details p strong {
+                                                                                  margin: 0 !important;
+                                                                                  padding: 0 !important;
+                                                                                }
