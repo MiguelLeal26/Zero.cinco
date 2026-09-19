@@ -105,8 +105,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const summaryPrice = document.getElementById('calcSummaryPrice') || document.getElementById('summary-price');
     const btnWhatsapp = document.getElementById('calcSendWhatsapp') || document.getElementById('btn-whatsapp') || document.querySelector('.calc-summary-card a');
 
-    if (summaryEvent) summaryEvent.innerText = eventData.name.trim();
-    if (summaryDuration) summaryDuration.innerText = durationData.name.trim();
+    if (summaryEvent) {
+      summaryEvent.innerHTML = `Evento: <strong>${eventData.name.trim()}</strong>`;
+    }
+    if (summaryDuration) {
+      summaryDuration.innerHTML = `Duração: <strong>${durationData.name.trim()}</strong>`;
+    }
 
     if (summaryPrice) {
       summaryPrice.innerText = `R$ ${total.toLocaleString("pt-BR")}`;

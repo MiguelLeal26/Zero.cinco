@@ -898,3 +898,23 @@
                                                                                   margin: 0 !important;
                                                                                   padding: 0 !important;
                                                                                 }
+
+                                                                                /* Remove alinhamentos flexíveis que afastam o texto */
+                                                                                .calc-summary-details p,
+                                                                                .calc-summary-item,
+                                                                                .calc-summary-line,
+                                                                                #summary-event,
+                                                                                #summary-duration,
+                                                                                #calcSummaryEvent,
+                                                                                #calcSummaryDuration {
+                                                                                  display: block !important;
+                                                                                  text-align: left !important;
+                                                                                  justify-content: flex-start !important;
+                                                                                  margin-bottom: 6px !important;
+                                                                                }
+
+                                                                                .calc-summary-details strong,
+                                                                                .calc-summary-item strong {
+                                                                                  margin-left: 4px !important;
+                                                                                  display: inline !important;
+                                                                                }
