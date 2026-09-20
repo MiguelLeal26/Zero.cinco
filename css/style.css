@@ -1113,66 +1113,67 @@ img {
     left: 0;
     width: 100%;
     height: calc(100vh - 60px);
-    background: var(--bg-glass);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border-subtle);
+    background-color: var(--bg-primary, #0f1117);
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 2.5rem 1.75rem;
-    gap: 1.5rem;
-    transform: translateY(-150%);
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 999;
-    overflow-y: auto;
+    /* Adicione estas 4 linhas para esconder quando fechado */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
   }
 
-  .nav-menu.open {
+
+  .nav-menu.active {
     transform: translateY(0);
   }
 
-  .nav-link {
-    font-size: 1.25rem;
-    font-weight: 700;
-    width: 100%;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid var(--border-subtle);
-  }
+  transform: translateY(0);
+}
 
-  .mobile-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    background: var(--bg-surface-elevated);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-  }
+.nav-link {
+  font-size: 1.25rem;
+  font-weight: 700;
+  width: 100%;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
 
-  .nav-actions .btn {
-    display: none;
-  }
+.mobile-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
 
-  .occasions-grid,
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
+.nav-actions .btn {
+  display: none;
+}
 
-  .section-title {
-    font-size: 1.85rem;
-  }
+.occasions-grid,
+.testimonials-grid {
+  grid-template-columns: 1fr;
+}
 
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+.section-title {
+  font-size: 1.85rem;
+}
 
-  .footer-bottom {
-    flex-direction: column;
-    gap: 0.75rem;
-    text-align: center;
-  }
+.footer-top {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.footer-bottom {
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
+}
 }
 
 .hero-title,

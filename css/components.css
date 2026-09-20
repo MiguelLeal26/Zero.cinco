@@ -1843,10 +1843,19 @@
                                                                                   }
 
                                                                                   /* Troca o fundo desfocado por uma cor sólida com opacidade suave no menu */
-                                                                                  .nav-menu.active,
-                                                                                  .nav-menu {
-                                                                                    background-color: rgba(15, 17, 23, 0.98) !important;
+                                                                                  /* Torna visível APENAS quando o menu tem a classe .active */
+                                                                                  .nav-menu.active {
+                                                                                    opacity: 1 !important;
+                                                                                    visibility: visible !important;
+                                                                                    pointer-events: auto !important;
+                                                                                    background-color: #0f1117 !important;
                                                                                   }
+
+                                                                                  /* Fundo claro para o menu quando o tema claro estiver ativo */
+                                                                                  [data-theme="light"] .nav-menu.active {
+                                                                                    background-color: #ffffff !important;
+                                                                                  }
+
                                                                                 }
 
                                                                                 /* Fix de estabilidade para o Header no Mobile */
