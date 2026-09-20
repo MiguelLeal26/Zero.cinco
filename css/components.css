@@ -1869,3 +1869,22 @@
                                                                                     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
                                                                                   }
                                                                                 }
+
+                                                                                /* Estilo do número de telefone na secção de contacto */
+                                                                                .contact-phone {
+                                                                                  display: flex !important;
+                                                                                  align-items: center !important;
+                                                                                  gap: 10px !important;
+                                                                                  margin-top: 10px !important;
+                                                                                  color: #a0a0a0 !important;
+                                                                                }
+
+                                                                                .contact-phone a {
+                                                                                  color: inherit !important;
+                                                                                  text-decoration: none !important;
+                                                                                  transition: color 0.2s ease !important;
+                                                                                }
+
+                                                                                .contact-phone a:hover {
+                                                                                  color: #ff4d4d !important;
+                                                                                }
