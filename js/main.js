@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('zerocinco-theme', theme);
-    
+
     // Update mobile text if present
     document.querySelectorAll('.theme-text-status').forEach(el => {
       el.textContent = theme === 'dark' ? 'Modo Claro' : 'Modo Escuro';
@@ -34,15 +34,20 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileThemeToggle.addEventListener('click', toggleTheme);
   }
 
-  // 1. STICKY NAVBAR SCROLL
+  // 1. STICKY NAVBAR SCROLL (Otimizado para Mobile)
   const header = document.querySelector('.site-header');
+  let isScrolled = false;
+
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
+    const currentScroll = window.scrollY > 40;
+    if (currentScroll !== isScrolled) {
+      isScrolled = currentScroll;
+      if (header) {
+        header.classList.toggle('scrolled', isScrolled);
+      }
     }
-  });
+  }, { passive: true });
+
 
   // 2. MOBILE MENU TOGGLE
   const mobileToggle = document.getElementById('mobileToggle');
@@ -119,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const details = document.getElementById('clientDetails').value;
 
       const text = `Olá, equipe ZERO.CINCO!%0A%0A*Novo Contato via Site:*%0A• Nome/Responsável: ${name}%0A• Ocasião/Evento: ${eventType}%0A• Mensagem/Briefing: ${details}%0A%0AGostaria de verificar disponibilidade na agenda!`;
-      
+
       window.open(`https://wa.me/5511999999999?text=${text}`, '_blank');
     });
   }
