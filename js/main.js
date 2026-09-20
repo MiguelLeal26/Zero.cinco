@@ -125,7 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const text = `Olá, equipe ZERO.CINCO!%0A%0A*Novo Contato via Site:*%0A• Nome/Responsável: ${name}%0A• Ocasião/Evento: ${eventType}%0A• Mensagem/Briefing: ${details}%0A%0AGostaria de verificar disponibilidade na agenda!`;
 
-      window.open(`https://wa.me/5511999999999?text=${text}`, '_blank');
+      window.open(`https://wa.me/5585999616570?text=${text}`, '_blank');
     });
   }
 });
+
