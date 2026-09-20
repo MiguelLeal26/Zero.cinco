@@ -1728,3 +1728,35 @@
                                                                                   display: inline-block !important;
                                                                                   line-height: 1.2 !important;
                                                                                 }
+
+                                                                                /* Padronização de alinhamento dos itens do resumo da proposta */
+                                                                                .calc-summary-details p,
+                                                                                .calc-summary-item {
+                                                                                  display: flex !important;
+                                                                                  flex-direction: column !important;
+                                                                                  align-items: flex-start !important;
+                                                                                  gap: 4px !important;
+                                                                                  margin-bottom: 12px !important;
+                                                                                }
+
+                                                                                /* Espaçamento interno para os valores selecionados */
+                                                                                #calcSummaryEvent,
+                                                                                #calcSummaryDuration {
+                                                                                  display: block !important;
+                                                                                  margin-top: 2px !important;
+                                                                                }
+
+                                                                                /* Garante um espaço e quebra de linha padronizada nos itens do resumo */
+                                                                                #calcSummaryEvent,
+                                                                                #calcSummaryDuration {
+                                                                                  margin-left: 4px !important;
+                                                                                }
+
+                                                                                /* Se quiser que o texto fique na linha de baixo igual aos eventos longos */
+                                                                                .calc-summary-details p,
+                                                                                .calc-summary-item {
+                                                                                  display: flex !important;
+                                                                                  flex-direction: column !important;
+                                                                                  align-items: flex-start !important;
+                                                                                  gap: 2px !important;
+                                                                                }
