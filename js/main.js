@@ -55,21 +55,29 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileToggle && navMenu) {
     mobileToggle.addEventListener('click', (e) => {
       e.stopPropagation();
-      navMenu.classList.toggle('open');
+      const isOpen = navMenu.classList.toggle('open');
+      navMenu.classList.toggle('active', isOpen);
     });
 
     navMenu.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => navMenu.classList.remove('open'));
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        navMenu.classList.remove('active');
+      });
     });
 
     document.addEventListener('click', (e) => {
-      if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+      if ((navMenu.classList.contains('open') || navMenu.classList.contains('active')) && !navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
         navMenu.classList.remove('open');
+        navMenu.classList.remove('active');
       }
     });
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') navMenu.classList.remove('open');
+      if (e.key === 'Escape') {
+        navMenu.classList.remove('open');
+        navMenu.classList.remove('active');
+      }
     });
   }
 
@@ -97,7 +105,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  window.addEventListener('scroll', highlightNavOnScroll);
+  let scrollTicking = false;
+  window.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+      window.requestAnimationFrame(() => {
+        highlightNavOnScroll();
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  }, { passive: true });
 
   // 4. FAQ ACCORDION
   const faqItems = document.querySelectorAll('.faq-item');

@@ -94,8 +94,12 @@ function initGallery() {
     filtered.forEach(item => {
       const card = document.createElement('div');
       card.className = 'portfolio-item';
+      const webpImage = item.image.replace(/\.(jpg|png)$/i, '.webp');
       card.innerHTML = `
-        <img src="${item.image}" alt="${item.title}" class="portfolio-img" loading="lazy">
+        <picture>
+          <source srcset="${webpImage}" type="image/webp">
+          <img src="${item.image}" alt="${item.title}" class="portfolio-img" loading="lazy" decoding="async">
+        </picture>
         <div class="portfolio-hover-indicator">
           <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
         </div>
@@ -119,7 +123,12 @@ function initGallery() {
   // Modal Handler
   function openModal(item) {
     if (!modal) return;
-    document.getElementById('modalImage').src = item.image;
+    const webpImage = item.image.replace(/\.(jpg|png)$/i, '.webp');
+    const modalImg = document.getElementById('modalImage');
+    if (modalImg) {
+      modalImg.src = webpImage;
+      modalImg.decoding = 'async';
+    }
     document.getElementById('modalCategory').textContent = item.categoryName;
     document.getElementById('modalTitle').textContent = item.title;
     document.getElementById('modalClient').textContent = item.client;

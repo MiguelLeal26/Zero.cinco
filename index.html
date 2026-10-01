@@ -28,8 +28,6 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
 
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -164,7 +162,10 @@
         <!-- Occasion 1: Casamentos -->
         <div class="occasion-card">
           <div class="occasion-img-wrap">
-            <img src="assets/images/wedding.jpg" alt="Casamento" loading="lazy">
+            <picture>
+              <source srcset="assets/images/wedding.webp" type="image/webp">
+              <img src="assets/images/wedding.jpg" alt="Casamento" loading="lazy" decoding="async" width="1200" height="896">
+            </picture>
           </div>
           <div class="occasion-body">
             <h3 class="occasion-title">Casamentos & Bodas</h3>
@@ -181,7 +182,10 @@
         <!-- Occasion 2: Pré-Wedding -->
         <div class="occasion-card">
           <div class="occasion-img-wrap">
-            <img src="assets/images/prewedding.jpg" alt="Ensaio Pré-Wedding" loading="lazy">
+            <picture>
+              <source srcset="assets/images/prewedding.webp" type="image/webp">
+              <img src="assets/images/prewedding.jpg" alt="Ensaio Pré-Wedding" loading="lazy" decoding="async" width="1200" height="896">
+            </picture>
           </div>
           <div class="occasion-body">
             <h3 class="occasion-title">Ensaio Pré-Wedding</h3>
@@ -198,7 +202,10 @@
         <!-- Occasion 3: 15 Anos -->
         <div class="occasion-card">
           <div class="occasion-img-wrap">
-            <img src="assets/images/debutante.jpg" alt="15 Anos e Formaturas" loading="lazy">
+            <picture>
+              <source srcset="assets/images/debutante.webp" type="image/webp">
+              <img src="assets/images/debutante.jpg" alt="15 Anos e Formaturas" loading="lazy" decoding="async" width="1200" height="896">
+            </picture>
           </div>
           <div class="occasion-body">
             <h3 class="occasion-title">15 Anos & Formaturas</h3>
@@ -215,7 +222,10 @@
         <!-- Occasion 4: Inaugurações & Lojas -->
         <div class="occasion-card">
           <div class="occasion-img-wrap">
-            <img src="assets/images/inauguration.jpg" alt="Inauguração de Lojas" loading="lazy">
+            <picture>
+              <source srcset="assets/images/inauguration.webp" type="image/webp">
+              <img src="assets/images/inauguration.jpg" alt="Inauguração de Lojas" loading="lazy" decoding="async" width="1200" height="896">
+            </picture>
           </div>
           <div class="occasion-body">
             <h3 class="occasion-title">Inaugurações & Lojas</h3>
@@ -232,7 +242,10 @@
         <!-- Occasion 5: Chá Revelação -->
         <div class="occasion-card">
           <div class="occasion-img-wrap">
-            <img src="assets/images/reveal.jpg" alt="Chá Revelação e Comemorações" loading="lazy">
+            <picture>
+              <source srcset="assets/images/reveal.webp" type="image/webp">
+              <img src="assets/images/reveal.jpg" alt="Chá Revelação e Comemorações" loading="lazy" decoding="async" width="1200" height="896">
+            </picture>
           </div>
           <div class="occasion-body">
             <h3 class="occasion-title">Chá Revelação & Família</h3>
@@ -249,7 +262,10 @@
         <!-- Occasion 6: Social Media -->
         <div class="occasion-card">
           <div class="occasion-img-wrap">
-            <img src="assets/images/commercial.jpg" alt="Social Media e Marcas" loading="lazy">
+            <picture>
+              <source srcset="assets/images/commercial.webp" type="image/webp">
+              <img src="assets/images/commercial.jpg" alt="Social Media e Marcas" loading="lazy" decoding="async" width="1200" height="896">
+            </picture>
           </div>
           <div class="occasion-body">
             <h3 class="occasion-title">Social Media & Marcas</h3>
@@ -365,7 +381,7 @@
             <div class="package-feature-item"><i data-lucide="check"></i> Filme completo 4K Cinema com Drone</div>
             <div class="package-feature-item"><i data-lucide="check"></i> Galeria completa de fotos tratadas</div>
           </div>
-          <a href="#calculator" class="btn btn-primary">Contratar VIP</a>
+          <a href="https://wa.me/5585999616570?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20pacote%20Casamentos%20%26%2015%20Anos%20VIP%20e%20verificar%20a%20disponibilidade." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Contratar VIP</a>
         </div>
 
         <!-- Package 3 -->
@@ -634,6 +650,10 @@
               todo o Brasil</span>
           </div>
           <div style="display: flex; align-items: center; gap: 0.85rem;">
+            <i data-lucide="phone" style="color: var(--red-primary); width: 20px; height: 20px;"></i>
+            <a href="https://wa.me/5585999616570" target="_blank" style="font-size: 0.95rem; color: var(--text-primary); text-decoration: none;">(85) 99961-6570</a>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
             <i data-lucide="instagram" style="color: var(--red-primary); width: 20px; height: 20px;"></i>
             <span style="font-size: 0.95rem; color: var(--text-primary);">@zerocinco.studio</span>
           </div>
@@ -726,13 +746,13 @@
   </footer>
 
   <!-- Floating WhatsApp Action -->
-  <a href="https://wa.me/5585999616570?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento">
-    class="floating-whatsapp" target="_blank" aria-label="Falar pelo WhatsApp">
-    <div class="floating-whatsapp-badge">1</div>
+  <a href="https://wa.me/5585999616570?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento" class="floating-whatsapp"
+    target="_blank" aria-label="Falar pelo WhatsApp">
     <i data-lucide="message-circle" style="width: 30px; height: 30px;"></i>
   </a>
 
   <!-- JavaScript Scripts -->
+  <script src="js/icons.js"></script>
   <script src="js/calculator.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/gallery.js" defer></script>
@@ -743,20 +763,4 @@
   </script>
 </body>
 
-</html><!-- Localização -->
-<p class="contact-location">
-  <i data-lucide="map-pin"></i>
-  Fortaleza / CE • Disponível para coberturas em todo o Brasil
-</p>
-
-<!-- Número de Telefone / WhatsApp -->
-<p class="contact-phone">
-  <i data-lucide="phone"></i>
-  <a href="https://wa.me/5585999616570" target="_blank">(85) 99961-6570</a>
-</p>
-
-<!-- Instagram -->
-<p class="contact-instagram">
-  <i data-lucide="instagram"></i>
-  @zerocinco.studio
-</p>
+</html>

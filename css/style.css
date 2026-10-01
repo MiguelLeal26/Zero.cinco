@@ -3,8 +3,6 @@
    Whitespace-focused, refined contrast, subtle red accents, zero clutter
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap');
-
 /* --- RESET & BASE --- */
 *,
 *::before,
@@ -16,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   font-size: 16px;
   background-color: var(--bg-main);
   color: var(--text-primary);
@@ -36,6 +35,12 @@ body {
   line-height: 1.6;
   color: var(--text-primary);
   transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* Melhora drástica de fluidez e FPS no mobile */
+  }
 }
 
 [data-theme="light"] body {
@@ -296,13 +301,19 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1000 !important;
   transition: all var(--transition-fast);
   padding: 1.15rem 0;
-  background: var(--bg-glass);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background-color: #0f1117 !important;
   border-bottom: 1px solid var(--border-subtle);
+}
+
+[data-theme="light"] .site-header {
+  background-color: #ffffff !important;
+}
+
+[data-theme="dark"] .site-header {
+  background-color: #0f1117 !important;
 }
 
 .site-header.scrolled {
@@ -419,14 +430,24 @@ img {
   justify-content: center;
   cursor: pointer;
   transition: all var(--transition-fast);
-  box-shadow: var(--shadow-sm);
+  box-shadow: none !important;
+  animation: none !important;
   position: relative;
 }
 
-.theme-toggle-btn:hover {
-  border-color: var(--border-red);
-  transform: scale(1.08) rotate(12deg);
-  box-shadow: 0 0 15px rgba(230, 0, 38, 0.25);
+.theme-toggle-btn:hover,
+.theme-toggle-btn:focus,
+.theme-toggle-btn:active {
+  border-color: var(--border-subtle);
+  transform: none;
+  box-shadow: none !important;
+  animation: none !important;
+}
+
+.theme-toggle-btn::before,
+.theme-toggle-btn::after {
+  display: none !important;
+  content: none !important;
 }
 
 .theme-toggle-btn .icon-sun {
@@ -492,6 +513,12 @@ img {
   color: var(--text-primary);
   cursor: pointer;
   padding: 0.5rem;
+}
+
+.mobile-toggle .badge,
+.badge,
+.notification-dot {
+  display: none !important;
 }
 
 /* --- HERO SECTION (EDITORIAL & HIGH-IMPACT) --- */
@@ -691,6 +718,12 @@ img {
   height: 200px;
   width: 100%;
   overflow: hidden;
+}
+
+.occasion-img-wrap picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .occasion-img-wrap img {
@@ -1082,9 +1115,18 @@ img {
     padding: 4rem 0;
   }
 
+  html {
+    scroll-padding-top: 85px;
+  }
+
   .hero-section {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding-top: calc(70px + 3rem) !important;
+    padding-bottom: 3.5rem !important;
   }
 
   .hero-title {
@@ -1109,28 +1151,31 @@ img {
 
   .nav-menu {
     position: fixed;
-    top: 60px;
+    top: 72px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 72px);
     background-color: var(--bg-primary, #0f1117);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* Adicione estas 4 linhas para esconder quando fechado */
+    padding: 2.5rem 1.75rem;
+    gap: 1.5rem;
+    z-index: 999;
+    overflow-y: auto;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.25s ease, visibility 0.25s ease;
   }
 
-
+  .nav-menu.open,
   .nav-menu.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
     transform: translateY(0);
   }
-
-  transform: translateY(0);
-}
 
 .nav-link {
   font-size: 1.25rem;
@@ -1139,6 +1184,18 @@ img {
   padding: 0.75rem 0;
   border-bottom: 1px solid var(--border-subtle);
 }
+
+  .site-header {
+    z-index: 1000 !important;
+  }
+
+  [data-theme="light"] .site-header {
+    background-color: #ffffff !important;
+  }
+
+  [data-theme="dark"] .site-header {
+    background-color: #0f1117 !important;
+  }
 
 .mobile-toggle {
   display: flex;
@@ -1149,6 +1206,12 @@ img {
   background: var(--bg-surface-elevated);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
+}
+
+.mobile-toggle .badge,
+.badge,
+.notification-dot {
+  display: none !important;
 }
 
 .nav-actions .btn {
