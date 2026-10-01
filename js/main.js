@@ -88,6 +88,17 @@ document.addEventListener('DOMContentLoaded', () => {
   function highlightNavOnScroll() {
     const scrollY = window.pageYOffset;
 
+    if (scrollY < 100) {
+      navLinks.forEach((link, idx) => {
+        if (link.getAttribute('href') === '#hero' || idx === 0) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+      return;
+    }
+
     sections.forEach(section => {
       const sectionHeight = section.offsetHeight;
       const sectionTop = section.offsetTop - 120;
@@ -104,6 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Inicializa o item ativo no carregamento inicial
+  highlightNavOnScroll();
 
   let scrollTicking = false;
   window.addEventListener('scroll', () => {

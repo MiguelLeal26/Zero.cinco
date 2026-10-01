@@ -2003,3 +2003,67 @@ body {
   }
 }
 
+/* Global permanent fixed header and active nav-link */
+.site-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 9999 !important;
+}
+
+.nav-link {
+  color: #cccccc !important;
+}
+
+.nav-link:hover {
+  color: #ffffff !important;
+}
+
+.nav-link.active {
+  color: #ff3b3b !important;
+}
+
+[data-theme="light"] .nav-link {
+  color: #666666 !important;
+}
+
+[data-theme="light"] .nav-link:hover {
+  color: #111111 !important;
+}
+
+[data-theme="light"] .nav-link.active {
+  color: #ff3b3b !important;
+}
+
+/* Hero section desktop proportion and centered alignment */
+@media (min-width: 769px) {
+  .hero-section {
+    padding-top: calc(80px + 3rem) !important;
+    min-height: calc(100vh - 80px);
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+.hero-centered-box,
+.hero-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+  max-width: 900px !important;
+}
+
+.hero-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+}
+
