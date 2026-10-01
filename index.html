@@ -24,9 +24,9 @@
 
 
   <!-- CSS Stylesheets (Cache-busted) -->
-  <link rel="stylesheet" href="css/variables.css?v=20261001_v5">
-  <link rel="stylesheet" href="css/style.css?v=20261001_v5">
-  <link rel="stylesheet" href="css/components.css?v=20261001_v5">
+  <link rel="stylesheet" href="css/variables.css?v=20261001_v6">
+  <link rel="stylesheet" href="css/style.css?v=20261001_v6">
+  <link rel="stylesheet" href="css/components.css?v=20261001_v6">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -47,6 +47,17 @@
 
     body {
       padding-top: 75px;
+    }
+
+    .logo-image {
+      height: 40px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    [data-theme="light"] .logo-image {
+      filter: brightness(0);
     }
 
     .nav-link {
@@ -208,7 +219,7 @@
   <header class="site-header" id="siteHeader">
     <div class="container nav-wrapper">
       <a href="#" class="brand-logo" aria-label="ZERO.CINCO Home">
-        <span class="logo-text">ZERO<span class="brand-dot">.</span>CINCO</span>
+        <img src="images/logo-zero-cinco.png" alt="Zero.Cinco Logo" class="logo-image">
       </a>
 
       <nav class="nav-menu" id="navMenu">

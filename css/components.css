@@ -2067,3 +2067,14 @@ body {
   gap: 0.75rem !important;
 }
 
+.logo-image {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+[data-theme="light"] .logo-image {
+  filter: brightness(0);
+}
+

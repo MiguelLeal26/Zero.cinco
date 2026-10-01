@@ -339,6 +339,18 @@ img {
   text-transform: uppercase;
 }
 
+.logo-image {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: opacity var(--transition-fast), filter var(--transition-fast);
+}
+
+[data-theme="light"] .logo-image {
+  filter: brightness(0);
+}
+
 .brand-logo .brand-dot {
   color: var(--red-primary);
   font-size: 1.65rem;
