@@ -339,16 +339,33 @@ img {
   text-transform: uppercase;
 }
 
-.logo-image {
-  height: 40px;
+.site-logo {
+  height: 38px;
   width: auto;
-  display: block;
   object-fit: contain;
-  transition: opacity var(--transition-fast), filter var(--transition-fast);
+  vertical-align: middle;
 }
 
-[data-theme="light"] .logo-image {
-  filter: brightness(0);
+/* Modo Escuro (padrão) */
+.site-logo.logo-light-mode-hidden,
+[data-theme="dark"] .site-logo.logo-light-mode-hidden,
+:root:not([data-theme="light"]) .site-logo.logo-light-mode-hidden {
+  display: inline-block !important;
+}
+
+.site-logo.logo-dark-mode-hidden,
+[data-theme="dark"] .site-logo.logo-dark-mode-hidden,
+:root:not([data-theme="light"]) .site-logo.logo-dark-mode-hidden {
+  display: none !important;
+}
+
+/* Modo Claro */
+[data-theme="light"] .site-logo.logo-dark-mode-hidden {
+  display: inline-block !important;
+}
+
+[data-theme="light"] .site-logo.logo-light-mode-hidden {
+  display: none !important;
 }
 
 .brand-logo .brand-dot {

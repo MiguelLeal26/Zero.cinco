@@ -24,9 +24,9 @@
 
 
   <!-- CSS Stylesheets (Cache-busted) -->
-  <link rel="stylesheet" href="css/variables.css?v=20261001_v6">
-  <link rel="stylesheet" href="css/style.css?v=20261001_v6">
-  <link rel="stylesheet" href="css/components.css?v=20261001_v6">
+  <link rel="stylesheet" href="css/variables.css?v=20261001_v7">
+  <link rel="stylesheet" href="css/style.css?v=20261001_v7">
+  <link rel="stylesheet" href="css/components.css?v=20261001_v7">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -49,15 +49,33 @@
       padding-top: 75px;
     }
 
-    .logo-image {
-      height: 40px;
+    .site-logo {
+      height: 38px;
       width: auto;
-      display: block;
       object-fit: contain;
+      vertical-align: middle;
     }
 
-    [data-theme="light"] .logo-image {
-      filter: brightness(0);
+    /* Dark Mode (Default) */
+    .site-logo.logo-light-mode-hidden,
+    [data-theme="dark"] .site-logo.logo-light-mode-hidden,
+    :root:not([data-theme="light"]) .site-logo.logo-light-mode-hidden {
+      display: inline-block !important;
+    }
+
+    .site-logo.logo-dark-mode-hidden,
+    [data-theme="dark"] .site-logo.logo-dark-mode-hidden,
+    :root:not([data-theme="light"]) .site-logo.logo-dark-mode-hidden {
+      display: none !important;
+    }
+
+    /* Light Mode */
+    [data-theme="light"] .site-logo.logo-dark-mode-hidden {
+      display: inline-block !important;
+    }
+
+    [data-theme="light"] .site-logo.logo-light-mode-hidden {
+      display: none !important;
     }
 
     .nav-link {
@@ -219,7 +237,8 @@
   <header class="site-header" id="siteHeader">
     <div class="container nav-wrapper">
       <a href="#" class="brand-logo" aria-label="ZERO.CINCO Home">
-        <img src="images/logo-zero-cinco.png" alt="Zero.Cinco Logo" class="logo-image">
+        <img src="images/logo-white.png" alt="ZERO.CINCO" class="site-logo logo-light-mode-hidden">
+        <img src="images/logo-black.png" alt="ZERO.CINCO" class="site-logo logo-dark-mode-hidden">
       </a>
 
       <nav class="nav-menu" id="navMenu">
