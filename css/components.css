@@ -2060,11 +2060,20 @@ body {
 }
 
 .hero-tags {
+  display: none !important;
+}
+
+.hero-cta-group {
   display: flex !important;
-  flex-wrap: wrap !important;
   justify-content: center !important;
   align-items: center !important;
-  gap: 0.75rem !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.hero-cta-group .btn {
+  margin: 0 auto !important;
 }
 
 .site-logo {
