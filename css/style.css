@@ -752,8 +752,8 @@ img {
 /* --- OCCASIONS & SERVICES STREAMLINED GRID --- */
 .occasions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
 }
 
 .occasion-card {
@@ -774,7 +774,7 @@ img {
 }
 
 .occasion-img-wrap {
-  height: 200px;
+  height: 220px;
   width: 100%;
   overflow: hidden;
 }
@@ -793,52 +793,27 @@ img {
 }
 
 .occasion-card:hover .occasion-img-wrap img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 .occasion-body {
-  padding: 1.75rem;
+  padding: 1.15rem 1.4rem;
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .occasion-title {
-  font-size: 1.3rem;
-  margin-bottom: 0.65rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0;
   color: var(--text-primary);
+  line-height: 1.3;
+  transition: color var(--transition-fast);
 }
 
-.occasion-desc {
-  font-size: 0.94rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 1.25rem;
-  flex-grow: 1;
-}
-
-.occasion-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border-subtle);
-}
-
-.occasion-tag-chip {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  background: rgba(227, 190, 180, 0.12);
-  border: 1px solid var(--border-subtle);
-  padding: 0.25rem 0.6rem;
-  border-radius: var(--radius-sm);
-}
-
-[data-theme="light"] .occasion-tag-chip {
-  background: var(--color-surface-warm);
-  border-color: var(--color-surface-tint);
-  color: var(--color-terracotta);
+.occasion-card:hover .occasion-title {
+  color: var(--red-primary);
 }
 
 /* --- PACKAGES SECTION --- */
