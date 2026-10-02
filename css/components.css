@@ -2012,6 +2012,22 @@ body {
   z-index: 9999 !important;
 }
 
+.nav-link,
+.nav-menu a {
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  font-size: 0.85rem !important;
+}
+
+.nav-dot,
+.nav-link::before,
+.nav-link.active::before,
+.nav-link::after,
+.nav-link.active::after {
+  display: none !important;
+  content: none !important;
+}
+
 .nav-link {
   color: #cccccc !important;
 }

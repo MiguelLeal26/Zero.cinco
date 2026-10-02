@@ -24,9 +24,9 @@
 
 
   <!-- CSS Stylesheets (Cache-busted) -->
-  <link rel="stylesheet" href="css/variables.css?v=20261001_v13">
-  <link rel="stylesheet" href="css/style.css?v=20261001_v13">
-  <link rel="stylesheet" href="css/components.css?v=20261001_v13">
+  <link rel="stylesheet" href="css/variables.css?v=20261001_v14">
+  <link rel="stylesheet" href="css/style.css?v=20261001_v14">
+  <link rel="stylesheet" href="css/components.css?v=20261001_v14">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -103,6 +103,22 @@
       [data-theme="light"] .logo-mobile.logo-white {
         display: none !important;
       }
+    }
+
+    .nav-link,
+    .nav-menu a {
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
+      font-size: 0.85rem !important;
+    }
+
+    .nav-dot,
+    .nav-link::before,
+    .nav-link.active::before,
+    .nav-link::after,
+    .nav-link.active::after {
+      display: none !important;
+      content: none !important;
     }
 
     .nav-link {
@@ -296,11 +312,11 @@
       </a>
 
       <nav class="nav-menu" id="navMenu">
-        <a href="#hero" class="nav-link active"><span class="nav-dot"></span>ZERO.CINCO</a>
-        <a href="#occasions" class="nav-link"><span class="nav-dot"></span>Especialidades</a>
-        <a href="#portfolio" class="nav-link"><span class="nav-dot"></span>Portfólio</a>
-        <a href="#packages" class="nav-link"><span class="nav-dot"></span>Planos</a>
-        <a href="#calculator" class="nav-link"><span class="nav-dot"></span>Orçamento Rápido</a>
+        <a href="#hero" class="nav-link active">ZERO.CINCO</a>
+        <a href="#occasions" class="nav-link">Especialidades</a>
+        <a href="#portfolio" class="nav-link">Portfólio</a>
+        <a href="#packages" class="nav-link">Planos</a>
+        <a href="#calculator" class="nav-link">Orçamento Rápido</a>
 
         <!-- Mobile Drawer Theme Switcher -->
         <div class="mobile-theme-switch-row">
