@@ -193,9 +193,22 @@ img {
 /* --- LAYOUT UTILITIES & WHITESPACE --- */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 4rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 769px) and (max-width: 1120px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
 }
 
 .section {
@@ -867,8 +880,21 @@ img {
 /* --- OCCASIONS & SERVICES STREAMLINED GRID --- */
 .occasions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .occasions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .occasions-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .occasion-card {
@@ -889,7 +915,7 @@ img {
 }
 
 .occasion-img-wrap {
-  height: 220px;
+  height: 240px;
   width: 100%;
   overflow: hidden;
 }
@@ -935,8 +961,9 @@ img {
 .packages-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
+  gap: 2rem;
   align-items: stretch;
+  width: 100%;
 }
 
 .package-card {
@@ -1029,7 +1056,14 @@ img {
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .testimonial-card {

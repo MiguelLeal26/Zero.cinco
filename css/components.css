@@ -460,8 +460,8 @@
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
   gap: 2.5rem;
-  box-shadow: var(--shadow-md);
-  max-width: 1040px;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -2225,7 +2225,7 @@ body {
   text-align: center !important;
   margin: 0 auto !important;
   width: 100% !important;
-  max-width: 900px !important;
+  max-width: 1100px !important;
 }
 
 .hero-tags,

@@ -24,9 +24,9 @@
 
 
   <!-- CSS Stylesheets (Cache-busted) -->
-  <link rel="stylesheet" href="css/variables.css?v=20261001_v23">
-  <link rel="stylesheet" href="css/style.css?v=20261001_v23">
-  <link rel="stylesheet" href="css/components.css?v=20261001_v23">
+  <link rel="stylesheet" href="css/variables.css?v=20261001_v24">
+  <link rel="stylesheet" href="css/style.css?v=20261001_v24">
+  <link rel="stylesheet" href="css/components.css?v=20261001_v24">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -500,6 +500,84 @@
         color: #ffffff !important;
         stroke: none !important;
       }
+    }
+
+    /* ==========================================================================
+       ENQUADRAMENTO GERAL DE TODO O SITE (SINCRONIZAÇÃO COM A FACHADA / CABEÇALHO)
+       ========================================================================== */
+    .container {
+      width: 100% !important;
+      max-width: 1600px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 4rem !important;
+      padding-right: 4rem !important;
+      box-sizing: border-box !important;
+    }
+
+    @media (min-width: 769px) and (max-width: 1120px) {
+      .container {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+      }
+    }
+
+    /* Enquadramento amplo das abas, grids e componentes de ponta a ponta */
+    .clean-calc-wrapper {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .packages-grid {
+      width: 100% !important;
+      gap: 2rem !important;
+    }
+
+    .occasions-grid {
+      width: 100% !important;
+      gap: 2rem !important;
+    }
+
+    @media (min-width: 992px) {
+      .occasions-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+
+    .occasion-img-wrap {
+      height: 240px !important;
+    }
+
+    .portfolio-grid {
+      width: 100% !important;
+      gap: 2rem !important;
+    }
+
+    .testimonials-grid {
+      width: 100% !important;
+      gap: 2rem !important;
+    }
+
+    .contact-grid {
+      width: 100% !important;
+      gap: 4rem !important;
+    }
+
+    .footer-top {
+      width: 100% !important;
+    }
+
+    .hero-centered-box,
+    .hero-content {
+      max-width: 1100px !important;
     }
   </style>
 </head>
