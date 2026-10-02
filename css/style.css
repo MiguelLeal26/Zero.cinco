@@ -667,40 +667,6 @@ img {
   display: none;
 }
 
-/* Mobile Drawer Theme Switcher Row */
-.mobile-theme-switch-row {
-  display: none;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border-subtle);
-  margin-top: 0.5rem;
-}
-
-.mobile-theme-label {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-}
-
-.mobile-theme-btn {
-  width: auto;
-  height: auto;
-  border-radius: var(--radius-full);
-  padding: 0.5rem 1.1rem;
-  gap: 0.6rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-@media (max-width: 768px) {
-  .mobile-theme-switch-row {
-    display: flex;
-  }
-}
-
 .mobile-toggle {
   display: none;
   background: none;

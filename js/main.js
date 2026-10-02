@@ -6,17 +6,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   // 0. THEME SWITCHER (Light / Dark Mode with LocalStorage)
   const themeToggle = document.getElementById('themeToggle');
-  const mobileThemeToggle = document.getElementById('mobileThemeToggle');
   const savedTheme = localStorage.getItem('zerocinco-theme') || 'dark';
 
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('zerocinco-theme', theme);
-
-    // Update mobile text if present
-    document.querySelectorAll('.theme-text-status').forEach(el => {
-      el.textContent = theme === 'dark' ? 'Modo Claro' : 'Modo Escuro';
-    });
   }
 
   applyTheme(savedTheme);
@@ -29,9 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (themeToggle) {
     themeToggle.addEventListener('click', toggleTheme);
-  }
-  if (mobileThemeToggle) {
-    mobileThemeToggle.addEventListener('click', toggleTheme);
   }
 
 
