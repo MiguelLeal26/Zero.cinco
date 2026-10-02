@@ -34,19 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileThemeToggle.addEventListener('click', toggleTheme);
   }
 
-  // 1. STICKY NAVBAR SCROLL (Otimizado para Mobile)
-  const header = document.querySelector('.site-header');
-  let isScrolled = false;
-
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY > 40;
-    if (currentScroll !== isScrolled) {
-      isScrolled = currentScroll;
-      if (header) {
-        header.classList.toggle('scrolled', isScrolled);
-      }
-    }
-  }, { passive: true });
 
 
   // 2. MOBILE MENU TOGGLE

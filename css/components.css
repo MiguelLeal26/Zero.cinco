@@ -738,8 +738,9 @@
   min-height: 95px;
 }
 
-/* Floating WhatsApp Button */
+/* Floating WhatsApp Button - Oculto no Desktop por padrão */
 .floating-whatsapp {
+  display: none !important;
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -747,12 +748,11 @@
   height: 58px;
   background: #25D366;
   border-radius: 50%;
-  display: flex;
   align-items: center;
   justify-content: center;
   color: #FFF;
   box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
-  z-index: 990;
+  z-index: 9999;
   transition: transform var(--transition-fast);
 }
 
@@ -844,10 +844,13 @@
   }
 
   .floating-whatsapp {
-    bottom: 1.25rem;
-    right: 1.25rem;
-    width: 52px;
-    height: 52px;
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 9999 !important;
+    display: flex !important;
+    width: 54px !important;
+    height: 54px !important;
   }
 
   .modal-backdrop {
@@ -1865,6 +1868,10 @@ body {
 
 /* Fix de estabilidade para o Header no Mobile */
 @media (max-width: 768px) {
+  body {
+    padding-top: 80px !important;
+  }
+
   .site-header {
     position: fixed !important;
     top: 0 !important;
@@ -1876,7 +1883,7 @@ body {
     will-change: transform;
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
-    z-index: 1000 !important;
+    z-index: 10000 !important;
   }
 
   [data-theme="light"] .site-header {
