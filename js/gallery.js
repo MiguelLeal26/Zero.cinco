@@ -5,11 +5,11 @@
 const portfolioData = [
   {
     id: 1,
-    title: "Casamento Contemporâneo • Mariana & Lucas",
+    title: "Casamento Contemporâneo • Dyana e Francisco",
     category: "weddings",
     categoryName: "Casamento & Storymaker",
     image: "assets/images/wedding.jpg",
-    client: "Mariana & Lucas",
+    client: "Dyana e Francisco",
     desc: "Cobertura cinematográfica e Storymaker em tempo real. Os noivos e convidados puderam reviver e repostar os momentos mais emocionantes da cerimônia e festa."
   },
   {
