@@ -2248,7 +2248,7 @@ body {
 [data-theme="dark"] .nav-menu a:hover,
 :root:not([data-theme="light"]) .nav-link:hover,
 :root:not([data-theme="light"]) .nav-menu a:hover {
-  color: #ffffff !important;
+  color: #e50914 !important;
 }
 
 .nav-link.active,
@@ -2268,7 +2268,7 @@ body {
 
 [data-theme="light"] .nav-link:hover,
 [data-theme="light"] .nav-menu a:hover {
-  color: #111111 !important;
+  color: #e50914 !important;
 }
 
 [data-theme="light"] .nav-link.active,

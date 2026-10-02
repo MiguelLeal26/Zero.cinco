@@ -288,30 +288,32 @@ img {
 .btn-primary {
   background: #ffffff;
   color: #000000;
-  border: 1px solid #ffffff;
+  border: 1.5px solid #ffffff;
   box-shadow: 0 4px 18px rgba(255, 255, 255, 0.12);
+  transition: all 0.25s ease;
 }
 
 .btn-primary:hover {
-  background: #e5e5e5;
+  background: #ffffff;
   color: #000000;
-  border-color: #e5e5e5;
+  border-color: #e50914;
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 22px rgba(229, 9, 20, 0.35), 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 [data-theme="light"] .btn-primary {
   background: #000000;
   color: #ffffff;
-  border: 1px solid #000000;
+  border: 1.5px solid #000000;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  transition: all 0.25s ease;
 }
 
 [data-theme="light"] .btn-primary:hover {
-  background: #222222;
+  background: #000000;
   color: #ffffff;
-  border-color: #222222;
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.2);
+  border-color: #e50914;
+  box-shadow: 0 0 22px rgba(229, 9, 20, 0.25), 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .btn-secondary {
@@ -588,7 +590,7 @@ img {
 [data-theme="dark"] .nav-menu a:hover,
 :root:not([data-theme="light"]) .nav-link:hover,
 :root:not([data-theme="light"]) .nav-menu a:hover {
-  color: #ffffff !important;
+  color: #e50914 !important;
 }
 
 .nav-link.active,
@@ -608,7 +610,7 @@ img {
 
 [data-theme="light"] .nav-link:hover,
 [data-theme="light"] .nav-menu a:hover {
-  color: #111111 !important;
+  color: #e50914 !important;
 }
 
 [data-theme="light"] .nav-link.active,
@@ -797,8 +799,8 @@ img {
 }
 
 .hero-title .highlight-red {
-  color: inherit;
-  font-weight: 300 !important;
+  color: #e50914;
+  font-weight: 400 !important;
 }
 
 .hero-desc {
@@ -958,12 +960,13 @@ img {
 
 .occasion-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: var(--shadow-md);
+  border-color: rgba(229, 9, 20, 0.4);
+  box-shadow: 0 8px 24px rgba(229, 9, 20, 0.12);
 }
 
 [data-theme="light"] .occasion-card:hover {
-  border-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(229, 9, 20, 0.4);
+  box-shadow: 0 8px 24px rgba(229, 9, 20, 0.08);
 }
 
 .occasion-img-wrap {
@@ -1002,15 +1005,15 @@ img {
   margin-bottom: 0;
   color: var(--text-primary);
   line-height: 1.3;
-  transition: color var(--transition-fast);
+  transition: color 0.3s ease;
 }
 
 .occasion-card:hover .occasion-title {
-  color: #ffffff;
+  color: #ff3b30;
 }
 
 [data-theme="light"] .occasion-card:hover .occasion-title {
-  color: #000000;
+  color: #e50914;
 }
 
 /* --- PACKAGES SECTION --- */
@@ -1049,20 +1052,24 @@ img {
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: #ffffff;
-  color: #000000;
+  background: transparent;
+  color: #e50914;
+  border: 1px solid #e50914;
   font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.12em;
   padding: 0.25rem 0.85rem;
   border-radius: var(--radius-full);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: none;
+  white-space: nowrap;
 }
 
 [data-theme="light"] .package-ribbon {
-  background: #000000;
-  color: #ffffff;
+  background: transparent;
+  color: #e50914;
+  border: 1px solid #e50914;
+  box-shadow: none;
 }
 
 .package-name {
@@ -1085,14 +1092,10 @@ img {
 
 .package-price {
   font-family: var(--font-display);
-  font-size: 2.2rem;
-  font-weight: 800;
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: var(--text-primary);
-}
-
-.package-period {
-  font-size: 0.85rem;
-  color: var(--text-muted);
 }
 
 .package-features {
@@ -1218,6 +1221,12 @@ img {
   color: var(--text-primary);
 }
 
+.footer-col-title .footer-title-dot,
+.footer-title-dot {
+  color: #e50914;
+  font-weight: 700;
+}
+
 .footer-links {
   display: flex;
   flex-direction: column;
@@ -1227,10 +1236,12 @@ img {
 .footer-links a {
   font-size: 0.88rem;
   color: var(--text-muted);
+  transition: color 0.2s ease;
 }
 
-.footer-links a:hover {
-  color: var(--red-primary);
+.footer-links a:hover,
+[data-theme="light"] .footer-links a:hover {
+  color: #e50914;
 }
 
 .footer-bottom {

@@ -62,8 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const durationData = config.durations[durationKey];
 
-        // 3. Soma dos Adicionais Opcionais
-        let addonsTotal = 0;
+        // 3. Coleta dos Adicionais Opcionais
         let selectedAddons = [];
 
         const calcSection = document.getElementById('calculator') || document;
@@ -73,32 +72,16 @@ document.addEventListener("DOMContentLoaded", function () {
             toggleAddonVisualState(chk);
 
             if (chk.checked) {
-                let price = parseFloat(chk.getAttribute('data-price') || chk.value || 0);
                 const parentCard = chk.closest('label') || chk.closest('div');
-
-                if (!price && parentCard) {
-                    const text = parentCard.innerText;
-                    const match = text.match(/\+\s*R\$\s*(\d+)/i);
-                    if (match) {
-                        price = parseFloat(match[1]);
-                    }
-                }
-
-                addonsTotal += price;
-
                 if (parentCard) {
-                    const cleanName = parentCard.innerText.split('(+')[0].split('(+R$')[0].trim();
+                    const span = parentCard.querySelector('span');
+                    const cleanName = span ? span.innerText.trim() : parentCard.innerText.trim();
                     selectedAddons.push(cleanName);
                 }
             }
         });
 
-        // 4. Cálculo final (Subtotal Base + Porcentagem da Duração)
-        const subtotalBase = eventData.price + addonsTotal;
-        const durationExtra = subtotalBase * durationData.percentage;
-        const total = Math.round(subtotalBase + durationExtra);
-
-        // 5. Atualiza o resumo visual
+        // 4. Atualiza o resumo visual sem exibição de valores em R$
         const summaryEvent = document.getElementById('calcSummaryEvent') || document.getElementById('summary-event');
         const summaryDuration = document.getElementById('calcSummaryDuration') || document.getElementById('summary-duration');
         const summaryAddons = document.getElementById('calcSummaryAddons') || document.getElementById('summary-addons');
@@ -106,10 +89,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const btnWhatsapp = document.getElementById('calcSendWhatsapp') || document.getElementById('btn-whatsapp') || document.querySelector('.calc-summary-card a');
 
         if (summaryEvent) summaryEvent.textContent = eventData.name.trim();
-        summaryDuration.textContent = " " + durationData.name.trim();
+        if (summaryDuration) summaryDuration.textContent = " " + durationData.name.trim();
 
         if (summaryPrice) {
-            summaryPrice.innerText = `R$ ${total.toLocaleString("pt-BR")}`;
+            summaryPrice.innerText = "Sob Consulta";
         }
 
         if (summaryAddons) {
@@ -120,15 +103,15 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        // 6. Atualiza a mensagem do WhatsApp
+        // 5. Atualiza a mensagem do WhatsApp com as opções selecionadas
         if (btnWhatsapp) {
-            const addonsText = selectedAddons.length > 0 ? selectedAddons.join(', ') : 'Nenhum';
+            const addonsText = selectedAddons.length > 0 ? selectedAddons.join(', ') : 'Nenhum opcional selecionado';
             const message = encodeURIComponent(
-                `Olá! Gostaria de um orçamento pelo site:\n\n` +
+                `Olá! Gostaria de solicitar um orçamento exclusivo pelo site:\n\n` +
                 `• *Evento/Serviço:* ${eventData.name}\n` +
-                `• *Duração:* ${durationData.name}\n` +
-                `• *Opcionais:* ${addonsText}\n` +
-                `• *Estimativa Final:* R$ ${total.toLocaleString("pt-BR")}`
+                `• *Duração da Cobertura:* ${durationData.name}\n` +
+                `• *Opcionais:* ${addonsText}\n\n` +
+                `Gostaria de verificar a disponibilidade na agenda e consultar os valores sob medida.`
             );
             btnWhatsapp.href = `https://wa.me/${config.whatsappNumber}?text=${message}`;
             btnWhatsapp.target = "_blank";
