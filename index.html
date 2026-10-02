@@ -27,9 +27,9 @@
 
 
   <!-- CSS Stylesheets (Cache-busted) -->
-  <link rel="stylesheet" href="css/variables.css?v=20261001_v24">
-  <link rel="stylesheet" href="css/style.css?v=20261001_v24">
-  <link rel="stylesheet" href="css/components.css?v=20261001_v24">
+  <link rel="stylesheet" href="css/variables.css?v=20261001_v25">
+  <link rel="stylesheet" href="css/style.css?v=20261001_v25">
+  <link rel="stylesheet" href="css/components.css?v=20261001_v25">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -581,6 +581,83 @@
     .hero-centered-box,
     .hero-content {
       max-width: 1100px !important;
+    }
+
+    /* ==========================================================================
+       PADRONIZAÇÃO GLOBAL DE CORES TIPOGRÁFICAS (BRANCO, CINZA E VERMELHO)
+       ========================================================================== */
+    body,
+    p,
+    .hero-desc {
+      color: #b0b0b0 !important;
+    }
+
+    strong,
+    b,
+    .hero-desc strong {
+      color: #ffffff !important;
+      font-weight: 700 !important;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    .section-title,
+    .package-name,
+    .author-name,
+    .occasion-title,
+    .footer-col-title {
+      color: #ffffff !important;
+    }
+
+    .section-subtitle,
+    .package-audience,
+    .testimonial-quote,
+    .footer-links a,
+    .footer-brand p {
+      color: #a3a3a3 !important;
+    }
+
+    .highlight-red,
+    .text-highlight,
+    .badge-tag,
+    .brand-dot,
+    .package-price,
+    .ticker-dot {
+      color: var(--red-primary) !important;
+    }
+
+    /* Modo Claro: Preto grafite (#111111), Cinza chumbo (#444444) e Vermelho */
+    [data-theme="light"] body,
+    [data-theme="light"] p,
+    [data-theme="light"] .hero-desc {
+      color: #444444 !important;
+    }
+
+    [data-theme="light"] strong,
+    [data-theme="light"] b,
+    [data-theme="light"] .hero-desc strong {
+      color: #111111 !important;
+    }
+
+    [data-theme="light"] h1,
+    [data-theme="light"] h2,
+    [data-theme="light"] h3,
+    [data-theme="light"] h4,
+    [data-theme="light"] h5,
+    [data-theme="light"] h6,
+    [data-theme="light"] .section-title,
+    [data-theme="light"] .package-name,
+    [data-theme="light"] .author-name,
+    [data-theme="light"] .occasion-title,
+    [data-theme="light"] .footer-col-title {
+      color: #111111 !important;
+    }
+
+    [data-theme="light"] .section-subtitle,
+    [data-theme="light"] .package-audience,
+    [data-theme="light"] .testimonial-quote,
+    [data-theme="light"] .footer-links a,
+    [data-theme="light"] .footer-brand p {
+      color: #555555 !important;
     }
   </style>
 </head>
@@ -1162,8 +1239,8 @@
   <!-- JavaScript Scripts -->
   <script src="js/icons.js"></script>
   <script src="js/calculator.js" defer></script>
-  <script src="js/main.js?v=20261001_v24" defer></script>
-  <script src="js/gallery.js?v=20261001_v24" defer></script>
+  <script src="js/main.js?v=20261001_v25" defer></script>
+  <script src="js/gallery.js?v=20261001_v25" defer></script>
 
   <script>
     // Initialize Lucide icons
