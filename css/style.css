@@ -372,22 +372,18 @@ img {
     display: inline-block !important;
   }
 
-  .logo-desktop.logo-red,
   .logo-desktop.logo-dark,
-  [data-theme="dark"] .logo-desktop.logo-red,
   [data-theme="dark"] .logo-desktop.logo-dark,
-  :root:not([data-theme="light"]) .logo-desktop.logo-red,
   :root:not([data-theme="light"]) .logo-desktop.logo-dark {
     display: none !important;
   }
 
   /* Tema Claro ([data-theme="light"]) */
-  [data-theme="light"] .logo-desktop.logo-red {
+  [data-theme="light"] .logo-desktop.logo-dark {
     display: inline-block !important;
   }
 
-  [data-theme="light"] .logo-desktop.logo-white,
-  [data-theme="light"] .logo-desktop.logo-dark {
+  [data-theme="light"] .logo-desktop.logo-white {
     display: none !important;
   }
 }
