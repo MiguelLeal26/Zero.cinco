@@ -626,13 +626,148 @@
       color: #a3a3a3 !important;
     }
 
+    /* Títulos e destaques neutros */
     .highlight-red,
-    .text-highlight,
-    .badge-tag,
+    .text-highlight {
+      color: inherit !important;
+    }
+
     .brand-dot,
-    .package-price,
     .ticker-dot {
       color: var(--red-primary) !important;
+    }
+
+    .package-price {
+      color: #ffffff !important;
+    }
+
+    [data-theme="light"] .package-price {
+      color: #000000 !important;
+    }
+
+    /* Badges de Seção Neutros e Editoriais */
+    .badge-tag {
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      color: #a0a0a0 !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.1em !important;
+      text-transform: uppercase !important;
+    }
+
+    .badge-tag .dot,
+    .badge-tag::before {
+      display: none !important;
+    }
+
+    [data-theme="light"] .badge-tag {
+      background: rgba(0, 0, 0, 0.04) !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
+      color: #555555 !important;
+    }
+
+    /* Botões Principais Monocromáticos de Alto Contraste */
+    .btn-primary {
+      background: #ffffff !important;
+      color: #000000 !important;
+      border: 1px solid #ffffff !important;
+      box-shadow: 0 4px 18px rgba(255, 255, 255, 0.12) !important;
+    }
+
+    .btn-primary:hover {
+      background: #e5e5e5 !important;
+      color: #000000 !important;
+      border-color: #e5e5e5 !important;
+      box-shadow: 0 6px 22px rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .btn-primary .btn-dot {
+      background: #000000 !important;
+    }
+
+    [data-theme="light"] .btn-primary {
+      background: #000000 !important;
+      color: #ffffff !important;
+      border: 1px solid #000000 !important;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    [data-theme="light"] .btn-primary:hover {
+      background: #222222 !important;
+      color: #ffffff !important;
+      border-color: #222222 !important;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    [data-theme="light"] .btn-primary .btn-dot {
+      background: #ffffff !important;
+    }
+
+    .btn-secondary {
+      background: #141416 !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .btn-secondary:hover {
+      background: #1c1c20 !important;
+      border-color: rgba(255, 255, 255, 0.35) !important;
+      color: #ffffff !important;
+    }
+
+    [data-theme="light"] .btn-secondary {
+      background: #f4f4f5 !important;
+      color: #111111 !important;
+      border: 1px solid rgba(0, 0, 0, 0.12) !important;
+    }
+
+    [data-theme="light"] .btn-secondary:hover {
+      background: #eaeaea !important;
+      border-color: rgba(0, 0, 0, 0.25) !important;
+      color: #000000 !important;
+    }
+
+    /* Pacote VIP Ribbon & Borda Neutra */
+    .package-card.featured {
+      border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6) !important;
+    }
+
+    [data-theme="light"] .package-card.featured {
+      border: 2px solid #000000 !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    .package-ribbon {
+      background: #ffffff !important;
+      color: #000000 !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    [data-theme="light"] .package-ribbon {
+      background: #000000 !important;
+      color: #ffffff !important;
+    }
+
+    .package-feature-item svg {
+      color: #a3a3a3 !important;
+    }
+
+    [data-theme="light"] .package-feature-item svg {
+      color: #555555 !important;
+    }
+
+    /* Galeria Filtros */
+    .filter-btn.active {
+      background: #ffffff !important;
+      border-color: #ffffff !important;
+      color: #000000 !important;
+    }
+
+    [data-theme="light"] .filter-btn.active {
+      background: #000000 !important;
+      border-color: #000000 !important;
+      color: #ffffff !important;
     }
 
     /* Modo Claro: Preto grafite (#111111), Cinza chumbo (#444444) e Vermelho */
@@ -816,7 +951,7 @@
   <section class="section" id="occasions">
     <div class="container">
       <div class="section-header">
-        <div class="badge-tag"><span class="dot"></span> Nossas Especialidades</div>
+        <div class="badge-tag">Nossas Especialidades</div>
         <h2 class="section-title">O que a <span class="text-highlight">ZERO.CINCO</span> produz</h2>
         <p class="section-subtitle">Técnica profissional, direção leve e equipamentos de ponta para cada momento.</p>
       </div>
@@ -907,7 +1042,7 @@
   <section class="section" id="portfolio">
     <div class="container">
       <div class="section-header">
-        <div class="badge-tag"><span class="dot"></span> Galeria</div>
+        <div class="badge-tag">Galeria</div>
         <h2 class="section-title">Portfólio <span class="text-highlight">Selecionado</span></h2>
         <p class="section-subtitle">Trabalhos reais em foto, vídeo e storymaking sem poluição visual.</p>
       </div>
@@ -942,7 +1077,7 @@
           <span class="portfolio-category-tag" id="modalCategory">Categoria</span>
           <h3 class="portfolio-title" id="modalTitle" style="font-size: 1.5rem; margin-top: 0.5rem; color: #FFF;">Título
             do Projeto</h3>
-          <p style="color: var(--red-primary); font-weight: 700; font-size: 0.92rem; margin-bottom: 1rem;"
+          <p style="color: var(--text-secondary); font-weight: 600; font-size: 0.92rem; margin-bottom: 1rem;"
             id="modalClient">Cliente</p>
           <p id="modalDesc"
             style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; color: var(--text-secondary);">
@@ -963,7 +1098,7 @@
   <section class="section" id="packages">
     <div class="container">
       <div class="section-header">
-        <div class="badge-tag"><span class="dot"></span> Pacotes Especiais</div>
+        <div class="badge-tag">Pacotes Especiais</div>
         <h2 class="section-title">Formatos de <span class="text-highlight">Contratação</span></h2>
         <p class="section-subtitle">Pacotes prontos para simplificar a sua escolha.</p>
       </div>
@@ -1029,7 +1164,7 @@
   <section class="section" id="calculator">
     <div class="container">
       <div class="section-header">
-        <div class="badge-tag"><span class="dot"></span> Orçamento Inteligente</div>
+        <div class="badge-tag">Orçamento Inteligente</div>
         <h2 class="section-title">Monte sua estimativa em <span class="text-highlight">3 passos simples</span></h2>
         <p class="section-subtitle">Simule seu projeto e visualize ao lado como seu conteúdo é entregue em tempo real.
         </p>
@@ -1143,7 +1278,7 @@
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <div class="badge-tag"><span class="dot"></span> Depoimentos</div>
+        <div class="badge-tag">Depoimentos</div>
         <h2 class="section-title">O que dizem os <span class="text-highlight">nossos clientes</span></h2>
       </div>
 
@@ -1197,7 +1332,7 @@
   <section class="section" id="contact" style="padding-bottom: 5.5rem;">
     <div class="container contact-grid">
       <div>
-        <div class="badge-tag"><span class="dot"></span> Contato Direto</div>
+        <div class="badge-tag">Contato Direto</div>
         <h2 class="section-title" style="margin-bottom: 1.25rem;">Vamos criar uma narrativa <span
             class="text-highlight">marcante</span> juntos?</h2>
         <p style="margin-bottom: 2rem;">
@@ -1207,17 +1342,17 @@
 
         <div style="display: flex; flex-direction: column; gap: 1rem;">
           <div style="display: flex; align-items: center; gap: 0.85rem;">
-            <i data-lucide="map-pin" style="color: var(--red-primary); width: 20px; height: 20px;"></i>
+            <i data-lucide="map-pin" style="color: var(--text-secondary); width: 20px; height: 20px;"></i>
             <span style="font-size: 0.95rem; color: var(--text-primary);">Fortaleza / CE • Disponível para coberturas
               em
               todo o Brasil</span>
           </div>
           <div style="display: flex; align-items: center; gap: 0.85rem;">
-            <i data-lucide="phone" style="color: var(--red-primary); width: 20px; height: 20px;"></i>
+            <i data-lucide="phone" style="color: var(--text-secondary); width: 20px; height: 20px;"></i>
             <a href="https://wa.me/5585999616570" target="_blank" style="font-size: 0.95rem; color: var(--text-primary); text-decoration: none;">(85) 99961-6570</a>
           </div>
           <div style="display: flex; align-items: center; gap: 0.85rem;">
-            <i data-lucide="instagram" style="color: var(--red-primary); width: 20px; height: 20px;"></i>
+            <i data-lucide="instagram" style="color: var(--text-secondary); width: 20px; height: 20px;"></i>
             <span style="font-size: 0.95rem; color: var(--text-primary);">@zerocinco.studio</span>
           </div>
         </div>
@@ -1311,8 +1446,8 @@
   <!-- JavaScript Scripts -->
   <script src="js/icons.js"></script>
   <script src="js/calculator.js" defer></script>
-  <script src="js/main.js?v=20261001_v26" defer></script>
-  <script src="js/gallery.js?v=20261001_v26" defer></script>
+  <script src="js/main.js?v=20261001_v27" defer></script>
+  <script src="js/gallery.js?v=20261001_v27" defer></script>
 
   <script>
     // Initialize Lucide icons
