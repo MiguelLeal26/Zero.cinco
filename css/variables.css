@@ -32,20 +32,20 @@
   --rose: var(--color-rose);
   --burnt-red: var(--color-burnt-red);
 
-  --red-glow: rgba(226, 34, 40, 0.4);
-  --red-glow-subtle: rgba(226, 34, 40, 0.12);
+  --red-glow: rgba(226, 34, 40, 0.15);
+  --red-glow-subtle: rgba(226, 34, 40, 0.04);
 
   /* Top Bar Red Gradient */
   --top-bar-bg: linear-gradient(90deg, #BE2429 0%, #E22228 50%, #7F1C1D 100%);
   --top-bar-text: #FFFFFF;
 
-  /* Dark Theme Surfaces (Deep Obsidian with Warm Undertone) */
-  --bg-main: #0B0B0E;
-  --bg-surface: #141318;
-  --bg-surface-elevated: #1B1820;
-  --bg-surface-card: #16141B;
-  --bg-glass: rgba(11, 11, 14, 0.92);
-  --bg-glass-card: rgba(27, 24, 32, 0.75);
+  /* Dark Theme Surfaces - Pure Black & Neutral Deep Grays */
+  --bg-main: #000000;
+  --bg-surface: #0a0a0c;
+  --bg-surface-elevated: #141416;
+  --bg-surface-card: #0f0f11;
+  --bg-glass: rgba(0, 0, 0, 0.95);
+  --bg-glass-card: rgba(15, 15, 17, 0.85);
 
   /* Dark Theme Typography - Estritamente Neutra: Branco, Cinza e Vermelho */
   --text-primary: #FFFFFF;
@@ -54,14 +54,14 @@
   --text-dim: #737373;
 
   /* Borders & Dividers */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-glass: rgba(255, 255, 255, 0.14);
+  --border-subtle: #1f1f23;
+  --border-glass: #222226;
   --border-red: rgba(226, 34, 40, 0.35);
   --border-red-active: #E22228;
 
   /* Gradients */
   --gradient-red-primary: linear-gradient(135deg, #EB4A43 0%, #E22228 50%, #BE2429 100%);
-  --gradient-red-subtle: linear-gradient(180deg, rgba(226, 34, 40, 0.12) 0%, rgba(226, 34, 40, 0.02) 100%);
+  --gradient-red-subtle: linear-gradient(180deg, rgba(226, 34, 40, 0.04) 0%, rgba(0, 0, 0, 0) 100%);
 
   /* Typography - Fonte Oficial: Montserrat */
   --font-display: 'Montserrat', system-ui, -apple-system, sans-serif;

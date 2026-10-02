@@ -27,9 +27,9 @@
 
 
   <!-- CSS Stylesheets (Cache-busted) -->
-  <link rel="stylesheet" href="css/variables.css?v=20261001_v25">
-  <link rel="stylesheet" href="css/style.css?v=20261001_v25">
-  <link rel="stylesheet" href="css/components.css?v=20261001_v25">
+  <link rel="stylesheet" href="css/variables.css?v=20261001_v26">
+  <link rel="stylesheet" href="css/style.css?v=20261001_v26">
+  <link rel="stylesheet" href="css/components.css?v=20261001_v26">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -50,13 +50,23 @@
       left: 0 !important;
       width: 100% !important;
       z-index: 999999 !important;
-      background-color: #0f1117 !important;
-      background: #0f1117 !important;
+      background-color: rgba(0, 0, 0, 0.95) !important;
+      background: rgba(0, 0, 0, 0.95) !important;
+      backdrop-filter: blur(10px) !important;
+      -webkit-backdrop-filter: blur(10px) !important;
+      border-bottom: 1px solid #1f1f23 !important;
+    }
+
+    [data-theme="dark"] .site-header,
+    :root:not([data-theme="light"]) .site-header {
+      background-color: rgba(0, 0, 0, 0.95) !important;
+      background: rgba(0, 0, 0, 0.95) !important;
     }
 
     [data-theme="light"] .site-header {
       background-color: #ffffff !important;
       background: #ffffff !important;
+      border-bottom: 1px solid #e5e5e5 !important;
     }
 
     body {
@@ -438,13 +448,13 @@
         transform: none !important;
         -webkit-transform: none !important;
         transition: none !important;
-        background-color: #0f1117 !important;
-        background: #0f1117 !important;
+        background-color: #000000 !important;
+        background: #000000 !important;
       }
       [data-theme="dark"] .site-header,
       :root:not([data-theme="light"]) .site-header {
-        background-color: #0f1117 !important;
-        background: #0f1117 !important;
+        background-color: #000000 !important;
+        background: #000000 !important;
       }
       [data-theme="light"] .site-header {
         background-color: #ffffff !important;
@@ -658,6 +668,68 @@
     [data-theme="light"] .footer-links a,
     [data-theme="light"] .footer-brand p {
       color: #555555 !important;
+    }
+
+    /* ==========================================================================
+       TEMA ESCURO - FUNDO PRETO REAL (#000000) & SUPERFÍCIES NEUTRAS
+       ========================================================================== */
+    html,
+    body {
+      background-color: #000000 !important;
+      background: #000000 !important;
+    }
+
+    /* Cards e Superfícies no Modo Escuro */
+    .occasion-card,
+    .package-card,
+    .testimonial-card,
+    .contact-card,
+    .clean-calc-wrapper {
+      background-color: #0f0f11 !important;
+      border-color: #1f1f23 !important;
+    }
+
+    .clean-calc-summary {
+      background-color: #141416 !important;
+      border-color: #1f1f23 !important;
+    }
+
+    .site-footer {
+      background-color: #000000 !important;
+      background: #000000 !important;
+      border-top: 1px solid #1f1f23 !important;
+    }
+
+    .modal-container {
+      background-color: #0f0f11 !important;
+      border-color: #1f1f23 !important;
+    }
+
+    /* Modo Claro - Preservando Superfícies Brancas Limpas */
+    [data-theme="light"] html,
+    [data-theme="light"] body {
+      background-color: #F8F9FA !important;
+      background: #F8F9FA !important;
+    }
+
+    [data-theme="light"] .occasion-card,
+    [data-theme="light"] .package-card,
+    [data-theme="light"] .testimonial-card,
+    [data-theme="light"] .contact-card,
+    [data-theme="light"] .clean-calc-wrapper {
+      background-color: #ffffff !important;
+      border-color: #e5e5e5 !important;
+    }
+
+    [data-theme="light"] .clean-calc-summary {
+      background-color: #f8f9fa !important;
+      border-color: #e5e5e5 !important;
+    }
+
+    [data-theme="light"] .site-footer {
+      background-color: #ffffff !important;
+      background: #ffffff !important;
+      border-top: 1px solid #e5e5e5 !important;
     }
   </style>
 </head>
@@ -1239,8 +1311,8 @@
   <!-- JavaScript Scripts -->
   <script src="js/icons.js"></script>
   <script src="js/calculator.js" defer></script>
-  <script src="js/main.js?v=20261001_v25" defer></script>
-  <script src="js/gallery.js?v=20261001_v25" defer></script>
+  <script src="js/main.js?v=20261001_v26" defer></script>
+  <script src="js/gallery.js?v=20261001_v26" defer></script>
 
   <script>
     // Initialize Lucide icons

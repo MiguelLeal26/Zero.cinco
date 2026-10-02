@@ -1523,8 +1523,8 @@ strong {
 /* Painel Lateral do Resumo no Dark Mode */
 body.dark-mode .clean-calc-summary,
 [data-theme="dark"] .clean-calc-summary {
-  background-color: #1a1a24 !important;
-  border-color: #2a2a3a !important;
+  background-color: #141416 !important;
+  border-color: #1f1f23 !important;
 }
 
 body.dark-mode .calc-summary-title,
@@ -1568,9 +1568,9 @@ body.dark-mode .calc-pill-btn,
 body.dark-mode .calc-addon-card,
 [data-theme="dark"] .calc-pill-btn,
 [data-theme="dark"] .calc-addon-card {
-  background-color: #1a1a24 !important;
-  border-color: #2e2e3e !important;
-  color: #cbd5e1 !important;
+  background-color: #141416 !important;
+  border-color: #1f1f23 !important;
+  color: #b0b0b0 !important;
 }
 
 body.dark-mode .calc-pill-btn i,
@@ -1608,15 +1608,15 @@ body.dark-mode .calc-pill-btn.active svg,
 /* Fundo do Card Geral da Calculadora */
 body.dark-mode .clean-calc-wrapper,
 [data-theme="dark"] .clean-calc-wrapper {
-  background-color: #12121a !important;
-  border-color: #262636 !important;
+  background-color: #0f0f11 !important;
+  border-color: #1f1f23 !important;
 }
 
 /* Painel Lateral do Resumo */
 body.dark-mode .clean-calc-summary,
 [data-theme="dark"] .clean-calc-summary {
-  background-color: #1a1a26 !important;
-  border-color: #2d2d3f !important;
+  background-color: #141416 !important;
+  border-color: #1f1f23 !important;
 }
 
 body.dark-mode .calc-summary-title,
@@ -1667,9 +1667,9 @@ body.dark-mode .calc-pill-btn,
 body.dark-mode .calc-addon-card,
 [data-theme="dark"] .calc-pill-btn,
 [data-theme="dark"] .calc-addon-card {
-  background-color: #1a1a26 !important;
-  border-color: #2d2d3f !important;
-  color: #e2e8f0 !important;
+  background-color: #141416 !important;
+  border-color: #1f1f23 !important;
+  color: #b0b0b0 !important;
 }
 
 body.dark-mode .calc-pill-btn i,
@@ -1907,7 +1907,7 @@ body {
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: auto !important;
-    background-color: #0f1117 !important;
+    background-color: #000000 !important;
   }
 
   /* Fundo claro para o menu quando o tema claro estiver ativo */
@@ -1940,7 +1940,7 @@ body {
     top: 0 !important;
     left: 0 !important;
     width: 100vw !important;
-    background-color: #0f1117 !important;
+    background-color: #000000 !important;
     border-bottom: 1px solid var(--border-subtle) !important;
     transform: none !important;
     -webkit-transform: none !important;
@@ -1953,7 +1953,7 @@ body {
   }
 
   [data-theme="dark"] .site-header {
-    background-color: #0f1117 !important;
+    background-color: #000000 !important;
   }
 
   .mobile-toggle .badge,
@@ -2052,11 +2052,11 @@ body {
     transform: none !important;
     -webkit-transform: none !important;
     transition: none !important;
-    background-color: #0f1117 !important;
+    background-color: #000000 !important;
   }
   [data-theme="dark"] .site-header,
   :root:not([data-theme="light"]) .site-header {
-    background-color: #0f1117 !important;
+    background-color: #000000 !important;
   }
   [data-theme="light"] .site-header {
     background-color: #ffffff !important;
