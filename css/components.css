@@ -2059,21 +2059,9 @@ body {
   max-width: 900px !important;
 }
 
-.hero-tags {
-  display: none !important;
-}
-
+.hero-tags,
 .hero-cta-group {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin: 0 auto !important;
-  width: 100% !important;
-  text-align: center !important;
-}
-
-.hero-cta-group .btn {
-  margin: 0 auto !important;
+  display: none !important;
 }
 
 .site-logo {
