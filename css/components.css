@@ -845,12 +845,47 @@
 
   .floating-whatsapp {
     position: fixed !important;
-    bottom: 20px !important;
+    bottom: 24px !important;
     right: 20px !important;
-    z-index: 9999 !important;
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 50% !important;
     display: flex !important;
-    width: 54px !important;
-    height: 54px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+    z-index: 9999 !important;
+    transition: background-color 0.3s ease, color 0.3s ease !important;
+  }
+
+  /* Modo Escuro ([data-theme="dark"] ou padrão dark): Círculo BRANCO (#ffffff) com ícone em PRETO (#000000) */
+  .floating-whatsapp,
+  [data-theme="dark"] .floating-whatsapp,
+  :root:not([data-theme="light"]) .floating-whatsapp {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .floating-whatsapp svg,
+  .floating-whatsapp i,
+  [data-theme="dark"] .floating-whatsapp svg,
+  [data-theme="dark"] .floating-whatsapp i,
+  :root:not([data-theme="light"]) .floating-whatsapp svg,
+  :root:not([data-theme="light"]) .floating-whatsapp i {
+    stroke: #000000 !important;
+    color: #000000 !important;
+  }
+
+  /* Modo Claro ([data-theme="light"]): Círculo PRETO (#000000) com ícone em BRANCO (#ffffff) */
+  [data-theme="light"] .floating-whatsapp {
+    background-color: #000000 !important;
+    background: #000000 !important;
+    color: #ffffff !important;
+  }
+  [data-theme="light"] .floating-whatsapp svg,
+  [data-theme="light"] .floating-whatsapp i {
+    stroke: #ffffff !important;
+    color: #ffffff !important;
   }
 
   .modal-backdrop {
@@ -1880,9 +1915,8 @@ body {
     background-color: #0f1117 !important;
     border-bottom: 1px solid var(--border-subtle) !important;
     transition: background-color 0.2s ease, box-shadow 0.2s ease !important;
-    will-change: transform;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
+    transform: none !important;
+    -webkit-transform: none !important;
     z-index: 10000 !important;
   }
 
