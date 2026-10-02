@@ -845,7 +845,7 @@
 
   .floating-whatsapp {
     position: fixed !important;
-    bottom: 20px !important;
+    bottom: 24px !important;
     right: 20px !important;
     width: 56px !important;
     height: 56px !important;
@@ -854,7 +854,7 @@
     align-items: center !important;
     justify-content: center !important;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
-    z-index: 99999 !important;
+    z-index: 999999 !important;
     transition: background-color 0.3s ease, color 0.3s ease !important;
     text-decoration: none !important;
   }
@@ -1814,8 +1814,19 @@ body.dark-mode .calc-pill-btn.active svg,
    ========================================================= */
 @media (max-width: 768px) {
 
-  /* Força aceleração por hardware nos elementos principais */
-  body,
+  /* Garante que nada quebre o position: fixed no mobile */
+  html,
+  body {
+    transform: none !important;
+    -webkit-transform: none !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    perspective: none !important;
+    -webkit-perspective: none !important;
+    contain: none !important;
+  }
+
+  /* Força aceleração por hardware nos elementos de cálculo */
   .clean-calc-wrapper,
   .clean-calc-summary {
     transform: translateZ(0);
@@ -1909,6 +1920,17 @@ body {
 
 /* Fix de estabilidade para o Header no Mobile */
 @media (max-width: 768px) {
+  html,
+  body {
+    transform: none !important;
+    -webkit-transform: none !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    perspective: none !important;
+    -webkit-perspective: none !important;
+    contain: none !important;
+  }
+
   body {
     padding-top: 80px !important;
   }
@@ -1917,13 +1939,13 @@ body {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
-    width: 100% !important;
+    width: 100vw !important;
     background-color: #0f1117 !important;
     border-bottom: 1px solid var(--border-subtle) !important;
     transform: none !important;
     -webkit-transform: none !important;
     transition: none !important;
-    z-index: 100000 !important;
+    z-index: 999999 !important;
   }
 
   [data-theme="light"] .site-header {
@@ -2025,8 +2047,8 @@ body {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
-    width: 100% !important;
-    z-index: 100000 !important;
+    width: 100vw !important;
+    z-index: 999999 !important;
     transform: none !important;
     -webkit-transform: none !important;
     transition: none !important;
@@ -2063,7 +2085,7 @@ body {
   top: 0 !important;
   left: 0 !important;
   width: 100% !important;
-  z-index: 100000 !important;
+  z-index: 999999 !important;
 }
 
 .nav-link,
