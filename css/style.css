@@ -348,11 +348,15 @@ img {
 }
 
 .logo-desktop {
-  height: 48px;
+  height: 36px !important;
+  width: auto;
+  object-fit: contain;
 }
 
 .logo-mobile {
-  height: 36px;
+  height: 34px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Comportamento no Desktop (telas > 768px) */
@@ -368,18 +372,22 @@ img {
     display: inline-block !important;
   }
 
+  .logo-desktop.logo-red,
   .logo-desktop.logo-dark,
+  [data-theme="dark"] .logo-desktop.logo-red,
   [data-theme="dark"] .logo-desktop.logo-dark,
+  :root:not([data-theme="light"]) .logo-desktop.logo-red,
   :root:not([data-theme="light"]) .logo-desktop.logo-dark {
     display: none !important;
   }
 
   /* Tema Claro ([data-theme="light"]) */
-  [data-theme="light"] .logo-desktop.logo-dark {
+  [data-theme="light"] .logo-desktop.logo-red {
     display: inline-block !important;
   }
 
-  [data-theme="light"] .logo-desktop.logo-white {
+  [data-theme="light"] .logo-desktop.logo-white,
+  [data-theme="light"] .logo-desktop.logo-dark {
     display: none !important;
   }
 }

@@ -24,9 +24,9 @@
 
 
   <!-- CSS Stylesheets (Cache-busted) -->
-  <link rel="stylesheet" href="css/variables.css?v=20261001_v14">
-  <link rel="stylesheet" href="css/style.css?v=20261001_v14">
-  <link rel="stylesheet" href="css/components.css?v=20261001_v14">
+  <link rel="stylesheet" href="css/variables.css?v=20261001_v15">
+  <link rel="stylesheet" href="css/style.css?v=20261001_v15">
+  <link rel="stylesheet" href="css/components.css?v=20261001_v15">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -56,8 +56,16 @@
       object-fit: contain;
       vertical-align: middle;
     }
-    .logo-desktop { height: 48px; }
-    .logo-mobile { height: 36px; }
+    .logo-desktop {
+      height: 36px !important;
+      width: auto;
+      object-fit: contain;
+    }
+    .logo-mobile {
+      height: 34px;
+      width: auto;
+      object-fit: contain;
+    }
 
     /* Desktop (> 768px) */
     @media (min-width: 769px) {
@@ -69,15 +77,19 @@
       :root:not([data-theme="light"]) .logo-desktop.logo-white {
         display: inline-block !important;
       }
+      .logo-desktop.logo-red,
       .logo-desktop.logo-dark,
+      [data-theme="dark"] .logo-desktop.logo-red,
       [data-theme="dark"] .logo-desktop.logo-dark,
+      :root:not([data-theme="light"]) .logo-desktop.logo-red,
       :root:not([data-theme="light"]) .logo-desktop.logo-dark {
         display: none !important;
       }
-      [data-theme="light"] .logo-desktop.logo-dark {
+      [data-theme="light"] .logo-desktop.logo-red {
         display: inline-block !important;
       }
-      [data-theme="light"] .logo-desktop.logo-white {
+      [data-theme="light"] .logo-desktop.logo-white,
+      [data-theme="light"] .logo-desktop.logo-dark {
         display: none !important;
       }
     }
@@ -306,7 +318,7 @@
     <div class="container nav-wrapper">
       <a href="#" class="brand-logo" aria-label="ZERO.CINCO Home">
         <img src="images/logo-desktop-white.png" alt="ZERO.CINCO Produções" class="site-logo logo-desktop logo-white">
-        <img src="images/logo-desktop-black.png" alt="ZERO.CINCO Produções" class="site-logo logo-desktop logo-dark">
+        <img src="images/logo-desktop-red.png" alt="ZERO.CINCO Produções" class="site-logo logo-desktop logo-red">
         <img src="images/logo-white.png" alt="ZERO.CINCO" class="site-logo logo-mobile logo-white">
         <img src="images/logo-black.png" alt="ZERO.CINCO" class="site-logo logo-mobile logo-dark">
       </a>
