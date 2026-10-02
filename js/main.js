@@ -117,6 +117,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
+  // Nota: O cabeçalho (.site-header) permanece permanentemente fixo no topo (position: fixed !important; top: 0;)
+  // sem qualquer alteração de classe ou transform ao rolar a página.
+
 
   // 5. CONTACT FORM SUBMISSION TO WHATSAPP
   const contactForm = document.getElementById('contactForm');
