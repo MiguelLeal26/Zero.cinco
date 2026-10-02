@@ -367,9 +367,9 @@ img {
   .site-header .nav-menu {
     display: flex !important;
     align-items: center !important;
-    gap: 2.75rem !important;
+    gap: 2.35rem !important;
     margin-left: auto !important;
-    margin-right: 3.5rem !important;
+    margin-right: 5.5rem !important;
   }
 
   .site-header .nav-actions {
@@ -386,8 +386,8 @@ img {
     padding: 0 2rem !important;
   }
   .site-header .nav-menu {
-    gap: 1.75rem !important;
-    margin-right: 2rem !important;
+    gap: 1.5rem !important;
+    margin-right: 2.5rem !important;
   }
 }
 
@@ -411,7 +411,7 @@ img {
 }
 
 .logo-desktop {
-  height: 36px !important;
+  height: 41px !important;
   width: auto;
   object-fit: contain;
 }
@@ -492,19 +492,19 @@ img {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 2.75rem;
+  gap: 2.35rem;
 }
 
 .nav-link,
 .nav-menu a {
-  font-size: 0.88rem;
+  font-size: 0.81rem;
   font-weight: 600;
   text-transform: uppercase !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: 0.11em !important;
   white-space: nowrap !important;
   color: #888888 !important;
   position: relative;
-  padding: 0.35rem 0;
+  padding: 0.25rem 0;
   display: inline-flex;
   align-items: center;
   transition: color 0.2s ease;
@@ -597,9 +597,9 @@ img {
 
 /* Theme Toggle Button (Light/Dark Switcher) */
 .theme-toggle-btn {
-  width: 38px;
-  height: 38px;
-  min-width: 38px;
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -635,15 +635,15 @@ img {
 
 .theme-toggle-btn .icon-sun {
   display: none;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   color: #D90429;
 }
 
 .theme-toggle-btn .icon-moon {
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   color: #CBD5E1;
 }
 
