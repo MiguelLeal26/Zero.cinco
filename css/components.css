@@ -2088,11 +2088,68 @@ body {
   z-index: 999999 !important;
 }
 
+/* Desktop Header Container (Hokma Reference Layout) */
+@media (min-width: 769px) {
+  .site-header {
+    padding: 1.15rem 0 !important;
+  }
+  .site-header .container,
+  .site-header .nav-wrapper,
+  .site-header .header-container {
+    max-width: 1600px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 4rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+  }
+  .site-header .brand-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+  }
+  .site-header .nav-menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 2.75rem !important;
+    margin-left: auto !important;
+    margin-right: 3.5rem !important;
+  }
+  .site-header .nav-actions {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1120px) {
+  .site-header .container,
+  .site-header .nav-wrapper {
+    padding: 0 2rem !important;
+  }
+  .site-header .nav-menu {
+    gap: 1.75rem !important;
+    margin-right: 2rem !important;
+  }
+}
+
 .nav-link,
 .nav-menu a {
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.06em !important;
-  font-size: 0.85rem !important;
+  white-space: nowrap !important;
+  color: #888888 !important;
+  position: relative !important;
+  padding: 0.35rem 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  transition: color 0.2s ease !important;
+  text-decoration: none !important;
 }
 
 .nav-dot,
@@ -2104,28 +2161,48 @@ body {
   content: none !important;
 }
 
-.nav-link {
-  color: #cccccc !important;
+/* Modo Escuro */
+.nav-link,
+.nav-menu a,
+[data-theme="dark"] .nav-link,
+[data-theme="dark"] .nav-menu a,
+:root:not([data-theme="light"]) .nav-link,
+:root:not([data-theme="light"]) .nav-menu a {
+  color: #8e8e8e !important;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-menu a:hover,
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-menu a:hover,
+:root:not([data-theme="light"]) .nav-link:hover,
+:root:not([data-theme="light"]) .nav-menu a:hover {
   color: #ffffff !important;
 }
 
-.nav-link.active {
-  color: #ff3b3b !important;
+.nav-link.active,
+.nav-menu a.active,
+[data-theme="dark"] .nav-link.active,
+[data-theme="dark"] .nav-menu a.active,
+:root:not([data-theme="light"]) .nav-link.active,
+:root:not([data-theme="light"]) .nav-menu a.active {
+  color: #e50914 !important;
 }
 
-[data-theme="light"] .nav-link {
-  color: #666666 !important;
+/* Modo Claro */
+[data-theme="light"] .nav-link,
+[data-theme="light"] .nav-menu a {
+  color: #555555 !important;
 }
 
-[data-theme="light"] .nav-link:hover {
+[data-theme="light"] .nav-link:hover,
+[data-theme="light"] .nav-menu a:hover {
   color: #111111 !important;
 }
 
-[data-theme="light"] .nav-link.active {
-  color: #ff3b3b !important;
+[data-theme="light"] .nav-link.active,
+[data-theme="light"] .nav-menu a.active {
+  color: #d60000 !important;
 }
 
 /* Hero section desktop proportion and centered alignment */

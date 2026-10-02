@@ -24,9 +24,9 @@
 
 
   <!-- CSS Stylesheets (Cache-busted) -->
-  <link rel="stylesheet" href="css/variables.css?v=20261001_v20">
-  <link rel="stylesheet" href="css/style.css?v=20261001_v20">
-  <link rel="stylesheet" href="css/components.css?v=20261001_v20">
+  <link rel="stylesheet" href="css/variables.css?v=20261001_v21">
+  <link rel="stylesheet" href="css/style.css?v=20261001_v21">
+  <link rel="stylesheet" href="css/components.css?v=20261001_v21">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -124,11 +124,80 @@
       }
     }
 
+    /* --- DESKTOP HEADER LAYOUT & DISTRIBUTION (HOKMA STANDARD) --- */
+    @media (min-width: 769px) {
+      .site-header {
+        padding: 1.15rem 0 !important;
+      }
+      .site-header .container,
+      .site-header .nav-wrapper,
+      .site-header .header-container {
+        max-width: 1600px !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 4rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        box-sizing: border-box !important;
+      }
+      .site-header .brand-logo {
+        display: inline-flex !important;
+        align-items: center !important;
+        flex-shrink: 0 !important;
+      }
+      .site-header .nav-menu {
+        display: flex !important;
+        align-items: center !important;
+        gap: 2.75rem !important;
+        margin-left: auto !important;
+        margin-right: 3.5rem !important;
+        position: static !important;
+        background: transparent !important;
+        padding: 0 !important;
+        height: auto !important;
+        width: auto !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+      }
+      .site-header .nav-actions {
+        display: flex !important;
+        align-items: center !important;
+        flex-shrink: 0 !important;
+        margin-left: 0 !important;
+      }
+      .site-header .mobile-toggle {
+        display: none !important;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1120px) {
+      .site-header .container,
+      .site-header .nav-wrapper {
+        padding: 0 2rem !important;
+      }
+      .site-header .nav-menu {
+        gap: 1.75rem !important;
+        margin-right: 2rem !important;
+      }
+    }
+
+    /* --- TIPOGRAFIA E CORES DOS LINKS DE NAVEGAÇÃO --- */
     .nav-link,
     .nav-menu a {
+      font-size: 0.88rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.12em !important;
       text-transform: uppercase !important;
-      letter-spacing: 0.06em !important;
-      font-size: 0.85rem !important;
+      white-space: nowrap !important;
+      color: #888888 !important;
+      position: relative !important;
+      padding: 0.35rem 0 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      transition: color 0.2s ease !important;
+      text-decoration: none !important;
     }
 
     .nav-dot,
@@ -140,45 +209,92 @@
       content: none !important;
     }
 
-    .nav-link {
-      color: #cccccc !important;
+    /* Modo Escuro */
+    .nav-link,
+    .nav-menu a,
+    [data-theme="dark"] .nav-link,
+    [data-theme="dark"] .nav-menu a,
+    :root:not([data-theme="light"]) .nav-link,
+    :root:not([data-theme="light"]) .nav-menu a {
+      color: #8e8e8e !important;
     }
 
-    .nav-link:hover {
+    .nav-link:hover,
+    .nav-menu a:hover,
+    [data-theme="dark"] .nav-link:hover,
+    [data-theme="dark"] .nav-menu a:hover,
+    :root:not([data-theme="light"]) .nav-link:hover,
+    :root:not([data-theme="light"]) .nav-menu a:hover {
       color: #ffffff !important;
     }
 
-    .nav-link.active {
-      color: #ff3b3b !important;
+    .nav-link.active,
+    .nav-menu a.active,
+    [data-theme="dark"] .nav-link.active,
+    [data-theme="dark"] .nav-menu a.active,
+    :root:not([data-theme="light"]) .nav-link.active,
+    :root:not([data-theme="light"]) .nav-menu a.active {
+      color: #e50914 !important;
     }
 
-    [data-theme="light"] .nav-link {
-      color: #666666 !important;
+    /* Modo Claro */
+    [data-theme="light"] .nav-link,
+    [data-theme="light"] .nav-menu a {
+      color: #555555 !important;
     }
 
-    [data-theme="light"] .nav-link:hover {
+    [data-theme="light"] .nav-link:hover,
+    [data-theme="light"] .nav-menu a:hover {
       color: #111111 !important;
     }
 
-    [data-theme="light"] .nav-link.active {
-      color: #ff3b3b !important;
+    [data-theme="light"] .nav-link.active,
+    [data-theme="light"] .nav-menu a.active {
+      color: #d60000 !important;
     }
 
-    .theme-toggle-btn,
-    .theme-toggle-btn:hover,
-    .theme-toggle-btn:focus,
-    .theme-toggle-btn:active,
-    #themeToggle,
-    #themeToggle:hover,
-    #themeToggle:focus,
-    #themeToggle:active,
-    .mobile-toggle,
-    .mobile-toggle:hover,
-    .mobile-toggle:focus,
-    .mobile-toggle:active {
+    /* --- BOTÃO DE TEMA MINIMALISTA NO TOPO (.theme-toggle-btn) --- */
+    .site-header .nav-actions .theme-toggle-btn {
+      width: 38px !important;
+      height: 38px !important;
+      min-width: 38px !important;
+      border-radius: 50% !important;
+      background: rgba(255, 255, 255, 0.04) !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      color: #888888 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      cursor: pointer !important;
+      transition: all 0.2s ease !important;
       box-shadow: none !important;
       animation: none !important;
       outline: none !important;
+      padding: 0 !important;
+    }
+
+    .site-header .nav-actions .theme-toggle-btn:hover {
+      background: rgba(255, 255, 255, 0.08) !important;
+      border-color: rgba(255, 255, 255, 0.3) !important;
+      color: #ffffff !important;
+      transform: none !important;
+    }
+
+    [data-theme="light"] .site-header .nav-actions .theme-toggle-btn {
+      background: rgba(0, 0, 0, 0.04) !important;
+      border: 1px solid rgba(0, 0, 0, 0.12) !important;
+      color: #555555 !important;
+    }
+
+    [data-theme="light"] .site-header .nav-actions .theme-toggle-btn:hover {
+      background: rgba(0, 0, 0, 0.08) !important;
+      border-color: rgba(0, 0, 0, 0.3) !important;
+      color: #111111 !important;
+    }
+
+    .site-header .nav-actions .theme-toggle-btn svg {
+      width: 18px !important;
+      height: 18px !important;
     }
 
     .theme-toggle-btn::before,
@@ -990,7 +1106,7 @@
   <!-- JavaScript Scripts -->
   <script src="js/icons.js"></script>
   <script src="js/calculator.js" defer></script>
-  <script src="js/main.js?v=20261001_v20" defer></script>
+  <script src="js/main.js?v=20261001_v21" defer></script>
   <script src="js/gallery.js" defer></script>
 
   <script>
