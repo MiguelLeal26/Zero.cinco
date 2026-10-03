@@ -2342,16 +2342,41 @@ body {
 :root:not([data-theme="light"]) .hero-watermark,
 :root:not([data-theme="light"]) .hero-bg-logo {
   display: block !important;
-  color: #e50914 !important;
-  opacity: 0.1 !important;
+  color: rgba(255, 255, 255, 0.06) !important;
+  opacity: 1 !important;
 }
 
 [data-theme="light"] .hero-watermark-05,
 [data-theme="light"] .hero-watermark,
 [data-theme="light"] .hero-bg-logo {
   display: block !important;
-  color: #99443d !important;
-  opacity: 0.05 !important;
+  color: rgba(17, 17, 17, 0.05) !important;
+  opacity: 1 !important;
+}
+
+/* Ponto da marca d'água 0.5 */
+.hero-watermark-05 .watermark-dot {
+  display: inline-block;
+  color: #e50914 !important;
+  opacity: 0.45 !important;
+}
+
+[data-theme="dark"] .hero-watermark-05 .watermark-dot,
+:root:not([data-theme="light"]) .hero-watermark-05 .watermark-dot {
+  color: #e50914 !important;
+  opacity: 0.45 !important;
+}
+
+[data-theme="light"] .hero-watermark-05 .watermark-dot {
+  color: #e50914 !important;
+  opacity: 0.35 !important;
+}
+
+/* Ponto vermelho de assinatura no ZERO.CINCO */
+.hero-eyebrow .dot-red,
+.dot-red {
+  color: #e50914 !important;
+  display: inline-block;
 }
 
 .site-logo {

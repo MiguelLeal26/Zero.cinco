@@ -784,8 +784,8 @@ img {
 :root:not([data-theme="light"]) .hero-watermark,
 :root:not([data-theme="light"]) .hero-bg-logo {
   display: block !important;
-  color: #e50914 !important;
-  opacity: 0.1 !important;
+  color: rgba(255, 255, 255, 0.06) !important;
+  opacity: 1 !important;
 }
 
 [data-theme="dark"] .hero-watermark-05 svg,
@@ -800,8 +800,40 @@ img {
 [data-theme="light"] .hero-watermark,
 [data-theme="light"] .hero-bg-logo {
   display: block !important;
-  color: #99443d !important;
-  opacity: 0.05 !important;
+  color: rgba(17, 17, 17, 0.05) !important;
+  opacity: 1 !important;
+}
+
+/* Ponto da marca d'água 0.5 */
+.hero-watermark-05 .watermark-dot {
+  display: inline-block;
+  color: #e50914 !important;
+  opacity: 0.45 !important;
+}
+
+[data-theme="dark"] .hero-watermark-05 .watermark-dot,
+:root:not([data-theme="light"]) .hero-watermark-05 .watermark-dot {
+  color: #e50914 !important;
+  opacity: 0.45 !important;
+}
+
+[data-theme="light"] .hero-watermark-05 .watermark-dot {
+  color: #e50914 !important;
+  opacity: 0.35 !important;
+}
+
+/* Ponto vermelho de assinatura no ZERO.CINCO */
+.hero-eyebrow .dot-red,
+.dot-red {
+  color: #e50914 !important;
+  display: inline-block;
+  transition: color var(--transition-normal, 0.25s);
+}
+
+[data-theme="dark"] .dot-red,
+[data-theme="light"] .dot-red,
+:root .dot-red {
+  color: #e50914 !important;
 }
 
 .hero-centered-box,
@@ -821,7 +853,7 @@ img {
 /* --- HERO EYEBROW (COSMOS MINIMALIST STYLE) --- */
 .hero-eyebrow {
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", 'Montserrat', sans-serif !important;
-  font-size: clamp(1.25rem, 1.8vw, 1.6rem) !important;
+  font-size: clamp(1.35rem, 2vw, 1.75rem) !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.2em !important;
@@ -1419,8 +1451,8 @@ html body h1.hero-title {
   }
 
   .hero-eyebrow {
-    font-size: clamp(1.05rem, 4vw, 1.3rem) !important;
-    letter-spacing: 0.16em !important;
+    font-size: clamp(1.15rem, 4.5vw, 1.45rem) !important;
+    letter-spacing: 0.18em !important;
     margin-bottom: 0.9rem !important;
   }
 
