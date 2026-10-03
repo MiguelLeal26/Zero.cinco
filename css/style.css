@@ -754,54 +754,16 @@ img {
   overflow: hidden !important;
 }
 
-/* --- HERO WATERMARK ("0.5") --- */
-.hero-watermark-05,
+/* --- HERO WATERMARK (DEFINITIVAMENTE REMOVIDO) --- */
+.hero-section::before,
+.hero-section::after,
+.hero-bg-logo,
 .hero-watermark,
-.hero-bg-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-display, 'Montserrat', sans-serif);
-  font-size: clamp(18rem, 36vw, 42rem);
-  font-weight: 900;
-  line-height: 1;
-  pointer-events: none;
-  user-select: none;
-  z-index: 0;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
-  display: block !important;
-  color: #e50914 !important;
-  opacity: 0.13 !important;
-  transition: opacity var(--transition-normal, 0.25s), color var(--transition-normal, 0.25s);
-}
-
-[data-theme="dark"] .hero-watermark-05,
-[data-theme="dark"] .hero-watermark,
-[data-theme="dark"] .hero-bg-logo,
-:root:not([data-theme="light"]) .hero-watermark-05,
-:root:not([data-theme="light"]) .hero-watermark,
-:root:not([data-theme="light"]) .hero-bg-logo {
-  display: block !important;
-  color: #e50914 !important;
-  opacity: 0.13 !important;
-}
-
-[data-theme="dark"] .hero-watermark-05 svg,
-[data-theme="dark"] .hero-watermark svg,
-[data-theme="dark"] .hero-bg-logo svg {
-  display: block !important;
-  fill: #e50914 !important;
-  opacity: 0.13 !important;
-}
-
-[data-theme="light"] .hero-watermark-05,
-[data-theme="light"] .hero-watermark,
-[data-theme="light"] .hero-bg-logo {
-  display: block !important;
-  color: #e50914 !important;
-  opacity: 0.12 !important;
+.hero-watermark-05 {
+  display: none !important;
+  content: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 /* Ponto vermelho de assinatura exclusivamente em ZERO.CINCO */
@@ -1447,21 +1409,6 @@ html body h1.hero-title {
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
-  }
-
-  .hero-watermark-05,
-  .hero-watermark,
-  .hero-bg-logo {
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    font-size: clamp(6.5rem, 28vw, 9.5rem) !important;
-    max-width: 90vw !important;
-    letter-spacing: 0.02em !important;
-    z-index: 1 !important;
-    pointer-events: none !important;
-    user-select: none !important;
   }
 
   .hero-eyebrow {
