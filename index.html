@@ -27,9 +27,9 @@
 
 
   <!-- CSS Stylesheets (Cache-busted) -->
-  <link rel="stylesheet" href="css/variables.css?v=20261003_v12">
-  <link rel="stylesheet" href="css/style.css?v=20261003_v12">
-  <link rel="stylesheet" href="css/components.css?v=20261003_v12">
+  <link rel="stylesheet" href="css/variables.css?v=20261003_v13">
+  <link rel="stylesheet" href="css/style.css?v=20261003_v13">
+  <link rel="stylesheet" href="css/components.css?v=20261003_v13">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -666,19 +666,8 @@
       gap: 2rem !important;
     }
 
-    .occasions-grid {
+    .showcase-container {
       width: 100% !important;
-      gap: 2rem !important;
-    }
-
-    @media (min-width: 992px) {
-      .occasions-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
-      }
-    }
-
-    .occasion-img-wrap {
-      height: 240px !important;
     }
 
     .portfolio-grid {
@@ -908,61 +897,25 @@
       box-shadow: none !important;
     }
 
-    /* Seção de Produções / Especialidades (Cosmos Editorial) */
-    #occasions .section-title {
+    /* Seção de Produções / Especialidades (Cosmos Editorial Showcase) */
+    .showcase-title {
       font-weight: 500 !important;
       letter-spacing: -0.02em !important;
       color: #ededed !important;
     }
 
-    [data-theme="light"] #occasions .section-title {
+    [data-theme="light"] .showcase-title {
       color: #1c1c1c !important;
     }
 
-    #occasions .section-subtitle {
-      font-size: 0.88rem !important;
-      color: #777777 !important;
+    .showcase-description {
+      color: #9a9a9a !important;
       font-weight: 400 !important;
-      line-height: 1.55 !important;
+      line-height: 1.65 !important;
     }
 
-    [data-theme="light"] #occasions .section-subtitle {
-      color: #888888 !important;
-    }
-
-    /* Cards de Eventos / Especialidades - Cinza Chumbo & Peso 450 */
-    .occasion-title {
-      color: #d8d8d8 !important;
-      font-size: 1.15rem !important;
-      font-weight: 450 !important;
-      transition: color 0.3s ease !important;
-    }
-
-    .occasion-card {
-      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
-    }
-
-    .occasion-card:hover {
-      border: 1px solid rgba(229, 9, 20, 0.4) !important;
-      box-shadow: 0 8px 24px rgba(229, 9, 20, 0.12) !important;
-    }
-
-    .occasion-card:hover .occasion-title {
-      color: #ff3b30 !important;
-    }
-
-    [data-theme="light"] .occasion-title {
-      color: #2a2a2a !important;
-      font-weight: 450 !important;
-    }
-
-    [data-theme="light"] .occasion-card:hover {
-      border: 1px solid rgba(229, 9, 20, 0.4) !important;
-      box-shadow: 0 8px 24px rgba(229, 9, 20, 0.08) !important;
-    }
-
-    [data-theme="light"] .occasion-card:hover .occasion-title {
-      color: #e50914 !important;
+    [data-theme="light"] .showcase-description {
+      color: #666666 !important;
     }
 
     /* Seção de Contato e Rodapé (Cosmos Editorial) */
@@ -1164,7 +1117,7 @@
 
       <nav class="nav-menu" id="navMenu">
         <a href="#hero" class="nav-link active">ZERO.CINCO</a>
-        <a href="#occasions" class="nav-link">Especialidades</a>
+        <a href="#especialidades" class="nav-link">Especialidades</a>
         <a href="#portfolio" class="nav-link">Portfólio</a>
         <a href="#calculator" class="nav-link">Orçamento Rápido</a>
       </nav>
@@ -1212,92 +1165,44 @@
   <!-- ==================== CONTINUOUS BRAND TICKER RIBBON ==================== -->
 
 
-  <!-- ==================== OCCASIONS & SERVICES ==================== -->
-  <section class="section" id="occasions">
-    <div class="container">
-      <div class="section-header">
-        <div class="badge-tag">Nossas Especialidades</div>
-        <h2 class="section-title">O que a <span class="highlight-red">ZERO.CINCO</span> produz</h2>
-        <p class="section-subtitle">Técnica profissional, direção leve e equipamentos de ponta para cada momento.</p>
+  <!-- ==================== PRODUÇÕES / ESPECIALIDADES (COSMOS EDITORIAL SHOWCASE) ==================== -->
+  <section id="especialidades" class="editorial-showcase section">
+    <span id="occasions" style="position: absolute; top: -100px; opacity: 0; pointer-events: none;"></span>
+    <div class="showcase-container">
+      <!-- Coluna Esquerda: Texto Editorial Fixo/Sticky -->
+      <div class="showcase-text">
+        <span class="eyebrow-tag">ESPECIALIDADES</span>
+        <h2 class="showcase-title">O que a <span class="highlight-red">ZERO.CINCO</span> produz</h2>
+        <p class="showcase-description">
+          Técnica profissional, direção leve e equipamentos de ponta para cada momento. De celebrações exclusivas a narrativas comerciais.
+        </p>
       </div>
 
-      <div class="occasions-grid">
-        <!-- Occasion 1: Casamentos -->
-        <div class="occasion-card">
-          <div class="occasion-img-wrap">
-            <picture>
-              <source srcset="assets/images/wedding.webp" type="image/webp">
-              <img src="assets/images/wedding.jpg" alt="Casamento" loading="lazy" decoding="async" width="1200" height="896">
-            </picture>
-          </div>
-          <div class="occasion-body">
-            <h3 class="occasion-title">Casamentos & Bodas</h3>
-          </div>
+      <!-- Coluna Direita: Mosaico Assimétrico de Fotos -->
+      <div class="showcase-gallery">
+        <div class="gallery-item item-1">
+          <img src="assets/images/wedding.webp" alt="Casamentos & Bodas" loading="lazy" decoding="async">
+          <span class="item-label">Casamentos & Bodas</span>
         </div>
-
-        <!-- Occasion 2: Pré-Wedding -->
-        <div class="occasion-card">
-          <div class="occasion-img-wrap">
-            <picture>
-              <source srcset="assets/images/prewedding.webp" type="image/webp">
-              <img src="assets/images/prewedding.jpg" alt="Ensaio Pré-Wedding" loading="lazy" decoding="async" width="1200" height="896">
-            </picture>
-          </div>
-          <div class="occasion-body">
-            <h3 class="occasion-title">Ensaio Pré-Wedding</h3>
-          </div>
+        <div class="gallery-item item-2">
+          <img src="assets/images/prewedding.webp" alt="Ensaio Pré-Wedding" loading="lazy" decoding="async">
+          <span class="item-label">Ensaio Pré-Wedding</span>
         </div>
-
-        <!-- Occasion 3: 15 Anos -->
-        <div class="occasion-card">
-          <div class="occasion-img-wrap">
-            <picture>
-              <source srcset="assets/images/debutante.webp" type="image/webp">
-              <img src="assets/images/debutante.jpg" alt="15 Anos e Formaturas" loading="lazy" decoding="async" width="1200" height="896">
-            </picture>
-          </div>
-          <div class="occasion-body">
-            <h3 class="occasion-title">15 Anos & Formaturas</h3>
-          </div>
+        <div class="gallery-item item-3">
+          <img src="assets/images/debutante.webp" alt="15 Anos & Formaturas" loading="lazy" decoding="async">
+          <span class="item-label">15 Anos & Formaturas</span>
         </div>
-
-        <!-- Occasion 4: Inaugurações & Lojas -->
-        <div class="occasion-card">
-          <div class="occasion-img-wrap">
-            <picture>
-              <source srcset="assets/images/inauguration.webp" type="image/webp">
-              <img src="assets/images/inauguration.jpg" alt="Inauguração de Lojas" loading="lazy" decoding="async" width="1200" height="896">
-            </picture>
-          </div>
-          <div class="occasion-body">
-            <h3 class="occasion-title">Inaugurações & Lojas</h3>
-          </div>
+        <div class="gallery-item item-4">
+          <img src="assets/images/inauguration.webp" alt="Inaugurações & Lojas" loading="lazy" decoding="async">
+          <span class="item-label">Inaugurações & Lojas</span>
         </div>
-
-        <!-- Occasion 5: Chá Revelação -->
-        <div class="occasion-card">
-          <div class="occasion-img-wrap">
-            <picture>
-              <source srcset="assets/images/reveal.webp" type="image/webp">
-              <img src="assets/images/reveal.jpg" alt="Chá Revelação e Comemorações" loading="lazy" decoding="async" width="1200" height="896">
-            </picture>
-          </div>
-          <div class="occasion-body">
-            <h3 class="occasion-title">Chá Revelação & Família</h3>
-          </div>
+        <div class="gallery-item item-5">
+          <img src="assets/images/reveal.webp" alt="Chá Revelação & Família" loading="lazy" decoding="async">
+          <span class="item-label">Chá Revelação & Família</span>
         </div>
-
-        <!-- Occasion 6: Social Media -->
-        <div class="occasion-card">
-          <div class="occasion-img-wrap">
-            <picture>
-              <source srcset="assets/images/commercial.webp" type="image/webp">
-              <img src="assets/images/commercial.jpg" alt="Social Media e Marcas" loading="lazy" decoding="async" width="1200" height="896">
-            </picture>
-          </div>
-          <div class="occasion-body">
-            <h3 class="occasion-title">Social Media & Marcas</h3>
-          </div>
+        <div class="gallery-item item-6">
+          <img src="assets/images/commercial.webp" alt="Social Media & Marcas" loading="lazy" decoding="async">
+          <span class="item-label">Social Media & Marcas</span>
         </div>
       </div>
     </div>
@@ -1609,10 +1514,10 @@
         <div>
           <h4 class="footer-col-title">Especialidades<span class="footer-title-dot">.</span></h4>
           <div class="footer-links">
-            <a href="#occasions">Casamentos</a>
-            <a href="#occasions">Pré-Wedding</a>
-            <a href="#occasions">15 Anos & Festas</a>
-            <a href="#occasions">Inaugurações</a>
+            <a href="#especialidades">Casamentos</a>
+            <a href="#especialidades">Pré-Wedding</a>
+            <a href="#especialidades">15 Anos & Festas</a>
+            <a href="#especialidades">Inaugurações</a>
           </div>
         </div>
 
