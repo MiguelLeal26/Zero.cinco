@@ -4,22 +4,57 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 0. THEME SWITCHER (Light / Dark Mode with LocalStorage)
+  // 0. THEME MANAGEMENT (Default: Dark Mode, with LocalStorage Persistence)
   const themeToggle = document.getElementById('themeToggle');
-  const savedTheme = localStorage.getItem('zerocinco-theme') || 'dark';
 
-  function applyTheme(theme) {
+  function applyTheme(theme, saveToStorage = true) {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('zerocinco-theme', theme);
+    if (document.body) {
+      document.body.setAttribute('data-theme', theme);
+    }
+
+    if (themeToggle) {
+      themeToggle.setAttribute(
+        'aria-label',
+        theme === 'dark' ? 'Alternar para Modo Claro' : 'Alternar para Modo Escuro'
+      );
+      themeToggle.setAttribute(
+        'title',
+        theme === 'dark' ? 'Alternar para Modo Claro' : 'Alternar para Modo Escuro'
+      );
+    }
+
+    if (saveToStorage) {
+      try {
+        localStorage.setItem('theme', theme);
+        localStorage.setItem('zerocinco-theme', theme);
+      } catch (e) {
+        console.warn('LocalStorage unavailable for theme saving', e);
+      }
+    }
   }
 
-  applyTheme(savedTheme);
+  function initTheme() {
+    let savedTheme = null;
+    try {
+      savedTheme = localStorage.getItem('theme') || localStorage.getItem('zerocinco-theme');
+    } catch (e) {
+      console.warn('LocalStorage unavailable for theme reading', e);
+    }
+
+    // Se NÃO houver tema salvo (primeiro acesso do usuário): 'dark' é o padrão obrigatório
+    const activeTheme = (savedTheme === 'light' || savedTheme === 'dark') ? savedTheme : 'dark';
+    applyTheme(activeTheme, false);
+  }
 
   function toggleTheme() {
-    const current = document.documentElement.getAttribute('data-theme') || 'dark';
-    const next = current === 'dark' ? 'light' : 'dark';
-    applyTheme(next);
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme, true);
   }
+
+  // Inicializa o tema no carregamento
+  initTheme();
 
   if (themeToggle) {
     themeToggle.addEventListener('click', toggleTheme);

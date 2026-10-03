@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -24,12 +24,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-
+  <!-- Instant Theme Initialization (Dark Mode Default, Zero Flash of Light Theme) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme') || localStorage.getItem('zerocinco-theme');
+        var theme = (saved === 'light' || saved === 'dark') ? saved : 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
 
   <!-- CSS Stylesheets (Cache-busted) -->
-  <link rel="stylesheet" href="css/variables.css?v=20261003_v13">
-  <link rel="stylesheet" href="css/style.css?v=20261003_v13">
-  <link rel="stylesheet" href="css/components.css?v=20261003_v13">
+  <link rel="stylesheet" href="css/variables.css?v=20261003_v14">
+  <link rel="stylesheet" href="css/style.css?v=20261003_v14">
+  <link rel="stylesheet" href="css/components.css?v=20261003_v14">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -308,6 +319,27 @@
     .site-header .nav-actions .theme-toggle-btn svg {
       width: 16px !important;
       height: 16px !important;
+    }
+
+    /* Theme Toggle Icons: Modo Escuro (Default) exibe Sol para alternar para o Claro */
+    .theme-toggle-btn .icon-sun {
+      display: block !important;
+      color: #ededed !important;
+      transition: transform 0.3s ease, color 0.3s ease !important;
+    }
+
+    .theme-toggle-btn .icon-moon {
+      display: none !important;
+      color: #1c1c1c !important;
+      transition: transform 0.3s ease, color 0.3s ease !important;
+    }
+
+    [data-theme="light"] .theme-toggle-btn .icon-sun {
+      display: none !important;
+    }
+
+    [data-theme="light"] .theme-toggle-btn .icon-moon {
+      display: block !important;
     }
 
     .theme-toggle-btn::before,
@@ -1123,10 +1155,10 @@
       </nav>
 
       <div class="nav-actions">
-        <!-- Theme Switcher (Claro / Escuro) -->
-        <button type="button" class="theme-toggle-btn" id="themeToggle" aria-label="Alternar Tema Claro/Escuro"
-          title="Alternar Modo Claro / Escuro">
-          <!-- Sun Icon (for Light Mode) -->
+        <!-- Theme Switcher (Claro / Escuro - Default: Dark Mode) -->
+        <button type="button" class="theme-toggle-btn" id="themeToggle" aria-label="Alternar para Modo Claro"
+          title="Alternar para Modo Claro">
+          <!-- Sun Icon (exibido no modo escuro para alternar para o claro) -->
           <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="4"></circle>
@@ -1139,7 +1171,7 @@
             <path d="m6.34 17.66-1.41 1.41"></path>
             <path d="m19.07 4.93-1.41 1.41"></path>
           </svg>
-          <!-- Moon Icon (for Dark Mode) -->
+          <!-- Moon Icon (exibido no modo claro para alternar para o escuro) -->
           <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
@@ -1550,7 +1582,7 @@
   <!-- JavaScript Scripts -->
   <script src="js/icons.js"></script>
   <script src="js/calculator.js?v=20261002_v29" defer></script>
-  <script src="js/main.js?v=20261002_v29" defer></script>
+  <script src="js/main.js?v=20261003_v14" defer></script>
   <script src="js/gallery.js?v=20261002_v29" defer></script>
 
   <script>

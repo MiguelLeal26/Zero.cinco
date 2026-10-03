@@ -696,18 +696,26 @@ img {
   content: none !important;
 }
 
+/* Modo Escuro (Default) -> Exibe o ícone de Sol para alternar para o Claro */
 .theme-toggle-btn .icon-sun {
-  display: none;
-  width: 16px;
-  height: 16px;
-  color: #D90429;
-}
-
-.theme-toggle-btn .icon-moon {
   display: block;
   width: 16px;
   height: 16px;
-  color: #CBD5E1;
+  color: #ededed;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle-btn .icon-moon {
+  display: none;
+  width: 16px;
+  height: 16px;
+  color: #1c1c1c;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle-btn:hover .icon-sun {
+  color: #e50914;
+  transform: rotate(20deg);
 }
 
 [data-theme="light"] .theme-toggle-btn {
@@ -722,12 +730,18 @@ img {
   color: #111111;
 }
 
+[data-theme="light"] .theme-toggle-btn:hover .icon-moon {
+  color: #e50914;
+  transform: rotate(-15deg);
+}
+
+/* Modo Claro ([data-theme="light"]) -> Exibe o ícone de Lua para alternar para o Escuro */
 [data-theme="light"] .theme-toggle-btn .icon-sun {
-  display: block;
+  display: none;
 }
 
 [data-theme="light"] .theme-toggle-btn .icon-moon {
-  display: none;
+  display: block;
 }
 
 .mobile-toggle {

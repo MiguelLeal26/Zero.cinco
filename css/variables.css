@@ -3,7 +3,9 @@
    Baseado na identidade visual oficial da Zero.Cinco
    ========================================================================== */
 
-:root {
+:root,
+[data-theme="dark"],
+html[data-theme="dark"] {
   /* --- 1. PALETA OFICIAL DE CORES --- */
   --color-primary: #E22228;        /* Vermelho principal */
   --color-primary-dark: #BE2429;   /* Vermelho escuro */
