@@ -770,12 +770,43 @@
   min-height: 95px;
 }
 
-/* Floating WhatsApp Button - Oculto no Desktop por padrão */
+/* Floating WhatsApp Button - Compacto e Proporcional (Desktop e Mobile) */
 .floating-whatsapp,
 .whatsapp-float,
 .btn-whatsapp-float,
 a.floating-whatsapp-btn {
-  display: none !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  background-color: #e50914 !important;
+  background: #e50914 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.35) !important;
+  z-index: 999999 !important;
+  text-decoration: none !important;
+  overflow: hidden !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  text-indent: -9999px !important;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.floating-whatsapp:hover,
+.whatsapp-float:hover,
+.btn-whatsapp-float:hover,
+a.floating-whatsapp-btn:hover {
+  transform: scale(1.08) !important;
+  background-color: #c40812 !important;
+  box-shadow: 0 6px 16px rgba(229, 9, 20, 0.45) !important;
 }
 
 .floating-whatsapp-badge {
@@ -861,26 +892,38 @@ a.floating-whatsapp-btn {
     grid-template-columns: 1fr;
   }
 
-  .floating-whatsapp {
+  .floating-whatsapp,
+  .floating-whatsapp-btn,
+  .whatsapp-float,
+  .btn-whatsapp-float,
+  a.floating-whatsapp-btn {
     position: fixed !important;
-    bottom: 24px !important;
+    bottom: 20px !important;
     right: 20px !important;
-    width: 56px !important;
-    height: 56px !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
     border-radius: 50% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+    padding: 0 !important;
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.35) !important;
     z-index: 999999 !important;
-    transition: background-color 0.3s ease, color 0.3s ease !important;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease !important;
     text-decoration: none !important;
+    overflow: hidden !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    text-indent: -9999px !important;
   }
 
   /* Botão Flutuante Redondo no Mobile: Fundo Vermelho (#e50914) e Ícone SEMPRE BRANCO (#ffffff) em ambos os temas */
   .floating-whatsapp,
   .floating-whatsapp-btn,
   .whatsapp-float,
+  .btn-whatsapp-float,
   a.floating-whatsapp-btn,
   [data-theme="dark"] .floating-whatsapp,
   [data-theme="dark"] .floating-whatsapp-btn,
@@ -891,7 +934,7 @@ a.floating-whatsapp-btn {
     background-color: #e50914 !important;
     background: #e50914 !important;
     color: #ffffff !important;
-    box-shadow: 0 4px 14px rgba(229, 9, 20, 0.4) !important;
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.35) !important;
   }
 
   /* Ícone sempre BRANCO (#ffffff) em ambos os modos (claro e escuro) */
@@ -903,6 +946,8 @@ a.floating-whatsapp-btn {
   .floating-whatsapp-btn i,
   .whatsapp-float svg,
   .whatsapp-float i,
+  .btn-whatsapp-float svg,
+  .btn-whatsapp-float i,
   [data-theme="dark"] .floating-whatsapp svg,
   [data-theme="dark"] .floating-whatsapp .whatsapp-icon,
   [data-theme="dark"] .floating-whatsapp i,
@@ -910,6 +955,7 @@ a.floating-whatsapp-btn {
   [data-theme="dark"] .floating-whatsapp-btn .whatsapp-icon,
   [data-theme="dark"] .floating-whatsapp-btn i,
   [data-theme="dark"] .whatsapp-float svg,
+  [data-theme="dark"] .btn-whatsapp-float svg,
   [data-theme="light"] .floating-whatsapp svg,
   [data-theme="light"] .floating-whatsapp .whatsapp-icon,
   [data-theme="light"] .floating-whatsapp i,
@@ -917,15 +963,24 @@ a.floating-whatsapp-btn {
   [data-theme="light"] .floating-whatsapp-btn .whatsapp-icon,
   [data-theme="light"] .floating-whatsapp-btn i,
   [data-theme="light"] .whatsapp-float svg,
+  [data-theme="light"] .btn-whatsapp-float svg,
   :root:not([data-theme="light"]) .floating-whatsapp svg,
   :root:not([data-theme="light"]) .floating-whatsapp .whatsapp-icon,
   :root:not([data-theme="light"]) .floating-whatsapp i,
   :root:not([data-theme="light"]) .floating-whatsapp-btn svg,
   :root:not([data-theme="light"]) .floating-whatsapp-btn .whatsapp-icon,
-  :root:not([data-theme="light"]) .floating-whatsapp-btn i {
+  :root:not([data-theme="light"]) .floating-whatsapp-btn i,
+  :root:not([data-theme="light"]) .btn-whatsapp-float svg {
+    width: 20px !important;
+    height: 20px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+    display: block !important;
+    margin: 0 !important;
     fill: #ffffff !important;
     color: #ffffff !important;
     stroke: none !important;
+    text-indent: 0 !important;
   }
 
   .modal-backdrop {
@@ -2600,14 +2655,27 @@ a[href*="whatsapp.com"].floating-whatsapp,
 .btn-whatsapp-float,
 a.floating-whatsapp-btn,
 .floating-whatsapp-btn {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
   background-color: #e50914 !important;
   background: #e50914 !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 18px rgba(229, 9, 20, 0.45) !important;
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.35) !important;
   overflow: hidden !important;
   font-size: 0 !important;
   line-height: 0 !important;
   text-indent: -9999px !important;
+  z-index: 999999 !important;
 }
 
 a[href*="wa.me"].floating-whatsapp svg,
@@ -2618,6 +2686,7 @@ a[href*="whatsapp.com"].floating-whatsapp svg,
 .floating-whatsapp-btn svg,
 .floating-whatsapp i,
 .whatsapp-float i,
+.btn-whatsapp-float i,
 .floating-whatsapp .whatsapp-icon,
 [data-theme="light"] .floating-whatsapp svg,
 [data-theme="light"] .whatsapp-float svg,
@@ -2627,6 +2696,12 @@ a[href*="whatsapp.com"].floating-whatsapp svg,
 [data-theme="dark"] .whatsapp-float svg,
 [data-theme="dark"] .btn-whatsapp-float svg,
 [data-theme="dark"] .floating-whatsapp-btn svg {
+  width: 20px !important;
+  height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+  display: block !important;
+  margin: 0 !important;
   fill: #ffffff !important;
   color: #ffffff !important;
   stroke: none !important;
@@ -2675,13 +2750,15 @@ a[href*="wa.me"]:not(.floating-whatsapp):not(.btn-whatsapp):not(.btn-whatsapp-ca
   overflow: visible !important;
 }
 
-/* Ocultar estritamente o botão flutuante no Desktop (PC) */
+/* Animação suave de hover para Desktop */
 @media (min-width: 769px) {
-  .floating-whatsapp,
-  .whatsapp-float,
-  .btn-whatsapp-float,
-  a.floating-whatsapp-btn {
-    display: none !important;
+  .floating-whatsapp:hover,
+  .whatsapp-float:hover,
+  .btn-whatsapp-float:hover,
+  a.floating-whatsapp-btn:hover {
+    transform: scale(1.08) !important;
+    background-color: #c40812 !important;
+    box-shadow: 0 6px 16px rgba(229, 9, 20, 0.45) !important;
   }
 }
 
