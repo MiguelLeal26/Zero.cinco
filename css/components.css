@@ -1825,6 +1825,24 @@ body.dark-mode .calc-pill-btn.active svg,
   opacity: 1 !important;
 }
 
+/* Remoção definitiva de ícones, SVGs e pseudo-elementos nos botões e opções da Calculadora */
+.calc-pill-btn i,
+.calc-pill-btn svg,
+.calc-pill-btn::before,
+.calc-pill-btn::after,
+.calc-addon-card i,
+.calc-addon-card svg,
+.calc-addon-card::before,
+.calc-addon-card::after {
+  display: none !important;
+  content: none !important;
+}
+
+.calc-pill-btn {
+  justify-content: center !important;
+  text-align: center !important;
+}
+
 /* Centralização e alinhamento do ícone do WhatsApp no botão lateral */
 .btn-whatsapp-calc-side {
   display: flex !important;

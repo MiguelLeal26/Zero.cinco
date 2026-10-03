@@ -1913,3 +1913,21 @@ textarea {
 .brand-ticker-strip {
   display: none !important;
 }
+
+/* Remoção definitiva de ícones, SVGs e pseudo-elementos nos botões e opções da Calculadora */
+.calc-pill-btn i,
+.calc-pill-btn svg,
+.calc-pill-btn::before,
+.calc-pill-btn::after,
+.calc-addon-card i,
+.calc-addon-card svg,
+.calc-addon-card::before,
+.calc-addon-card::after {
+  display: none !important;
+  content: none !important;
+}
+
+.calc-pill-btn {
+  justify-content: center !important;
+  text-align: center !important;
+}
