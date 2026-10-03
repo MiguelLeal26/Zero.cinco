@@ -467,10 +467,11 @@ img {
 .nav-brand img,
 .brand-logo img,
 .logo-theme {
-  height: 38px;
-  width: auto;
-  display: block;
-  object-fit: contain;
+  height: 52px !important;
+  max-height: 54px !important;
+  width: auto !important;
+  display: block !important;
+  object-fit: contain !important;
   vertical-align: middle;
 }
 
@@ -497,7 +498,8 @@ img {
   .nav-brand img,
   .brand-logo img,
   .logo-theme {
-    height: 34px !important;
+    height: 42px !important;
+    max-height: 44px !important;
     width: auto !important;
   }
 }
