@@ -39,8 +39,8 @@
 
   <!-- CSS Stylesheets (Cache-busted) -->
   <link rel="stylesheet" href="css/variables.css?v=20261003_v14">
-  <link rel="stylesheet" href="css/style.css?v=20261003_v24">
-  <link rel="stylesheet" href="css/components.css?v=20261003_v20">
+  <link rel="stylesheet" href="css/style.css?v=20261003_v25">
+  <link rel="stylesheet" href="css/components.css?v=20261003_v21">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -491,26 +491,21 @@
       margin: 0 auto !important;
     }
 
-    /* Floating WhatsApp Button - Círculo Vermelho Fixo e Ícone 100% Branco */
+    /* Floating WhatsApp Button - Oculto no Desktop (PC) */
     .floating-whatsapp,
     .whatsapp-float,
     .btn-whatsapp-float,
     a.floating-whatsapp-btn {
-      position: fixed !important;
-      bottom: 24px !important;
-      right: 24px !important;
-      width: 56px !important;
-      height: 56px !important;
-      border-radius: 50% !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      z-index: 999999 !important;
-      text-decoration: none !important;
-      overflow: hidden !important;
-      font-size: 0 !important;
-      line-height: 0 !important;
-      text-indent: -9999px !important;
+      display: none !important;
+    }
+
+    @media (min-width: 769px) {
+      .floating-whatsapp,
+      .whatsapp-float,
+      .btn-whatsapp-float,
+      a.floating-whatsapp-btn {
+        display: none !important;
+      }
     }
 
     a[href*="wa.me"].floating-whatsapp,

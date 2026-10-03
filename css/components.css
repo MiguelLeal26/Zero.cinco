@@ -770,31 +770,12 @@
   min-height: 95px;
 }
 
-/* Floating WhatsApp Button - Círculo Vermelho e Ícone Branco */
-.floating-whatsapp {
-  position: fixed !important;
-  bottom: 2rem !important;
-  right: 2rem !important;
-  width: 58px !important;
-  height: 58px !important;
-  background-color: #e50914 !important;
-  background: #e50914 !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 18px rgba(229, 9, 20, 0.45) !important;
-  z-index: 999999 !important;
-  transition: transform var(--transition-fast), background-color 0.2s ease, box-shadow 0.2s ease !important;
-  overflow: hidden !important;
-  font-size: 0 !important;
-  line-height: 0 !important;
-  text-indent: -9999px !important;
-}
-
-.floating-whatsapp:hover {
-  transform: scale(1.08);
+/* Floating WhatsApp Button - Oculto no Desktop por padrão */
+.floating-whatsapp,
+.whatsapp-float,
+.btn-whatsapp-float,
+a.floating-whatsapp-btn {
+  display: none !important;
 }
 
 .floating-whatsapp-badge {
@@ -2639,5 +2620,15 @@ a[href*="wa.me"]:not(.floating-whatsapp):not(.btn-whatsapp):not(.btn-whatsapp-ca
   line-height: inherit !important;
   text-indent: 0 !important;
   overflow: visible !important;
+}
+
+/* Ocultar estritamente o botão flutuante no Desktop (PC) */
+@media (min-width: 769px) {
+  .floating-whatsapp,
+  .whatsapp-float,
+  .btn-whatsapp-float,
+  a.floating-whatsapp-btn {
+    display: none !important;
+  }
 }
 
