@@ -39,8 +39,8 @@
 
   <!-- CSS Stylesheets (Cache-busted) -->
   <link rel="stylesheet" href="css/variables.css?v=20261003_v14">
-  <link rel="stylesheet" href="css/style.css?v=20261003_v23">
-  <link rel="stylesheet" href="css/components.css?v=20261003_v19">
+  <link rel="stylesheet" href="css/style.css?v=20261003_v24">
+  <link rel="stylesheet" href="css/components.css?v=20261003_v20">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -507,10 +507,14 @@
       justify-content: center !important;
       z-index: 999999 !important;
       text-decoration: none !important;
+      overflow: hidden !important;
+      font-size: 0 !important;
+      line-height: 0 !important;
+      text-indent: -9999px !important;
     }
 
-    a[href*="wa.me"],
-    a[href*="whatsapp.com"],
+    a[href*="wa.me"].floating-whatsapp,
+    a[href*="whatsapp.com"].floating-whatsapp,
     .floating-whatsapp,
     .whatsapp-float,
     .btn-whatsapp-float,
@@ -520,17 +524,18 @@
       box-shadow: 0 4px 18px rgba(229, 9, 20, 0.45) !important;
     }
 
-    a[href*="wa.me"] svg,
-    a[href*="whatsapp.com"] svg,
+    a[href*="wa.me"].floating-whatsapp svg,
+    a[href*="whatsapp.com"].floating-whatsapp svg,
     .floating-whatsapp svg,
     .whatsapp-float svg,
     .btn-whatsapp-float svg,
     .floating-whatsapp-btn svg {
       fill: #ffffff !important;
       color: #ffffff !important;
+      text-indent: 0 !important;
     }
 
-    a[href*="wa.me"] path,
+    a[href*="wa.me"].floating-whatsapp path,
     .floating-whatsapp path,
     .whatsapp-float path,
     .btn-whatsapp-float path,
@@ -538,10 +543,30 @@
       fill: #ffffff !important;
     }
 
+    /* Proteção estrita para manter links textuais de contato e rodapé intactos e não flutuantes */
+    .contact-section a[href*="wa.me"],
     .footer-links a[href*="wa.me"],
-    .site-footer a[href*="wa.me"] {
+    .site-footer a[href*="wa.me"],
+    a[href*="wa.me"]:not(.floating-whatsapp):not(.btn-whatsapp):not(.btn-whatsapp-calc-side):not(.btn-whatsapp-calc-bottom):not(.btn-submit-whatsapp) {
+      position: static !important;
+      display: inline !important;
+      width: auto !important;
+      height: auto !important;
       background: none !important;
       box-shadow: none !important;
+      border-radius: 0 !important;
+      font-size: inherit !important;
+      line-height: inherit !important;
+      text-indent: 0 !important;
+      overflow: visible !important;
+    }
+
+    .hero-section {
+      position: relative !important;
+    }
+
+    .site-footer {
+      position: static !important;
     }
 
     @media (max-width: 768px) {
@@ -643,7 +668,7 @@
       .floating-whatsapp-btn,
       .whatsapp-float,
       .btn-whatsapp-float,
-      a[href*="wa.me"] {
+      a[href*="wa.me"].floating-whatsapp {
         position: fixed !important;
         bottom: 24px !important;
         right: 20px !important;
@@ -660,22 +685,27 @@
         box-shadow: 0 4px 18px rgba(229, 9, 20, 0.45) !important;
         transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease !important;
         text-decoration: none !important;
+        overflow: hidden !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+        text-indent: -9999px !important;
       }
 
       .floating-whatsapp svg,
       .floating-whatsapp-btn svg,
       .whatsapp-float svg,
       .btn-whatsapp-float svg,
-      a[href*="wa.me"] svg {
+      a[href*="wa.me"].floating-whatsapp svg {
         fill: #ffffff !important;
         color: #ffffff !important;
+        text-indent: 0 !important;
       }
 
       .floating-whatsapp path,
       .floating-whatsapp-btn path,
       .whatsapp-float path,
       .btn-whatsapp-float path,
-      a[href*="wa.me"] path {
+      a[href*="wa.me"].floating-whatsapp path {
         fill: #ffffff !important;
       }
     }
