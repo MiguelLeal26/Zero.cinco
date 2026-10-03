@@ -754,7 +754,7 @@ img {
   overflow: hidden !important;
 }
 
-/* --- HERO WATERMARK ("05") --- */
+/* --- HERO WATERMARK ("0.5") --- */
 .hero-watermark-05,
 .hero-watermark,
 .hero-bg-logo {
@@ -773,7 +773,7 @@ img {
   white-space: nowrap;
   display: block !important;
   color: #e50914 !important;
-  opacity: 0.1 !important;
+  opacity: 0.13 !important;
   transition: opacity var(--transition-normal, 0.25s), color var(--transition-normal, 0.25s);
 }
 
@@ -784,8 +784,8 @@ img {
 :root:not([data-theme="light"]) .hero-watermark,
 :root:not([data-theme="light"]) .hero-bg-logo {
   display: block !important;
-  color: rgba(255, 255, 255, 0.06) !important;
-  opacity: 1 !important;
+  color: #e50914 !important;
+  opacity: 0.13 !important;
 }
 
 [data-theme="dark"] .hero-watermark-05 svg,
@@ -793,40 +793,25 @@ img {
 [data-theme="dark"] .hero-bg-logo svg {
   display: block !important;
   fill: #e50914 !important;
-  opacity: 0.1 !important;
+  opacity: 0.13 !important;
 }
 
 [data-theme="light"] .hero-watermark-05,
 [data-theme="light"] .hero-watermark,
 [data-theme="light"] .hero-bg-logo {
   display: block !important;
-  color: rgba(17, 17, 17, 0.05) !important;
-  opacity: 1 !important;
-}
-
-/* Ponto da marca d'água 0.5 */
-.hero-watermark-05 .watermark-dot {
-  display: inline-block;
   color: #e50914 !important;
-  opacity: 0.45 !important;
+  opacity: 0.12 !important;
 }
 
-[data-theme="dark"] .hero-watermark-05 .watermark-dot,
-:root:not([data-theme="light"]) .hero-watermark-05 .watermark-dot {
-  color: #e50914 !important;
-  opacity: 0.45 !important;
-}
-
-[data-theme="light"] .hero-watermark-05 .watermark-dot {
-  color: #e50914 !important;
-  opacity: 0.35 !important;
-}
-
-/* Ponto vermelho de assinatura no ZERO.CINCO */
+/* Ponto vermelho de assinatura exclusivamente em ZERO.CINCO */
 .hero-eyebrow .dot-red,
 .dot-red {
   color: #e50914 !important;
-  display: inline-block;
+  display: inline !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
   transition: color var(--transition-normal, 0.25s);
 }
 

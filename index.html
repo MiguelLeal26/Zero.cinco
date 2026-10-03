@@ -27,9 +27,9 @@
 
 
   <!-- CSS Stylesheets (Cache-busted) -->
-  <link rel="stylesheet" href="css/variables.css?v=20261003_v7">
-  <link rel="stylesheet" href="css/style.css?v=20261003_v7">
-  <link rel="stylesheet" href="css/components.css?v=20261003_v7">
+  <link rel="stylesheet" href="css/variables.css?v=20261003_v8">
+  <link rel="stylesheet" href="css/style.css?v=20261003_v8">
+  <link rel="stylesheet" href="css/components.css?v=20261003_v8">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -338,7 +338,7 @@
       }
     }
 
-    /* Hero Watermark ("05") */
+    /* Hero Watermark 0.5 - Marca D'água Vermelha Suave */
     .hero-watermark-05,
     .hero-watermark,
     .hero-bg-logo {
@@ -356,6 +356,8 @@
       user-select: none !important;
       z-index: 0 !important;
       display: block !important;
+      color: #e50914 !important;
+      opacity: 0.13 !important;
     }
 
     [data-theme="dark"] .hero-watermark-05,
@@ -365,16 +367,16 @@
     :root:not([data-theme="light"]) .hero-watermark,
     :root:not([data-theme="light"]) .hero-bg-logo {
       display: block !important;
-      color: rgba(255, 255, 255, 0.06) !important;
-      opacity: 1 !important;
+      color: #e50914 !important;
+      opacity: 0.13 !important;
     }
 
     [data-theme="light"] .hero-watermark-05,
     [data-theme="light"] .hero-watermark,
     [data-theme="light"] .hero-bg-logo {
       display: block !important;
-      color: rgba(17, 17, 17, 0.05) !important;
-      opacity: 1 !important;
+      color: #e50914 !important;
+      opacity: 0.12 !important;
     }
 
     .hero-centered-box,
@@ -389,29 +391,14 @@
       max-width: 900px !important;
     }
 
-    /* Ponto da marca d'água 0.5 */
-    .hero-watermark-05 .watermark-dot {
-      display: inline-block;
-      color: #e50914 !important;
-      opacity: 0.45 !important;
-    }
-
-    [data-theme="dark"] .hero-watermark-05 .watermark-dot,
-    :root:not([data-theme="light"]) .hero-watermark-05 .watermark-dot {
-      color: #e50914 !important;
-      opacity: 0.45 !important;
-    }
-
-    [data-theme="light"] .hero-watermark-05 .watermark-dot {
-      color: #e50914 !important;
-      opacity: 0.35 !important;
-    }
-
-    /* Ponto vermelho de assinatura no ZERO.CINCO */
+    /* Ponto vermelho de assinatura exclusivamente em ZERO.CINCO */
     .hero-eyebrow .dot-red,
     .dot-red {
       color: #e50914 !important;
-      display: inline-block;
+      display: inline !important;
+      font-size: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
       transition: color var(--transition-normal, 0.25s);
     }
 
@@ -1166,8 +1153,8 @@
   <!-- ==================== HERO SECTION ==================== -->
   <section class="hero-section" id="hero">
     <div class="container hero-centered-box hero-content">
-      <!-- Architectural Background 05 Watermark -->
-      <div class="hero-watermark-05 hero-watermark hero-bg-logo" aria-hidden="true">0<span class="watermark-dot dot-red">.</span>5</div>
+      <!-- Architectural Background 0.5 Watermark -->
+      <div class="hero-watermark-05 hero-watermark hero-bg-logo" aria-hidden="true">0.5</div>
 
       <span class="hero-eyebrow">ZERO<span class="dot-red">.</span>CINCO</span>
       <h1 class="hero-title">Nem todo ponto<br>é um ponto final.</h1>
