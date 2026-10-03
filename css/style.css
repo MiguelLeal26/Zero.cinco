@@ -1197,7 +1197,7 @@ html body h1.hero-title {
   aspect-ratio: 4 / 5;
 }
 
-/* Responsividade (@media (max-width: 900px)) */
+/* Responsividade Geral (@media (max-width: 900px)) */
 @media (max-width: 900px) {
   .editorial-showcase {
     padding: 4.5rem 1.25rem;
@@ -1229,30 +1229,114 @@ html body h1.hero-title {
     gap: 1.25rem;
   }
 
-  .gallery-item.item-1,
-  .gallery-item.item-2,
-  .gallery-item.item-3,
-  .gallery-item.item-4,
-  .gallery-item.item-5,
-  .gallery-item.item-6 {
+  .gallery-item {
     grid-column: auto;
     margin-top: 0;
     aspect-ratio: 4 / 5;
   }
-}
 
-@media (max-width: 560px) {
-  .editorial-showcase {
-    padding: 3.5rem 1rem;
+  .gallery-item.item-1 {
+    grid-column: span 2;
+    aspect-ratio: 16 / 10;
   }
 
-  .showcase-gallery {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+  .gallery-item.item-1 img {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* Responsividade Exclusiva para Mobile (@media (max-width: 768px)) */
+@media (max-width: 768px) {
+  .editorial-showcase {
+    padding: 0;
+    width: 100%;
+  }
+
+  /* 1. Ajuste do Bloco de Texto no Mobile */
+  .showcase-container,
+  .specialties-container {
+    padding: 3rem 1.25rem !important;
+    gap: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .showcase-text {
+    position: static !important;
+    top: auto !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+  }
+
+  .showcase-text .eyebrow-tag {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.12em !important;
+    margin-bottom: 0.85rem !important;
   }
 
   .showcase-title {
-    font-size: 1.85rem;
+    font-size: clamp(1.6rem, 6vw, 2rem) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .showcase-description {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 2rem !important;
+    color: #a3a3a3 !important;
+    max-width: 100% !important;
+  }
+
+  [data-theme="light"] .showcase-description {
+    color: #666666 !important;
+  }
+
+  /* 2. Ajuste das Imagens e Layout da Galeria no Mobile (2 colunas elegantes) */
+  .showcase-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .gallery-item {
+    grid-column: auto !important;
+    margin-top: 0 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+  }
+
+  .gallery-item.item-1 {
+    grid-column: span 2 !important;
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  .gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 4 / 5 !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+  }
+
+  .gallery-item.item-1 img {
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  .item-label {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.05em !important;
+    padding-top: 0.35rem !important;
+    padding-left: 0.35rem !important;
+    padding-right: 0.35rem !important;
+    padding-bottom: 0.35rem !important;
+    color: #888888 !important;
+    margin-top: 0 !important;
+    display: block !important;
+    line-height: 1.2 !important;
   }
 }
 
