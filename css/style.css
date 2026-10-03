@@ -466,12 +466,13 @@ img {
 /* --- SITE LOGO (DYNAMIC BY THEME) --- */
 .nav-brand img,
 .brand-logo img,
-.logo-theme {
-  height: 52px !important;
-  max-height: 54px !important;
+.logo-theme,
+.header-logo img {
+  height: 36px !important; /* Altura padrão elegante para desktop */
   width: auto !important;
-  display: block !important;
+  max-width: none !important;
   object-fit: contain !important;
+  display: block;
   vertical-align: middle;
 }
 
@@ -497,9 +498,9 @@ img {
 @media (max-width: 768px) {
   .nav-brand img,
   .brand-logo img,
-  .logo-theme {
-    height: 42px !important;
-    max-height: 44px !important;
+  .logo-theme,
+  .header-logo img {
+    height: 30px !important; /* Tamanho proporcional perfeito para celular */
     width: auto !important;
   }
 }

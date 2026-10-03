@@ -39,7 +39,7 @@
 
   <!-- CSS Stylesheets (Cache-busted) -->
   <link rel="stylesheet" href="css/variables.css?v=20261003_v14">
-  <link rel="stylesheet" href="css/style.css?v=20261003_v16">
+  <link rel="stylesheet" href="css/style.css?v=20261003_v18">
   <link rel="stylesheet" href="css/components.css?v=20261003_v14">
 
   <style>
@@ -94,11 +94,13 @@
 
     .nav-brand img,
     .brand-logo img,
-    .logo-theme {
-      height: 38px !important;
+    .logo-theme,
+    .header-logo img {
+      height: 36px !important; /* Altura padrão elegante para desktop */
       width: auto !important;
-      display: block;
-      object-fit: contain;
+      max-width: none !important;
+      display: block !important;
+      object-fit: contain !important;
       vertical-align: middle;
     }
 
@@ -124,8 +126,9 @@
     @media (max-width: 768px) {
       .nav-brand img,
       .brand-logo img,
-      .logo-theme {
-        height: 34px !important;
+      .logo-theme,
+      .header-logo img {
+        height: 30px !important; /* Tamanho proporcional perfeito para celular */
         width: auto !important;
       }
     }
