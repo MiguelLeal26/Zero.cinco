@@ -39,8 +39,8 @@
 
   <!-- CSS Stylesheets (Cache-busted) -->
   <link rel="stylesheet" href="css/variables.css?v=20261003_v14">
-  <link rel="stylesheet" href="css/style.css?v=20261003_v27">
-  <link rel="stylesheet" href="css/components.css?v=20261003_v23">
+  <link rel="stylesheet" href="css/style.css?v=20261003_v28">
+  <link rel="stylesheet" href="css/components.css?v=20261003_v24">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -399,11 +399,12 @@
     /* Hero Eyebrow (Cosmos Style) */
     .hero-eyebrow {
       font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif !important;
-      font-size: clamp(1.35rem, 2vw, 1.75rem) !important;
-      font-weight: 700 !important;
+      font-size: clamp(0.95rem, 1.4vw, 1.15rem) !important;
+      font-weight: 500 !important;
       text-transform: uppercase !important;
-      letter-spacing: 0.2em !important;
-      margin-bottom: 1.25rem !important;
+      letter-spacing: 0.15em !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
       display: block !important;
       text-align: center !important;
       position: relative !important;
@@ -426,13 +427,13 @@
     html body h1.hero-title {
       font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif !important;
       font-size: clamp(2.4rem, 4.6vw, 4rem) !important;
-      font-weight: 600 !important;
-      line-height: 1.12 !important;
-      letter-spacing: -0.03em !important;
+      font-weight: 400 !important;
+      line-height: 1.18 !important;
+      letter-spacing: -0.025em !important;
       text-transform: none !important;
-      margin-top: 0 !important;
-      margin-bottom: 0 !important;
       text-align: center !important;
+      max-width: 800px !important;
+      margin: 0.75rem auto 0 auto !important;
       position: relative !important;
       z-index: 2 !important;
     }
@@ -610,19 +611,26 @@
         text-align: center !important;
       }
       .hero-eyebrow {
-        font-size: 0.9rem !important;
-        letter-spacing: 0.16em !important;
-        margin-bottom: 0.75rem !important;
+        font-size: 0.85rem !important;
+        letter-spacing: 0.15em !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        font-weight: 500 !important;
         text-align: center !important;
       }
       .hero-title,
       h1.hero-title {
-        font-size: clamp(1.85rem, 7vw, 2.3rem) !important;
+        font-size: clamp(2.2rem, 9vw, 3.2rem) !important;
+        font-weight: 400 !important;
         line-height: 1.15 !important;
         letter-spacing: -0.025em !important;
         text-transform: none !important;
         text-align: center !important;
-        margin-bottom: 0 !important;
+        max-width: 800px !important;
+        width: 100% !important;
+        padding: 0 1.25rem !important;
+        margin: 0.75rem auto 0 auto !important;
+        box-sizing: border-box !important;
       }
       .hero-desc {
         font-size: 1.08rem !important;
@@ -1259,7 +1267,7 @@
   <section class="hero-section" id="hero">
     <div class="container hero-centered-box hero-content">
       <span class="hero-eyebrow">ZERO<span class="dot-red">.</span>CINCO</span>
-      <h1 class="hero-title">Nem todo ponto<br>é um ponto final.</h1>
+      <h1 class="hero-title">Nem todo ponto<br>é um final.</h1>
     </div>
   </section>
 
