@@ -39,7 +39,7 @@
 
   <!-- CSS Stylesheets (Cache-busted) -->
   <link rel="stylesheet" href="css/variables.css?v=20261003_v14">
-  <link rel="stylesheet" href="css/style.css?v=20261003_v14">
+  <link rel="stylesheet" href="css/style.css?v=20261003_v16">
   <link rel="stylesheet" href="css/components.css?v=20261003_v14">
 
   <style>
@@ -84,67 +84,49 @@
       padding-top: 75px;
     }
 
-    /* --- SITE LOGO (RESPONSIVE & DYNAMIC BY THEME) --- */
-    .site-logo {
-      display: none;
-      width: auto;
+    /* --- SITE LOGO (DYNAMIC BY THEME) --- */
+    .nav-brand,
+    .brand-logo {
+      display: inline-flex !important;
+      align-items: center !important;
+      text-decoration: none !important;
+    }
+
+    .nav-brand img,
+    .brand-logo img,
+    .logo-theme {
+      height: 38px !important;
+      width: auto !important;
+      display: block;
       object-fit: contain;
       vertical-align: middle;
     }
-    .logo-desktop {
-      height: 41px !important;
-      width: auto;
-      object-fit: contain;
+
+    /* Modo Claro */
+    [data-theme="light"] .logo-light {
+      display: block !important;
     }
-    .logo-mobile {
-      height: 34px;
-      width: auto;
-      object-fit: contain;
+    [data-theme="light"] .logo-dark {
+      display: none !important;
     }
 
-    /* Desktop (> 768px) */
-    @media (min-width: 769px) {
-      .logo-mobile {
-        display: none !important;
-      }
-      .logo-desktop.logo-white,
-      [data-theme="dark"] .logo-desktop.logo-white,
-      :root:not([data-theme="light"]) .logo-desktop.logo-white {
-        display: inline-block !important;
-      }
-      .logo-desktop.logo-dark,
-      [data-theme="dark"] .logo-desktop.logo-dark,
-      :root:not([data-theme="light"]) .logo-desktop.logo-dark {
-        display: none !important;
-      }
-      [data-theme="light"] .logo-desktop.logo-dark {
-        display: inline-block !important;
-      }
-      [data-theme="light"] .logo-desktop.logo-white {
-        display: none !important;
-      }
+    /* Modo Escuro (padrão) */
+    [data-theme="dark"] .logo-light,
+    :root:not([data-theme="light"]) .logo-light {
+      display: none !important;
+    }
+    [data-theme="dark"] .logo-dark,
+    :root:not([data-theme="light"]) .logo-dark {
+      display: block !important;
     }
 
-    /* Mobile (<= 768px) */
+    /* No Mobile (<= 768px) */
     @media (max-width: 768px) {
-      .logo-desktop {
-        display: none !important;
-      }
-      .logo-mobile.logo-white,
-      [data-theme="dark"] .logo-mobile.logo-white,
-      :root:not([data-theme="light"]) .logo-mobile.logo-white {
-        display: inline-block !important;
-      }
-      .logo-mobile.logo-dark,
-      [data-theme="dark"] .logo-mobile.logo-dark,
-      :root:not([data-theme="light"]) .logo-mobile.logo-dark {
-        display: none !important;
-      }
-      [data-theme="light"] .logo-mobile.logo-dark {
-        display: inline-block !important;
-      }
-      [data-theme="light"] .logo-mobile.logo-white {
-        display: none !important;
+      .nav-brand img,
+      .brand-logo img,
+      .logo-theme {
+        height: 34px !important;
+        width: auto !important;
       }
     }
 
@@ -1140,11 +1122,9 @@
   <!-- ==================== HEADER / NAVBAR ==================== -->
   <header class="site-header" id="siteHeader">
     <div class="container nav-wrapper">
-      <a href="#" class="brand-logo" aria-label="ZERO.CINCO Home">
-        <img src="images/logo-desktop-white.png" alt="ZERO.CINCO Produções" class="site-logo logo-desktop logo-white">
-        <img src="images/logo-desktop-black.png" alt="ZERO.CINCO Produções" class="site-logo logo-desktop logo-dark">
-        <img src="images/logo-white.png" alt="ZERO.CINCO" class="site-logo logo-mobile logo-white">
-        <img src="images/logo-black.png" alt="ZERO.CINCO" class="site-logo logo-mobile logo-dark">
+      <a href="#" class="nav-brand brand-logo" aria-label="05 Produções">
+        <img src="assets/logo-light.png" alt="05 Produções" class="logo-theme logo-light">
+        <img src="assets/logo-dark.png" alt="05 Produções" class="logo-theme logo-dark">
       </a>
 
       <nav class="nav-menu" id="navMenu">

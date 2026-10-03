@@ -85,15 +85,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const summaryEvent = document.getElementById('calcSummaryEvent') || document.getElementById('summary-event');
         const summaryDuration = document.getElementById('calcSummaryDuration') || document.getElementById('summary-duration');
         const summaryAddons = document.getElementById('calcSummaryAddons') || document.getElementById('summary-addons');
-        const summaryPrice = document.getElementById('calcSummaryPrice') || document.getElementById('summary-price');
         const btnWhatsapp = document.getElementById('calcSendWhatsapp') || document.getElementById('btn-whatsapp') || document.querySelector('.calc-summary-card a');
 
         if (summaryEvent) summaryEvent.textContent = eventData.name.trim();
         if (summaryDuration) summaryDuration.textContent = " " + durationData.name.trim();
-
-        if (summaryPrice) {
-            summaryPrice.innerText = "Sob Consulta";
-        }
 
         if (summaryAddons) {
             if (selectedAddons.length > 0) {

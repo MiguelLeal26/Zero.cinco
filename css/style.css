@@ -450,6 +450,7 @@ img {
   }
 }
 
+.nav-brand,
 .brand-logo {
   display: inline-flex;
   align-items: center;
@@ -459,83 +460,45 @@ img {
   letter-spacing: -0.02em;
   color: var(--text-primary);
   text-transform: uppercase;
+  text-decoration: none;
 }
 
-/* --- SITE LOGO (RESPONSIVE & DYNAMIC BY THEME) --- */
-.site-logo {
-  display: none;
+/* --- SITE LOGO (DYNAMIC BY THEME) --- */
+.nav-brand img,
+.brand-logo img,
+.logo-theme {
+  height: 38px;
   width: auto;
+  display: block;
   object-fit: contain;
   vertical-align: middle;
 }
 
-.logo-desktop {
-  height: 41px !important;
-  width: auto;
-  object-fit: contain;
+/* Modo Claro */
+[data-theme="light"] .logo-light {
+  display: block !important;
+}
+[data-theme="light"] .logo-dark {
+  display: none !important;
 }
 
-.logo-mobile {
-  height: 34px;
-  width: auto;
-  object-fit: contain;
+/* Modo Escuro (padrão) */
+[data-theme="dark"] .logo-light,
+:root:not([data-theme="light"]) .logo-light {
+  display: none !important;
+}
+[data-theme="dark"] .logo-dark,
+:root:not([data-theme="light"]) .logo-dark {
+  display: block !important;
 }
 
-/* Comportamento no Desktop (telas > 768px) */
-@media (min-width: 769px) {
-  .logo-mobile {
-    display: none !important;
-  }
-
-  /* Tema Escuro ([data-theme="dark"] ou padrão dark) */
-  .logo-desktop.logo-white,
-  [data-theme="dark"] .logo-desktop.logo-white,
-  :root:not([data-theme="light"]) .logo-desktop.logo-white {
-    display: inline-block !important;
-  }
-
-  .logo-desktop.logo-dark,
-  [data-theme="dark"] .logo-desktop.logo-dark,
-  :root:not([data-theme="light"]) .logo-desktop.logo-dark {
-    display: none !important;
-  }
-
-  /* Tema Claro ([data-theme="light"]) */
-  [data-theme="light"] .logo-desktop.logo-dark {
-    display: inline-block !important;
-  }
-
-  [data-theme="light"] .logo-desktop.logo-white {
-    display: none !important;
-  }
-}
-
-/* Comportamento no Mobile (telas <= 768px) */
+/* No Mobile (@media (max-width: 768px)) */
 @media (max-width: 768px) {
-  .logo-desktop {
-    display: none !important;
-  }
-
-  /* Tema Escuro ([data-theme="dark"] ou padrão dark) */
-  .logo-mobile.logo-white,
-  [data-theme="dark"] .logo-mobile.logo-white,
-  :root:not([data-theme="light"]) .logo-mobile.logo-white {
-    display: inline-block !important;
-  }
-
-  .logo-mobile.logo-dark,
-  [data-theme="dark"] .logo-mobile.logo-dark,
-  :root:not([data-theme="light"]) .logo-mobile.logo-dark {
-    display: none !important;
-  }
-
-  /* Tema Claro ([data-theme="light"]) */
-  [data-theme="light"] .logo-mobile.logo-dark {
-    display: inline-block !important;
-  }
-
-  [data-theme="light"] .logo-mobile.logo-white {
-    display: none !important;
+  .nav-brand img,
+  .brand-logo img,
+  .logo-theme {
+    height: 34px !important;
+    width: auto !important;
   }
 }
 
