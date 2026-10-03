@@ -152,7 +152,7 @@ body {
   transform: translateX(2px);
 }
 
-/* --- TYPOGRAPHY & HEADINGS --- */
+/* --- TYPOGRAPHY & HEADINGS (COSMOS MINIMALIST & EDITORIAL) --- */
 h1,
 h2,
 h3,
@@ -160,23 +160,23 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1.18;
+  font-weight: 500;
+  line-height: 1.25;
   color: var(--text-primary);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
 }
 
 p {
   color: var(--text-secondary);
   font-size: 1.02rem;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 strong,
 b {
   color: var(--text-primary);
-  font-weight: 700;
+  font-weight: 500;
 }
 
 a {
@@ -256,6 +256,9 @@ img {
 
 .section-title {
   font-size: clamp(2rem, 3.8vw, 2.75rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
@@ -264,7 +267,9 @@ img {
 }
 
 .section-subtitle {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
+  font-weight: 400;
+  line-height: 1.55;
   color: var(--text-muted);
 }
 
@@ -1054,12 +1059,21 @@ html body h1.hero-title {
 }
 
 .occasion-title {
-  font-size: 1.2rem;
-  font-weight: 500 !important;
+  font-size: 1.15rem;
+  font-weight: 450 !important;
   margin-bottom: 0;
   color: var(--text-primary);
   line-height: 1.3;
   transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .occasion-title,
+:root:not([data-theme="light"]) .occasion-title {
+  color: #d8d8d8;
+}
+
+[data-theme="light"] .occasion-title {
+  color: #2a2a2a;
 }
 
 .occasion-card:hover .occasion-title {
@@ -1097,7 +1111,7 @@ html body h1.hero-title {
 }
 
 [data-theme="light"] .package-card.featured {
-  border: 2px solid #000000;
+  border: 1.5px solid #1c1c1c;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
@@ -1110,7 +1124,7 @@ html body h1.hero-title {
   color: #e50914;
   border: 1px solid #e50914;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   padding: 0.25rem 0.85rem;
@@ -1128,6 +1142,7 @@ html body h1.hero-title {
 
 .package-name {
   font-size: 1.3rem;
+  font-weight: 500;
   margin-bottom: 0.4rem;
 }
 
@@ -1147,7 +1162,7 @@ html body h1.hero-title {
 .package-price {
   font-family: var(--font-display);
   font-size: clamp(1.4rem, 2.2vw, 1.85rem);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.01em;
   color: var(--text-primary);
 }
@@ -1225,19 +1240,19 @@ html body h1.hero-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.85rem;
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 [data-theme="light"] .author-avatar {
   background: rgba(0, 0, 0, 0.05);
   border-color: rgba(0, 0, 0, 0.12);
-  color: #111111;
+  color: var(--text-primary);
 }
 
 .author-name {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.92rem;
   color: var(--text-primary);
 }
@@ -1270,7 +1285,8 @@ html body h1.hero-title {
 
 .footer-col-title {
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 500;
+  letter-spacing: -0.01em;
   margin-bottom: 1.2rem;
   color: var(--text-primary);
 }
@@ -1278,7 +1294,7 @@ html body h1.hero-title {
 .footer-col-title .footer-title-dot,
 .footer-title-dot {
   color: #e50914;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .footer-links {
@@ -1289,6 +1305,7 @@ html body h1.hero-title {
 
 .footer-links a {
   font-size: 0.88rem;
+  font-weight: 400;
   color: var(--text-muted);
   transition: color 0.2s ease;
 }

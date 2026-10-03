@@ -27,9 +27,9 @@
 
 
   <!-- CSS Stylesheets (Cache-busted) -->
-  <link rel="stylesheet" href="css/variables.css?v=20261003_v11">
-  <link rel="stylesheet" href="css/style.css?v=20261003_v11">
-  <link rel="stylesheet" href="css/components.css?v=20261003_v11">
+  <link rel="stylesheet" href="css/variables.css?v=20261003_v12">
+  <link rel="stylesheet" href="css/style.css?v=20261003_v12">
+  <link rel="stylesheet" href="css/components.css?v=20261003_v12">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -721,17 +721,18 @@
     strong,
     b,
     .hero-desc strong {
-      color: #ffffff !important;
-      font-weight: 700 !important;
+      color: #ededed !important;
+      font-weight: 500 !important;
     }
 
     h1, h2, h3, h4, h5, h6,
     .section-title,
     .package-name,
     .author-name,
-    .occasion-title,
     .footer-col-title {
-      color: #ffffff !important;
+      color: #ededed !important;
+      font-weight: 500 !important;
+      letter-spacing: -0.02em !important;
     }
 
     .section-subtitle,
@@ -739,7 +740,9 @@
     .testimonial-quote,
     .footer-links a,
     .footer-brand p {
-      color: #a3a3a3 !important;
+      color: #9a9a9a !important;
+      font-weight: 400 !important;
+      line-height: 1.55 !important;
     }
 
     /* Títulos e destaques neutros com assinatura de precisão */
@@ -760,24 +763,31 @@
 
     .package-price {
       font-size: clamp(1.4rem, 2.2vw, 1.85rem) !important;
-      font-weight: 700 !important;
+      font-weight: 500 !important;
       letter-spacing: -0.01em !important;
-      color: #ffffff !important;
+      color: #ededed !important;
     }
 
     [data-theme="light"] .package-price {
-      color: #000000 !important;
+      color: #1c1c1c !important;
+      font-weight: 500 !important;
     }
 
     .calc-summary-price {
       font-size: 1.45rem !important;
-      font-weight: 700 !important;
+      font-weight: 500 !important;
       letter-spacing: -0.01em !important;
-      color: #ffffff !important;
+      color: #ededed !important;
     }
 
     [data-theme="light"] .calc-summary-price {
-      color: #111111 !important;
+      color: #1c1c1c !important;
+      font-weight: 500 !important;
+    }
+
+    .calc-summary-val {
+      font-weight: 500 !important;
+      color: inherit !important;
     }
 
     /* Badges de Seção Neutros e Editoriais */
@@ -898,10 +908,33 @@
       box-shadow: none !important;
     }
 
-    /* Cards de Eventos / Especialidades - Título Branco, Borda e Título Vermelho Suave no Hover */
-    .occasion-title {
-      color: #ffffff !important;
+    /* Seção de Produções / Especialidades (Cosmos Editorial) */
+    #occasions .section-title {
       font-weight: 500 !important;
+      letter-spacing: -0.02em !important;
+      color: #ededed !important;
+    }
+
+    [data-theme="light"] #occasions .section-title {
+      color: #1c1c1c !important;
+    }
+
+    #occasions .section-subtitle {
+      font-size: 0.88rem !important;
+      color: #777777 !important;
+      font-weight: 400 !important;
+      line-height: 1.55 !important;
+    }
+
+    [data-theme="light"] #occasions .section-subtitle {
+      color: #888888 !important;
+    }
+
+    /* Cards de Eventos / Especialidades - Cinza Chumbo & Peso 450 */
+    .occasion-title {
+      color: #d8d8d8 !important;
+      font-size: 1.15rem !important;
+      font-weight: 450 !important;
       transition: color 0.3s ease !important;
     }
 
@@ -919,8 +952,8 @@
     }
 
     [data-theme="light"] .occasion-title {
-      color: #111111 !important;
-      font-weight: 500 !important;
+      color: #2a2a2a !important;
+      font-weight: 450 !important;
     }
 
     [data-theme="light"] .occasion-card:hover {
@@ -932,20 +965,49 @@
       color: #e50914 !important;
     }
 
-    /* Rodapé - Títulos Neutros com Detalhe do Ponto Final Vermelho e Hover nos Links */
+    /* Seção de Contato e Rodapé (Cosmos Editorial) */
+    #contact .section-title {
+      font-weight: 500 !important;
+      letter-spacing: -0.02em !important;
+      color: #ededed !important;
+    }
+
+    [data-theme="light"] #contact .section-title {
+      color: #1c1c1c !important;
+    }
+
+    #contact p,
+    .contact-phone,
+    .footer-links a,
+    .footer-bottom p,
+    .footer-brand p {
+      color: #949494 !important;
+      font-weight: 400 !important;
+    }
+
+    [data-theme="light"] #contact p,
+    [data-theme="light"] .contact-phone,
+    [data-theme="light"] .footer-links a,
+    [data-theme="light"] .footer-bottom p,
+    [data-theme="light"] .footer-brand p {
+      color: #6b6b6b !important;
+    }
+
     .footer-col-title {
-      color: #ffffff !important;
-      font-weight: 700 !important;
+      color: #ededed !important;
+      font-weight: 500 !important;
+      letter-spacing: -0.01em !important;
     }
 
     [data-theme="light"] .footer-col-title {
-      color: #111111 !important;
+      color: #1c1c1c !important;
+      font-weight: 500 !important;
     }
 
     .footer-col-title .footer-title-dot,
     .footer-title-dot {
       color: #e50914 !important;
-      font-weight: 700 !important;
+      font-weight: 500 !important;
     }
 
     .footer-links a {
@@ -979,21 +1041,24 @@
       color: #ffffff !important;
     }
 
-    /* Modo Claro: Preto grafite (#111111), Cinza chumbo (#444444) e Vermelho */
+    /* Modo Claro: Grafite profundo (#1c1c1c) e Cinza intermediário (#6e6e6e) */
     [data-theme="light"] body,
     [data-theme="light"] p {
-      color: #444444 !important;
+      color: #6e6e6e !important;
+      font-weight: 400 !important;
+      line-height: 1.6 !important;
     }
 
     [data-theme="light"] .hero-desc {
-      color: #555555 !important;
+      color: #767676 !important;
       font-weight: 400 !important;
     }
 
     [data-theme="light"] strong,
     [data-theme="light"] b,
     [data-theme="light"] .hero-desc strong {
-      color: #111111 !important;
+      color: #1c1c1c !important;
+      font-weight: 500 !important;
     }
 
     [data-theme="light"] h1,
@@ -1005,17 +1070,18 @@
     [data-theme="light"] .section-title,
     [data-theme="light"] .package-name,
     [data-theme="light"] .author-name,
-    [data-theme="light"] .occasion-title,
     [data-theme="light"] .footer-col-title {
-      color: #111111 !important;
+      color: #1c1c1c !important;
+      font-weight: 500 !important;
+      letter-spacing: -0.02em !important;
     }
 
     [data-theme="light"] .section-subtitle,
     [data-theme="light"] .package-audience,
-    [data-theme="light"] .testimonial-quote,
-    [data-theme="light"] .footer-links a,
-    [data-theme="light"] .footer-brand p {
-      color: #555555 !important;
+    [data-theme="light"] .testimonial-quote {
+      color: #6e6e6e !important;
+      font-weight: 400 !important;
+      line-height: 1.55 !important;
     }
 
     /* ==========================================================================
@@ -1377,10 +1443,10 @@
         <div class="clean-calc-summary">
           <h3 class="calc-summary-title">Resumo da Proposta</h3>
           <div class="calc-summary-details">
-            <p><span class="calc-summary-label">Evento:</span> <strong id="calcSummaryEvent">Casamento &amp;
-                Pré-Wedding</strong></p>
-            <p><span class="calc-summary-label">Duração:</span> <strong id="calcSummaryDuration">Cobertura Essencial
-                (até 3h)</strong></p>
+            <p><span class="calc-summary-label">Evento:</span> <span id="calcSummaryEvent" class="calc-summary-val">Casamento &amp;
+                Pré-Wedding</span></p>
+            <p><span class="calc-summary-label">Duração:</span> <span id="calcSummaryDuration" class="calc-summary-val">Cobertura Essencial
+                (até 3h)</span></p>
             <div class="calc-addons-block">
               <span class="calc-summary-label">Opcionais:</span>
               <ul id="calcSummaryAddons" class="calc-summary-addons-list">
