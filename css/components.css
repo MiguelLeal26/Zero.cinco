@@ -2299,9 +2299,14 @@ body {
   max-width: 1100px !important;
 }
 
-.hero-tags,
-.hero-cta-group {
+.hero-tags {
   display: none !important;
+}
+
+.hero-cta-group {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 /* Marca d'água / Logo "05" gigante de fundo na seção Hero */

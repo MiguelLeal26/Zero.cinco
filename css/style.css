@@ -816,20 +816,54 @@ img {
   z-index: 2;
 }
 
-.hero-title {
-  font-size: clamp(2rem, 3.8vw, 3rem) !important;
-  font-weight: 300 !important;
-  line-height: 1.35 !important;
-  letter-spacing: -0.015em;
-  margin-top: 0 !important;
-  margin-bottom: 1.5rem !important;
-  color: var(--text-primary);
-  text-align: center;
+/* --- HERO EYEBROW (COSMOS MINIMALIST STYLE) --- */
+.hero-eyebrow {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", 'Montserrat', sans-serif !important;
+  font-size: 1rem;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.18em !important;
+  margin-bottom: 1.2rem !important;
+  display: block !important;
+  text-align: center !important;
+  color: #e5e5e5;
 }
 
-.hero-title .highlight-red {
-  color: #e50914;
-  font-weight: 400 !important;
+[data-theme="dark"] .hero-eyebrow,
+:root:not([data-theme="light"]) .hero-eyebrow {
+  color: #e5e5e5 !important;
+}
+
+[data-theme="light"] .hero-eyebrow {
+  color: #1a1a1a !important;
+}
+
+/* --- HERO TITLE (COSMOS EDITORIAL STYLE) --- */
+.hero-title,
+h1.hero-title,
+html body .hero-title,
+html body h1.hero-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif !important;
+  font-size: clamp(2.8rem, 6vw, 5.2rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.035em !important;
+  margin-top: 0 !important;
+  margin-bottom: 2rem !important;
+  text-align: center !important;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .hero-title,
+[data-theme="dark"] h1.hero-title,
+:root:not([data-theme="light"]) .hero-title,
+:root:not([data-theme="light"]) h1.hero-title {
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .hero-title,
+[data-theme="light"] h1.hero-title {
+  color: #0a0a0a !important;
 }
 
 .hero-desc {
@@ -1306,7 +1340,7 @@ img {
   }
 
   .hero-title {
-    font-size: 2.2rem !important;
+    font-size: clamp(2.6rem, 5.5vw, 4rem) !important;
   }
 
   .hero-tags {
@@ -1368,8 +1402,9 @@ img {
   }
 
   .hero-title {
-    font-size: clamp(1.85rem, 7.5vw, 2.5rem);
-    line-height: 1.15;
+    font-size: clamp(2.2rem, 8vw, 3.2rem) !important;
+    line-height: 1.1 !important;
+    margin-bottom: 1.5rem !important;
   }
 
   .hero-desc {
@@ -1564,19 +1599,14 @@ img {
 h1.hero-title,
 html body .hero-title,
 html body h1.hero-title {
-  font-size: clamp(2rem, 3.8vw, 3rem) !important;
-  line-height: 1.35 !important;
-  font-weight: 300 !important;
-  letter-spacing: -0.015em;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif !important;
+  font-size: clamp(2.8rem, 6vw, 5.2rem) !important;
+  line-height: 1.08 !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.035em !important;
   margin-top: 0 !important;
-  margin-bottom: 1.5rem !important;
-  text-align: center;
-}
-
-/* Garante que o texto em destaque (vermelho) acompanhe a fonte fina */
-.hero-title span,
-.hero-title .highlight-red {
-  font-weight: 400 !important;
+  margin-bottom: 2rem !important;
+  text-align: center !important;
 }
 
 .hero-desc,
