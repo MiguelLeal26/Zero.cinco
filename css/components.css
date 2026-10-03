@@ -2279,8 +2279,10 @@ body {
 /* Hero section desktop proportion and centered alignment */
 @media (min-width: 769px) {
   .hero-section {
-    padding-top: calc(80px + 3rem) !important;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 75px) !important;
+    height: calc(100vh - 75px);
+    padding: 0 1.5rem !important;
+    margin: 0 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -2296,7 +2298,9 @@ body {
   text-align: center !important;
   margin: 0 auto !important;
   width: 100% !important;
-  max-width: 1100px !important;
+  max-width: 900px !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
 
 .hero-tags {
@@ -2318,13 +2322,14 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: var(--font-display, 'Montserrat', sans-serif);
-  font-size: clamp(14rem, 30vw, 36rem);
+  font-size: clamp(18rem, 36vw, 42rem);
   font-weight: 900;
   line-height: 1;
   pointer-events: none;
   user-select: none;
   z-index: 0;
-  letter-spacing: -0.06em;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
   display: block !important;
   color: #e50914 !important;
   opacity: 0.1 !important;

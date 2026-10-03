@@ -27,9 +27,9 @@
 
 
   <!-- CSS Stylesheets (Cache-busted) -->
-  <link rel="stylesheet" href="css/variables.css?v=20261003_v5">
-  <link rel="stylesheet" href="css/style.css?v=20261003_v5">
-  <link rel="stylesheet" href="css/components.css?v=20261003_v5">
+  <link rel="stylesheet" href="css/variables.css?v=20261003_v6">
+  <link rel="stylesheet" href="css/style.css?v=20261003_v6">
+  <link rel="stylesheet" href="css/components.css?v=20261003_v6">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -328,8 +328,10 @@
     /* Hero Section - Desktop spacing and centering */
     @media (min-width: 769px) {
       .hero-section {
-        padding-top: calc(80px + 3rem) !important;
-        min-height: calc(100vh - 80px);
+        min-height: calc(100vh - 75px) !important;
+        height: calc(100vh - 75px);
+        padding: 0 1.5rem !important;
+        margin: 0 !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -345,13 +347,14 @@
       left: 50% !important;
       transform: translate(-50%, -50%) !important;
       font-family: var(--font-display, 'Montserrat', sans-serif) !important;
-      font-size: clamp(14rem, 30vw, 36rem) !important;
+      font-size: clamp(18rem, 36vw, 42rem) !important;
       font-weight: 900 !important;
       line-height: 1 !important;
+      letter-spacing: 0.04em !important;
+      white-space: nowrap !important;
       pointer-events: none !important;
       user-select: none !important;
       z-index: 0 !important;
-      letter-spacing: -0.06em !important;
       display: block !important;
     }
 
@@ -389,18 +392,20 @@
     /* Hero Eyebrow (Cosmos Style) */
     .hero-eyebrow {
       font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif !important;
-      font-size: clamp(0.95rem, 1.2vw, 1.15rem) !important;
-      font-weight: 600 !important;
+      font-size: clamp(1.25rem, 1.8vw, 1.6rem) !important;
+      font-weight: 700 !important;
       text-transform: uppercase !important;
-      letter-spacing: 0.14em !important;
-      margin-bottom: 0.9rem !important;
+      letter-spacing: 0.2em !important;
+      margin-bottom: 1.25rem !important;
       display: block !important;
       text-align: center !important;
+      position: relative !important;
+      z-index: 2 !important;
     }
 
     [data-theme="dark"] .hero-eyebrow,
     :root:not([data-theme="light"]) .hero-eyebrow {
-      color: #e0e0e0 !important;
+      color: #f5f5f5 !important;
     }
 
     [data-theme="light"] .hero-eyebrow {
@@ -413,14 +418,16 @@
     html body .hero-title,
     html body h1.hero-title {
       font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif !important;
-      font-size: clamp(2.8rem, 5.5vw, 4.6rem) !important;
+      font-size: clamp(2.4rem, 4.6vw, 4rem) !important;
       font-weight: 600 !important;
-      line-height: 1.08 !important;
-      letter-spacing: -0.035em !important;
+      line-height: 1.12 !important;
+      letter-spacing: -0.03em !important;
       text-transform: none !important;
       margin-top: 0 !important;
       margin-bottom: 0 !important;
       text-align: center !important;
+      position: relative !important;
+      z-index: 2 !important;
     }
 
     [data-theme="dark"] .hero-title,
@@ -488,6 +495,7 @@
       }
       .hero-section {
         min-height: calc(100vh - 80px) !important;
+        height: auto !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
@@ -495,15 +503,21 @@
         padding: 3rem 1.25rem !important;
         margin-top: 0 !important;
       }
+      .hero-watermark-05,
+      .hero-watermark,
+      .hero-bg-logo {
+        font-size: clamp(14rem, 48vw, 22rem) !important;
+        letter-spacing: 0.02em !important;
+      }
       .hero-eyebrow {
-        font-size: clamp(0.85rem, 3.5vw, 1rem) !important;
-        letter-spacing: 0.14em !important;
-        margin-bottom: 0.75rem !important;
+        font-size: clamp(1.05rem, 4vw, 1.3rem) !important;
+        letter-spacing: 0.16em !important;
+        margin-bottom: 0.9rem !important;
       }
       .hero-title,
       h1.hero-title {
-        font-size: clamp(2rem, 7.5vw, 2.8rem) !important;
-        line-height: 1.12 !important;
+        font-size: clamp(1.85rem, 7vw, 2.4rem) !important;
+        line-height: 1.15 !important;
         text-transform: none !important;
         margin-bottom: 0 !important;
       }
@@ -1119,10 +1133,10 @@
 
   <!-- ==================== HERO SECTION ==================== -->
   <section class="hero-section" id="hero">
-    <!-- Architectural Background 05 Watermark -->
-    <div class="hero-watermark-05 hero-watermark hero-bg-logo" aria-hidden="true">05</div>
-
     <div class="container hero-centered-box hero-content">
+      <!-- Architectural Background 05 Watermark -->
+      <div class="hero-watermark-05 hero-watermark hero-bg-logo" aria-hidden="true">05</div>
+
       <span class="hero-eyebrow">ZERO.CINCO</span>
       <h1 class="hero-title">Nem todo ponto<br>é um ponto final.</h1>
     </div>
