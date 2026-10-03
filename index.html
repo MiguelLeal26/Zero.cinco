@@ -27,9 +27,9 @@
 
 
   <!-- CSS Stylesheets (Cache-busted) -->
-  <link rel="stylesheet" href="css/variables.css?v=20261002_v28">
-  <link rel="stylesheet" href="css/style.css?v=20261002_v28">
-  <link rel="stylesheet" href="css/components.css?v=20261002_v28">
+  <link rel="stylesheet" href="css/variables.css?v=20261003_v2">
+  <link rel="stylesheet" href="css/style.css?v=20261003_v2">
+  <link rel="stylesheet" href="css/components.css?v=20261003_v2">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -336,6 +336,44 @@
       }
     }
 
+    /* Hero Watermark ("05") */
+    .hero-watermark-05,
+    .hero-watermark,
+    .hero-bg-logo {
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+      font-family: var(--font-display, 'Montserrat', sans-serif) !important;
+      font-size: clamp(14rem, 30vw, 36rem) !important;
+      font-weight: 900 !important;
+      line-height: 1 !important;
+      pointer-events: none !important;
+      user-select: none !important;
+      z-index: 0 !important;
+      letter-spacing: -0.06em !important;
+      display: block !important;
+    }
+
+    [data-theme="dark"] .hero-watermark-05,
+    [data-theme="dark"] .hero-watermark,
+    [data-theme="dark"] .hero-bg-logo,
+    :root:not([data-theme="light"]) .hero-watermark-05,
+    :root:not([data-theme="light"]) .hero-watermark,
+    :root:not([data-theme="light"]) .hero-bg-logo {
+      display: block !important;
+      color: #e50914 !important;
+      opacity: 0.1 !important;
+    }
+
+    [data-theme="light"] .hero-watermark-05,
+    [data-theme="light"] .hero-watermark,
+    [data-theme="light"] .hero-bg-logo {
+      display: block !important;
+      color: #99443d !important;
+      opacity: 0.05 !important;
+    }
+
     .hero-centered-box,
     .hero-content {
       display: flex !important;
@@ -365,11 +403,22 @@
     }
 
     .hero-desc {
-      font-size: 1.12rem !important;
-      line-height: 1.75 !important;
-      max-width: 720px !important;
+      font-size: 1.3rem !important;
+      font-weight: 400 !important;
+      line-height: 1.6 !important;
+      max-width: 820px !important;
       margin: 0 auto !important;
       text-align: center !important;
+      color: #b5b5b5 !important;
+    }
+
+    [data-theme="dark"] .hero-desc,
+    :root:not([data-theme="light"]) .hero-desc {
+      color: #b5b5b5 !important;
+    }
+
+    [data-theme="light"] .hero-desc {
+      color: #555555 !important;
     }
 
     .hero-tags {
@@ -415,8 +464,9 @@
         margin-bottom: 1.25rem !important;
       }
       .hero-desc {
-        font-size: 1rem !important;
-        line-height: 1.65 !important;
+        font-size: 1.08rem !important;
+        font-weight: 400 !important;
+        line-height: 1.6 !important;
         margin-bottom: 0 !important;
       }
       .hero-cta-group {
@@ -599,9 +649,13 @@
        PADRONIZAÇÃO GLOBAL DE CORES TIPOGRÁFICAS (BRANCO, CINZA E VERMELHO)
        ========================================================================== */
     body,
-    p,
-    .hero-desc {
+    p {
       color: #b0b0b0 !important;
+    }
+
+    .hero-desc {
+      color: #b5b5b5 !important;
+      font-weight: 400 !important;
     }
 
     strong,
@@ -865,9 +919,13 @@
 
     /* Modo Claro: Preto grafite (#111111), Cinza chumbo (#444444) e Vermelho */
     [data-theme="light"] body,
-    [data-theme="light"] p,
-    [data-theme="light"] .hero-desc {
+    [data-theme="light"] p {
       color: #444444 !important;
+    }
+
+    [data-theme="light"] .hero-desc {
+      color: #555555 !important;
+      font-weight: 400 !important;
     }
 
     [data-theme="light"] strong,
@@ -1018,7 +1076,7 @@
   <!-- ==================== HERO SECTION ==================== -->
   <section class="hero-section" id="hero">
     <!-- Architectural Background 05 Watermark -->
-    <div class="hero-watermark-05" aria-hidden="true">05</div>
+    <div class="hero-watermark-05 hero-watermark hero-bg-logo" aria-hidden="true">05</div>
 
     <div class="container hero-centered-box hero-content">
 
@@ -1029,8 +1087,7 @@
       </h1>
 
       <p class="hero-desc">
-        A <strong>ZERO.CINCO</strong> une a agilidade da cultura digital com acabamento cinematográfico. Produções
-        autorais para <strong>Casamentos, Pré-Wedding, 15 Anos, Inaugurações de Lojas e Redes Sociais</strong>.
+        A ZERO.CINCO une a agilidade da cultura digital com acabamento cinematográfico, produções autorais para seus eventos contratados.
       </p>
 
       <div class="hero-cta-group" style="margin-top: 2rem;">
