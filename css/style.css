@@ -1769,9 +1769,11 @@ html body h1.hero-title {
     text-decoration: none !important;
   }
 
-  /* Botão Flutuante Redondo no Mobile: Fundo Vermelho (#e50914) em ambos os temas */
+  /* Botão Flutuante Redondo no Mobile: Fundo Vermelho (#e50914) e Ícone SEMPRE BRANCO (#ffffff) em ambos os temas */
   .floating-whatsapp,
   .floating-whatsapp-btn,
+  .whatsapp-float,
+  a.floating-whatsapp-btn,
   [data-theme="dark"] .floating-whatsapp,
   [data-theme="dark"] .floating-whatsapp-btn,
   [data-theme="light"] .floating-whatsapp,
@@ -1780,33 +1782,41 @@ html body h1.hero-title {
   :root:not([data-theme="light"]) .floating-whatsapp-btn {
     background-color: #e50914 !important;
     background: #e50914 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(229, 9, 20, 0.4) !important;
   }
 
-  /* Modo Escuro: Ícone em BRANCO (#ffffff) */
+  /* Ícone sempre BRANCO (#ffffff) em ambos os modos (claro e escuro) */
   .floating-whatsapp svg,
   .floating-whatsapp .whatsapp-icon,
+  .floating-whatsapp i,
   .floating-whatsapp-btn svg,
   .floating-whatsapp-btn .whatsapp-icon,
+  .floating-whatsapp-btn i,
+  .whatsapp-float svg,
+  .whatsapp-float i,
   [data-theme="dark"] .floating-whatsapp svg,
   [data-theme="dark"] .floating-whatsapp .whatsapp-icon,
+  [data-theme="dark"] .floating-whatsapp i,
   [data-theme="dark"] .floating-whatsapp-btn svg,
   [data-theme="dark"] .floating-whatsapp-btn .whatsapp-icon,
-  :root:not([data-theme="light"]) .floating-whatsapp svg,
-  :root:not([data-theme="light"]) .floating-whatsapp .whatsapp-icon,
-  :root:not([data-theme="light"]) .floating-whatsapp-btn svg,
-  :root:not([data-theme="light"]) .floating-whatsapp-btn .whatsapp-icon {
-    fill: #ffffff !important;
-    color: #ffffff !important;
-    stroke: none !important;
-  }
-
-  /* Modo Claro: Ícone em PRETO (#0a0a0a) */
+  [data-theme="dark"] .floating-whatsapp-btn i,
+  [data-theme="dark"] .whatsapp-float svg,
   [data-theme="light"] .floating-whatsapp svg,
   [data-theme="light"] .floating-whatsapp .whatsapp-icon,
+  [data-theme="light"] .floating-whatsapp i,
   [data-theme="light"] .floating-whatsapp-btn svg,
-  [data-theme="light"] .floating-whatsapp-btn .whatsapp-icon {
-    fill: #0a0a0a !important;
-    color: #0a0a0a !important;
+  [data-theme="light"] .floating-whatsapp-btn .whatsapp-icon,
+  [data-theme="light"] .floating-whatsapp-btn i,
+  [data-theme="light"] .whatsapp-float svg,
+  :root:not([data-theme="light"]) .floating-whatsapp svg,
+  :root:not([data-theme="light"]) .floating-whatsapp .whatsapp-icon,
+  :root:not([data-theme="light"]) .floating-whatsapp i,
+  :root:not([data-theme="light"]) .floating-whatsapp-btn svg,
+  :root:not([data-theme="light"]) .floating-whatsapp-btn .whatsapp-icon,
+  :root:not([data-theme="light"]) .floating-whatsapp-btn i {
+    fill: #ffffff !important;
+    color: #ffffff !important;
     stroke: none !important;
   }
 
@@ -2043,13 +2053,7 @@ button[type="submit"].btn-contact svg,
 [data-theme="light"] .btn-whatsapp-calc-side,
 [data-theme="light"] .btn-whatsapp-calc-side span,
 [data-theme="light"] .btn-whatsapp-calc-side svg,
-[data-theme="light"] .btn-whatsapp-calc-side .whatsapp-icon,
-[data-theme="light"] .floating-whatsapp,
-[data-theme="light"] .floating-whatsapp svg,
-[data-theme="light"] .floating-whatsapp .whatsapp-icon,
-[data-theme="light"] .floating-whatsapp-btn,
-[data-theme="light"] .floating-whatsapp-btn svg,
-[data-theme="light"] .floating-whatsapp-btn .whatsapp-icon {
+[data-theme="light"] .btn-whatsapp-calc-side .whatsapp-icon {
   color: #0a0a0a !important;
   fill: #0a0a0a !important;
   stroke: none !important;
@@ -2072,12 +2076,6 @@ button[type="submit"].btn-contact .whatsapp-icon,
 .btn-whatsapp-calc-side span,
 .btn-whatsapp-calc-side svg,
 .btn-whatsapp-calc-side .whatsapp-icon,
-.floating-whatsapp,
-.floating-whatsapp svg,
-.floating-whatsapp .whatsapp-icon,
-.floating-whatsapp-btn,
-.floating-whatsapp-btn svg,
-.floating-whatsapp-btn .whatsapp-icon,
 [data-theme="dark"] .btn-whatsapp,
 [data-theme="dark"] .btn-whatsapp span,
 [data-theme="dark"] .btn-whatsapp svg,
@@ -2094,33 +2092,50 @@ button[type="submit"].btn-contact .whatsapp-icon,
 [data-theme="dark"] .btn-whatsapp-calc-side span,
 [data-theme="dark"] .btn-whatsapp-calc-side svg,
 [data-theme="dark"] .btn-whatsapp-calc-side .whatsapp-icon,
-[data-theme="dark"] .floating-whatsapp,
-[data-theme="dark"] .floating-whatsapp svg,
-[data-theme="dark"] .floating-whatsapp .whatsapp-icon,
-[data-theme="dark"] .floating-whatsapp-btn,
-[data-theme="dark"] .floating-whatsapp-btn svg,
-[data-theme="dark"] .floating-whatsapp-btn .whatsapp-icon,
 body.dark-mode .btn-whatsapp,
 body.dark-mode .btn-whatsapp span,
 body.dark-mode .btn-whatsapp svg,
 body.dark-mode .btn-whatsapp .whatsapp-icon,
-body.dark-mode .floating-whatsapp,
-body.dark-mode .floating-whatsapp svg,
-body.dark-mode .floating-whatsapp .whatsapp-icon,
-body.dark-mode .floating-whatsapp-btn,
-body.dark-mode .floating-whatsapp-btn svg,
-body.dark-mode .floating-whatsapp-btn .whatsapp-icon,
 :root:not([data-theme="light"]) .btn-whatsapp,
 :root:not([data-theme="light"]) .btn-whatsapp span,
 :root:not([data-theme="light"]) .btn-whatsapp svg,
-:root:not([data-theme="light"]) .btn-whatsapp .whatsapp-icon,
-:root:not([data-theme="light"]) .floating-whatsapp,
-:root:not([data-theme="light"]) .floating-whatsapp svg,
-:root:not([data-theme="light"]) .floating-whatsapp .whatsapp-icon,
-:root:not([data-theme="light"]) .floating-whatsapp-btn,
-:root:not([data-theme="light"]) .floating-whatsapp-btn svg,
-:root:not([data-theme="light"]) .floating-whatsapp-btn .whatsapp-icon {
+:root:not([data-theme="light"]) .btn-whatsapp .whatsapp-icon {
   color: #ffffff !important;
   fill: #ffffff !important;
+  stroke: none !important;
+}
+
+/* =========================================================
+   Botão Flutuante Redondo do WhatsApp: Fundo vermelho fixo e ícone SEMPRE BRANCO (#ffffff)
+   ========================================================= */
+.floating-whatsapp,
+.whatsapp-float,
+a.floating-whatsapp-btn,
+.floating-whatsapp-btn {
+  background-color: #e50914 !important;
+  background: #e50914 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(229, 9, 20, 0.4) !important;
+}
+
+.floating-whatsapp svg,
+.whatsapp-float svg,
+.floating-whatsapp i,
+.whatsapp-float i,
+.floating-whatsapp .whatsapp-icon,
+.floating-whatsapp-btn svg,
+.floating-whatsapp-btn .whatsapp-icon,
+[data-theme="light"] .floating-whatsapp svg,
+[data-theme="light"] .whatsapp-float svg,
+[data-theme="light"] .floating-whatsapp .whatsapp-icon,
+[data-theme="light"] .floating-whatsapp-btn svg,
+[data-theme="light"] .floating-whatsapp-btn .whatsapp-icon,
+[data-theme="dark"] .floating-whatsapp svg,
+[data-theme="dark"] .whatsapp-float svg,
+[data-theme="dark"] .floating-whatsapp .whatsapp-icon,
+[data-theme="dark"] .floating-whatsapp-btn svg,
+[data-theme="dark"] .floating-whatsapp-btn .whatsapp-icon {
+  fill: #ffffff !important;
+  color: #ffffff !important;
   stroke: none !important;
 }
