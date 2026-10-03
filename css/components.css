@@ -2043,15 +2043,15 @@ body {
     transition: none !important;
   }
 
-  /* Garante que a hero section e o conteúdo nunca fiquem sob a barra fixa */
   .hero-section {
-    min-height: auto !important;
+    min-height: calc(100vh - 70px) !important;
     display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
     align-items: center !important;
-    padding-top: calc(70px + 3rem) !important;
-    padding-bottom: 3.5rem !important;
+    justify-content: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+    padding: 2rem 1.5rem !important;
+    margin: 0 !important;
   }
 }
 
@@ -2108,11 +2108,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    padding-top: 80px !important;
-  }
-  .hero-section {
-    padding-top: 4rem !important;
-    margin-top: 0 !important;
+    padding-top: 70px !important;
   }
   .site-header {
     position: fixed !important;

@@ -1418,33 +1418,65 @@ html body h1.hero-title {
     scroll-padding-top: 85px;
   }
 
+  body {
+    padding-top: 70px !important;
+  }
+
   .hero-section {
-    min-height: calc(100vh - 80px) !important;
+    min-height: calc(100vh - 70px) !important;
     height: auto !important;
     display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
     align-items: center !important;
-    padding: 3rem 1.25rem !important;
+    justify-content: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+    padding: 2rem 1.5rem !important;
+    margin: 0 !important;
+  }
+
+  .hero-content,
+  .hero-centered-box {
+    position: relative !important;
+    z-index: 2 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
   }
 
   .hero-watermark-05,
   .hero-watermark,
   .hero-bg-logo {
-    font-size: clamp(14rem, 48vw, 22rem) !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    font-size: clamp(6.5rem, 28vw, 9.5rem) !important;
+    max-width: 90vw !important;
     letter-spacing: 0.02em !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    user-select: none !important;
   }
 
   .hero-eyebrow {
-    font-size: clamp(1.15rem, 4.5vw, 1.45rem) !important;
-    letter-spacing: 0.18em !important;
-    margin-bottom: 0.9rem !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 0.16em !important;
+    margin-bottom: 0.75rem !important;
+    text-align: center !important;
   }
 
   .hero-title {
-    font-size: clamp(1.85rem, 7vw, 2.4rem) !important;
+    font-size: clamp(1.85rem, 7vw, 2.3rem) !important;
     line-height: 1.15 !important;
+    letter-spacing: -0.025em !important;
     text-transform: none !important;
+    text-align: center !important;
     margin-bottom: 0 !important;
   }
 
