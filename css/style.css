@@ -1951,10 +1951,11 @@ textarea {
 }
 
 /* =========================================================
-   PADRONIZAÇÃO DOS BOTÕES DO WHATSAPP (VERMELHO ZERO.CINCO)
+   BOTÕES DE AÇÃO: FORMULÁRIO E RESUMO DA PROPOSTA
+   Alternância Dinâmica Preto/Branco conforme o Tema Ativo
    ========================================================= */
 
-/* 1. Fundo Vermelho Obrigatório em ambos os temas */
+/* Alinhamento, proporção e estrutura dos botões de ação */
 .btn-whatsapp,
 button[type="submit"].btn-contact,
 button[type="submit"].btn-submit-whatsapp,
@@ -1962,17 +1963,124 @@ button[type="submit"].btn-submit-whatsapp,
 .btn-contact,
 .btn-whatsapp-calc-side,
 .btn-whatsapp-calc-bottom,
-.floating-whatsapp,
-.floating-whatsapp-btn {
-  background-color: #e50914 !important;
-  background: #e50914 !important;
-  border: none !important;
-  box-shadow: 0 4px 18px rgba(229, 9, 20, 0.35) !important;
-  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+#calcSendWhatsapp {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
   text-decoration: none !important;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
-/* 2. Hover com vermelho mais escuro e sutil elevação */
+.btn-whatsapp .whatsapp-icon,
+.btn-whatsapp svg,
+button[type="submit"].btn-contact .whatsapp-icon,
+button[type="submit"].btn-contact svg,
+.btn-submit-whatsapp .whatsapp-icon,
+.btn-submit-whatsapp svg,
+.btn-whatsapp-calc-side .whatsapp-icon,
+.btn-whatsapp-calc-side svg,
+#calcSendWhatsapp .whatsapp-icon,
+#calcSendWhatsapp svg {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  flex-shrink: 0 !important;
+}
+
+/* 1. MODO ESCURO (Padrão inicial e [data-theme="dark"]): Fundo Branco (#ffffff) e Conteúdo Preto (#0a0a0a) */
+.btn-whatsapp,
+button[type="submit"].btn-contact,
+button[type="submit"].btn-submit-whatsapp,
+.btn-submit-whatsapp,
+.btn-contact,
+.btn-whatsapp-calc-side,
+.btn-whatsapp-calc-bottom,
+#calcSendWhatsapp,
+[data-theme="dark"] .btn-whatsapp,
+[data-theme="dark"] button[type="submit"].btn-contact,
+[data-theme="dark"] button[type="submit"].btn-submit-whatsapp,
+[data-theme="dark"] .btn-submit-whatsapp,
+[data-theme="dark"] .btn-contact,
+[data-theme="dark"] .btn-whatsapp-calc-side,
+[data-theme="dark"] .btn-whatsapp-calc-bottom,
+[data-theme="dark"] #calcSendWhatsapp,
+:root:not([data-theme="light"]) .btn-whatsapp,
+:root:not([data-theme="light"]) button[type="submit"].btn-contact,
+:root:not([data-theme="light"]) button[type="submit"].btn-submit-whatsapp,
+:root:not([data-theme="light"]) .btn-submit-whatsapp,
+:root:not([data-theme="light"]) .btn-contact,
+:root:not([data-theme="light"]) .btn-whatsapp-calc-side,
+:root:not([data-theme="light"]) .btn-whatsapp-calc-bottom,
+:root:not([data-theme="light"]) #calcSendWhatsapp,
+body.dark-mode .btn-whatsapp,
+body.dark-mode button[type="submit"].btn-contact,
+body.dark-mode .btn-submit-whatsapp,
+body.dark-mode .btn-whatsapp-calc-side,
+body.dark-mode #calcSendWhatsapp {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  color: #0a0a0a !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+}
+
+.btn-whatsapp span,
+.btn-whatsapp svg,
+.btn-whatsapp .whatsapp-icon,
+button[type="submit"].btn-contact span,
+button[type="submit"].btn-contact svg,
+button[type="submit"].btn-contact .whatsapp-icon,
+.btn-submit-whatsapp span,
+.btn-submit-whatsapp svg,
+.btn-submit-whatsapp .whatsapp-icon,
+.btn-whatsapp-calc-side span,
+.btn-whatsapp-calc-side svg,
+.btn-whatsapp-calc-side .whatsapp-icon,
+#calcSendWhatsapp span,
+#calcSendWhatsapp svg,
+#calcSendWhatsapp .whatsapp-icon,
+[data-theme="dark"] .btn-whatsapp span,
+[data-theme="dark"] .btn-whatsapp svg,
+[data-theme="dark"] .btn-whatsapp .whatsapp-icon,
+[data-theme="dark"] button[type="submit"].btn-contact span,
+[data-theme="dark"] button[type="submit"].btn-contact svg,
+[data-theme="dark"] button[type="submit"].btn-contact .whatsapp-icon,
+[data-theme="dark"] .btn-submit-whatsapp span,
+[data-theme="dark"] .btn-submit-whatsapp svg,
+[data-theme="dark"] .btn-submit-whatsapp .whatsapp-icon,
+[data-theme="dark"] .btn-whatsapp-calc-side span,
+[data-theme="dark"] .btn-whatsapp-calc-side svg,
+[data-theme="dark"] .btn-whatsapp-calc-side .whatsapp-icon,
+[data-theme="dark"] #calcSendWhatsapp span,
+[data-theme="dark"] #calcSendWhatsapp svg,
+[data-theme="dark"] #calcSendWhatsapp .whatsapp-icon,
+:root:not([data-theme="light"]) .btn-whatsapp span,
+:root:not([data-theme="light"]) .btn-whatsapp svg,
+:root:not([data-theme="light"]) .btn-whatsapp .whatsapp-icon,
+:root:not([data-theme="light"]) button[type="submit"].btn-contact span,
+:root:not([data-theme="light"]) button[type="submit"].btn-contact svg,
+:root:not([data-theme="light"]) button[type="submit"].btn-contact .whatsapp-icon,
+:root:not([data-theme="light"]) .btn-submit-whatsapp span,
+:root:not([data-theme="light"]) .btn-submit-whatsapp svg,
+:root:not([data-theme="light"]) .btn-submit-whatsapp .whatsapp-icon,
+:root:not([data-theme="light"]) .btn-whatsapp-calc-side span,
+:root:not([data-theme="light"]) .btn-whatsapp-calc-side svg,
+:root:not([data-theme="light"]) .btn-whatsapp-calc-side .whatsapp-icon,
+:root:not([data-theme="light"]) #calcSendWhatsapp span,
+:root:not([data-theme="light"]) #calcSendWhatsapp svg,
+:root:not([data-theme="light"]) #calcSendWhatsapp .whatsapp-icon,
+body.dark-mode .btn-whatsapp span,
+body.dark-mode .btn-whatsapp svg,
+body.dark-mode .btn-whatsapp .whatsapp-icon {
+  color: #0a0a0a !important;
+  fill: #0a0a0a !important;
+  stroke: none !important;
+}
+
+/* Hover no Modo Escuro: Fundo ligeiramente acinzentado claro (#f0f0f0), sutil elevação */
 .btn-whatsapp:hover,
 button[type="submit"].btn-contact:hover,
 button[type="submit"].btn-submit-whatsapp:hover,
@@ -1980,132 +2088,77 @@ button[type="submit"].btn-submit-whatsapp:hover,
 .btn-contact:hover,
 .btn-whatsapp-calc-side:hover,
 .btn-whatsapp-calc-bottom:hover,
-.floating-whatsapp:hover,
-.floating-whatsapp-btn:hover {
-  background-color: #c40812 !important;
-  background: #c40812 !important;
+#calcSendWhatsapp:hover,
+[data-theme="dark"] .btn-whatsapp:hover,
+[data-theme="dark"] button[type="submit"].btn-contact:hover,
+[data-theme="dark"] button[type="submit"].btn-submit-whatsapp:hover,
+[data-theme="dark"] .btn-submit-whatsapp:hover,
+[data-theme="dark"] .btn-contact:hover,
+[data-theme="dark"] .btn-whatsapp-calc-side:hover,
+[data-theme="dark"] #calcSendWhatsapp:hover,
+:root:not([data-theme="light"]) .btn-whatsapp:hover,
+:root:not([data-theme="light"]) button[type="submit"].btn-contact:hover,
+:root:not([data-theme="light"]) .btn-submit-whatsapp:hover,
+:root:not([data-theme="light"]) .btn-whatsapp-calc-side:hover,
+:root:not([data-theme="light"]) #calcSendWhatsapp:hover,
+body.dark-mode .btn-whatsapp:hover {
+  background-color: #f0f0f0 !important;
+  background: #f0f0f0 !important;
+  color: #000000 !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 6px 24px rgba(229, 9, 20, 0.45) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* 3. Alinhamento e proporção dos ícones dentro dos botões de ação */
-.btn-whatsapp,
-button[type="submit"].btn-contact,
-.btn-submit-whatsapp,
-.btn-whatsapp-calc-side {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 10px !important;
-  font-weight: 600 !important;
-  cursor: pointer !important;
-}
-
-.btn-whatsapp .whatsapp-icon,
-.btn-whatsapp svg,
-button[type="submit"].btn-contact .whatsapp-icon,
-button[type="submit"].btn-contact svg,
-.btn-submit-whatsapp .whatsapp-icon,
-.btn-submit-whatsapp svg,
-.btn-whatsapp-calc-side .whatsapp-icon,
-.btn-whatsapp-calc-side svg {
-  width: 20px !important;
-  height: 20px !important;
-  min-width: 20px !important;
-  flex-shrink: 0 !important;
-}
-
-/* Botão Flutuante Redondo */
-.floating-whatsapp,
-.floating-whatsapp-btn {
-  width: 56px !important;
-  height: 56px !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.floating-whatsapp .whatsapp-icon,
-.floating-whatsapp svg,
-.floating-whatsapp-btn .whatsapp-icon,
-.floating-whatsapp-btn svg {
-  width: 28px !important;
-  height: 28px !important;
-  min-width: 28px !important;
-  flex-shrink: 0 !important;
-}
-
-/* =========================================================
-   CORES DE TEXTO E ÍCONE VARIÁVEL POR TEMA
-   ========================================================= */
-
-/* No Modo Claro ([data-theme="light"]): Texto e Ícone em PRETO (#0a0a0a) */
+/* 2. MODO CLARO ([data-theme="light"]): Fundo Preto (#0a0a0a) e Conteúdo Branco (#ffffff) */
 [data-theme="light"] .btn-whatsapp,
+[data-theme="light"] button[type="submit"].btn-contact,
+[data-theme="light"] button[type="submit"].btn-submit-whatsapp,
+[data-theme="light"] .btn-submit-whatsapp,
+[data-theme="light"] .btn-contact,
+[data-theme="light"] .btn-whatsapp-calc-side,
+[data-theme="light"] .btn-whatsapp-calc-bottom,
+[data-theme="light"] #calcSendWhatsapp {
+  background-color: #0a0a0a !important;
+  background: #0a0a0a !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+}
+
 [data-theme="light"] .btn-whatsapp span,
 [data-theme="light"] .btn-whatsapp svg,
 [data-theme="light"] .btn-whatsapp .whatsapp-icon,
-[data-theme="light"] button[type="submit"].btn-contact,
 [data-theme="light"] button[type="submit"].btn-contact span,
 [data-theme="light"] button[type="submit"].btn-contact svg,
 [data-theme="light"] button[type="submit"].btn-contact .whatsapp-icon,
-[data-theme="light"] .btn-submit-whatsapp,
 [data-theme="light"] .btn-submit-whatsapp span,
 [data-theme="light"] .btn-submit-whatsapp svg,
 [data-theme="light"] .btn-submit-whatsapp .whatsapp-icon,
-[data-theme="light"] .btn-whatsapp-calc-side,
 [data-theme="light"] .btn-whatsapp-calc-side span,
 [data-theme="light"] .btn-whatsapp-calc-side svg,
-[data-theme="light"] .btn-whatsapp-calc-side .whatsapp-icon {
-  color: #0a0a0a !important;
-  fill: #0a0a0a !important;
-  stroke: none !important;
-}
-
-/* No Modo Escuro ([data-theme="dark"], :root:not([data-theme="light"]) e body.dark-mode): Texto e Ícone em BRANCO (#ffffff) */
-.btn-whatsapp,
-.btn-whatsapp span,
-.btn-whatsapp svg,
-.btn-whatsapp .whatsapp-icon,
-button[type="submit"].btn-contact,
-button[type="submit"].btn-contact span,
-button[type="submit"].btn-contact svg,
-button[type="submit"].btn-contact .whatsapp-icon,
-.btn-submit-whatsapp,
-.btn-submit-whatsapp span,
-.btn-submit-whatsapp svg,
-.btn-submit-whatsapp .whatsapp-icon,
-.btn-whatsapp-calc-side,
-.btn-whatsapp-calc-side span,
-.btn-whatsapp-calc-side svg,
-.btn-whatsapp-calc-side .whatsapp-icon,
-[data-theme="dark"] .btn-whatsapp,
-[data-theme="dark"] .btn-whatsapp span,
-[data-theme="dark"] .btn-whatsapp svg,
-[data-theme="dark"] .btn-whatsapp .whatsapp-icon,
-[data-theme="dark"] button[type="submit"].btn-contact,
-[data-theme="dark"] button[type="submit"].btn-contact span,
-[data-theme="dark"] button[type="submit"].btn-contact svg,
-[data-theme="dark"] button[type="submit"].btn-contact .whatsapp-icon,
-[data-theme="dark"] .btn-submit-whatsapp,
-[data-theme="dark"] .btn-submit-whatsapp span,
-[data-theme="dark"] .btn-submit-whatsapp svg,
-[data-theme="dark"] .btn-submit-whatsapp .whatsapp-icon,
-[data-theme="dark"] .btn-whatsapp-calc-side,
-[data-theme="dark"] .btn-whatsapp-calc-side span,
-[data-theme="dark"] .btn-whatsapp-calc-side svg,
-[data-theme="dark"] .btn-whatsapp-calc-side .whatsapp-icon,
-body.dark-mode .btn-whatsapp,
-body.dark-mode .btn-whatsapp span,
-body.dark-mode .btn-whatsapp svg,
-body.dark-mode .btn-whatsapp .whatsapp-icon,
-:root:not([data-theme="light"]) .btn-whatsapp,
-:root:not([data-theme="light"]) .btn-whatsapp span,
-:root:not([data-theme="light"]) .btn-whatsapp svg,
-:root:not([data-theme="light"]) .btn-whatsapp .whatsapp-icon {
+[data-theme="light"] .btn-whatsapp-calc-side .whatsapp-icon,
+[data-theme="light"] #calcSendWhatsapp span,
+[data-theme="light"] #calcSendWhatsapp svg,
+[data-theme="light"] #calcSendWhatsapp .whatsapp-icon {
   color: #ffffff !important;
   fill: #ffffff !important;
   stroke: none !important;
+}
+
+/* Hover no Modo Claro: Fundo grafite ligeiramente mais claro (#222222), sutil elevação */
+[data-theme="light"] .btn-whatsapp:hover,
+[data-theme="light"] button[type="submit"].btn-contact:hover,
+[data-theme="light"] button[type="submit"].btn-submit-whatsapp:hover,
+[data-theme="light"] .btn-submit-whatsapp:hover,
+[data-theme="light"] .btn-contact:hover,
+[data-theme="light"] .btn-whatsapp-calc-side:hover,
+[data-theme="light"] .btn-whatsapp-calc-bottom:hover,
+[data-theme="light"] #calcSendWhatsapp:hover {
+  background-color: #222222 !important;
+  background: #222222 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25) !important;
 }
 
 /* =========================================================
