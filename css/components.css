@@ -2304,6 +2304,46 @@ body {
   display: none !important;
 }
 
+/* Marca d'água / Logo "05" gigante de fundo na seção Hero */
+.hero-watermark-05,
+.hero-watermark,
+.hero-bg-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display, 'Montserrat', sans-serif);
+  font-size: clamp(14rem, 30vw, 36rem);
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  letter-spacing: -0.06em;
+  display: block !important;
+  color: #e50914 !important;
+  opacity: 0.1 !important;
+}
+
+[data-theme="dark"] .hero-watermark-05,
+[data-theme="dark"] .hero-watermark,
+[data-theme="dark"] .hero-bg-logo,
+:root:not([data-theme="light"]) .hero-watermark-05,
+:root:not([data-theme="light"]) .hero-watermark,
+:root:not([data-theme="light"]) .hero-bg-logo {
+  display: block !important;
+  color: #e50914 !important;
+  opacity: 0.1 !important;
+}
+
+[data-theme="light"] .hero-watermark-05,
+[data-theme="light"] .hero-watermark,
+[data-theme="light"] .hero-bg-logo {
+  display: block !important;
+  color: #99443d !important;
+  opacity: 0.05 !important;
+}
+
 .site-logo {
   height: 38px;
   width: auto;

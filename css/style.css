@@ -753,24 +753,53 @@ img {
   overflow: hidden;
 }
 
-.hero-watermark-05 {
+/* --- HERO WATERMARK ("05") --- */
+.hero-watermark-05,
+.hero-watermark,
+.hero-bg-logo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: var(--font-display);
+  font-family: var(--font-display, 'Montserrat', sans-serif);
   font-size: clamp(14rem, 30vw, 36rem);
   font-weight: 900;
-  color: rgba(226, 34, 40, 0.04);
   line-height: 1;
   pointer-events: none;
   user-select: none;
   z-index: 0;
   letter-spacing: -0.06em;
+  display: block !important;
+  color: #e50914 !important;
+  opacity: 0.1 !important;
+  transition: opacity var(--transition-normal, 0.25s), color var(--transition-normal, 0.25s);
 }
 
-[data-theme="light"] .hero-watermark-05 {
-  color: rgba(153, 68, 61, 0.045);
+[data-theme="dark"] .hero-watermark-05,
+[data-theme="dark"] .hero-watermark,
+[data-theme="dark"] .hero-bg-logo,
+:root:not([data-theme="light"]) .hero-watermark-05,
+:root:not([data-theme="light"]) .hero-watermark,
+:root:not([data-theme="light"]) .hero-bg-logo {
+  display: block !important;
+  color: #e50914 !important;
+  opacity: 0.1 !important;
+}
+
+[data-theme="dark"] .hero-watermark-05 svg,
+[data-theme="dark"] .hero-watermark svg,
+[data-theme="dark"] .hero-bg-logo svg {
+  display: block !important;
+  fill: #e50914 !important;
+  opacity: 0.1 !important;
+}
+
+[data-theme="light"] .hero-watermark-05,
+[data-theme="light"] .hero-watermark,
+[data-theme="light"] .hero-bg-logo {
+  display: block !important;
+  color: #99443d !important;
+  opacity: 0.05 !important;
 }
 
 .hero-centered-box,
