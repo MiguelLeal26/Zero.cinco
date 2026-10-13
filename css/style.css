@@ -751,15 +751,57 @@ img {
   visibility: hidden !important;
 }
 
+/* --- HERO ANIMATIONS --- */
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes badgeReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+    letter-spacing: 0.05em;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 0.16em;
+  }
+}
+
+@keyframes redDotGlow {
+  0%, 100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px rgba(229, 9, 20, 0.7));
+  }
+}
+
 /* Ponto vermelho de assinatura exclusivamente em ZERO.CINCO */
 .hero-eyebrow .dot-red,
 .dot-red {
   color: #e50914 !important;
-  display: inline !important;
+  display: inline-block;
   font-size: inherit !important;
   font-weight: inherit !important;
   line-height: inherit !important;
   transition: color var(--transition-normal, 0.25s);
+  animation: redDotGlow 3s ease-in-out infinite;
+  animation-delay: 1.2s;
+  transform-origin: center;
 }
 
 [data-theme="dark"] .dot-red,
@@ -788,7 +830,7 @@ img {
   font-size: clamp(0.95rem, 1.4vw, 1.15rem) !important;
   font-weight: 500 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.15em !important;
+  letter-spacing: 0.16em;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   display: block !important;
@@ -796,6 +838,9 @@ img {
   position: relative !important;
   z-index: 2 !important;
   color: #f5f5f5;
+  animation: badgeReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.15s;
+  opacity: 0;
 }
 
 [data-theme="dark"] .hero-eyebrow,
@@ -824,6 +869,10 @@ html body h1.hero-title {
   position: relative !important;
   z-index: 2 !important;
   color: #ffffff;
+  animation: heroFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.35s;
+  opacity: 0;
+  will-change: transform, opacity, filter;
 }
 
 [data-theme="dark"] .hero-title,
@@ -836,6 +885,24 @@ html body h1.hero-title {
 [data-theme="light"] .hero-title,
 [data-theme="light"] h1.hero-title {
   color: #000000 !important;
+}
+
+/* --- HERO ACCESSIBILITY (MOTION-REDUCED) --- */
+@media (prefers-reduced-motion: reduce) {
+  .hero-eyebrow,
+  .hero-eyebrow .dot-red,
+  .dot-red,
+  .hero-title,
+  h1.hero-title,
+  html body .hero-title,
+  html body h1.hero-title {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    letter-spacing: 0.16em !important;
+    will-change: auto !important;
+  }
 }
 
 .hero-desc {
@@ -1664,7 +1731,7 @@ a[href*="whatsapp.com"].floating-whatsapp {
 
   .hero-eyebrow {
     font-size: 0.85rem !important;
-    letter-spacing: 0.15em !important;
+    letter-spacing: 0.16em;
     font-weight: 500 !important;
     margin-top: 0 !important;
     margin-bottom: 0 !important;

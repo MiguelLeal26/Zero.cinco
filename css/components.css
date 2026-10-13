@@ -2009,9 +2009,7 @@ body {
     -webkit-backface-visibility: hidden !important;
   }
 
-  /* Evita que animações contínuas façam o texto do topo tremer */
-  .hero-title,
-  .hero h1,
+  /* Evita que animações contínuas façam textos secundários tremerem */
   .hero p {
     transform: none !important;
     animation: none !important;
@@ -2372,7 +2370,7 @@ body {
 .hero-eyebrow .dot-red,
 .dot-red {
   color: #e50914 !important;
-  display: inline !important;
+  display: inline-block;
   font-size: inherit !important;
   font-weight: inherit !important;
   line-height: inherit !important;
