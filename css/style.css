@@ -227,30 +227,69 @@ img {
   margin: 0 auto 3.5rem auto;
 }
 
-.badge-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.38rem 0.95rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-full);
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #a0a0a0;
-  margin-bottom: 1.25rem;
+/* --- SECTION BADGES / EDITORIAL TAGS (PURA TIPOGRAFIA EDITORIAL) --- */
+.section-badge,
+.section-tag,
+.tag-pill,
+.badge,
+.badge-tag,
+.eyebrow-tag,
+.showcase-text .eyebrow-tag {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  display: inline-block !important;
+  text-transform: uppercase !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.16em !important;
+  margin-bottom: 0.75rem !important;
+  line-height: 1.4 !important;
 }
 
-[data-theme="light"] .badge-tag {
-  background: rgba(0, 0, 0, 0.04);
-  border-color: rgba(0, 0, 0, 0.08);
-  color: #555555;
+/* Modo Escuro (padrão e explícito) */
+.section-badge,
+.section-tag,
+.tag-pill,
+.badge,
+.badge-tag,
+.eyebrow-tag,
+.showcase-text .eyebrow-tag,
+[data-theme="dark"] .section-badge,
+[data-theme="dark"] .section-tag,
+[data-theme="dark"] .tag-pill,
+[data-theme="dark"] .badge,
+[data-theme="dark"] .badge-tag,
+[data-theme="dark"] .eyebrow-tag,
+[data-theme="dark"] .showcase-text .eyebrow-tag,
+:root:not([data-theme="light"]) .section-badge,
+:root:not([data-theme="light"]) .section-tag,
+:root:not([data-theme="light"]) .tag-pill,
+:root:not([data-theme="light"]) .badge,
+:root:not([data-theme="light"]) .badge-tag,
+:root:not([data-theme="light"]) .eyebrow-tag,
+:root:not([data-theme="light"]) .showcase-text .eyebrow-tag {
+  color: #888888 !important; /* Cinza claro elegante */
+}
+
+/* Modo Claro */
+[data-theme="light"] .section-badge,
+[data-theme="light"] .section-tag,
+[data-theme="light"] .tag-pill,
+[data-theme="light"] .badge,
+[data-theme="light"] .badge-tag,
+[data-theme="light"] .eyebrow-tag,
+[data-theme="light"] .showcase-text .eyebrow-tag {
+  color: #666666 !important; /* Grafite sutil */
 }
 
 .badge-tag .dot,
-.badge-tag::before {
+.badge-tag::before,
+.section-badge .dot,
+.section-badge::before {
   display: none !important;
 }
 
@@ -1065,21 +1104,22 @@ html body h1.hero-title {
 }
 
 .showcase-text .eyebrow-tag {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 1.25rem;
-  display: inline-block;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 0.75rem !important;
+  display: inline-block !important;
+  color: #888888 !important;
 }
 
-:root:not([data-theme="light"]) .showcase-text .eyebrow-tag {
-  color: #888888;
+:root:not([data-theme="light"]) .showcase-text .eyebrow-tag,
+[data-theme="dark"] .showcase-text .eyebrow-tag {
+  color: #888888 !important;
 }
 
 [data-theme="light"] .showcase-text .eyebrow-tag {
-  color: #767676;
+  color: #666666 !important;
 }
 
 .showcase-title {
@@ -1304,9 +1344,9 @@ html body h1.hero-title {
   }
 
   .showcase-text .eyebrow-tag {
-    font-size: 0.7rem !important;
-    letter-spacing: 0.12em !important;
-    margin-bottom: 0.85rem !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.16em !important;
+    margin-bottom: 0.75rem !important;
   }
 
   .showcase-title {
