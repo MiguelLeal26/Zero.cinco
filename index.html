@@ -39,8 +39,8 @@
 
   <!-- CSS Stylesheets (Cache-busted) -->
   <link rel="stylesheet" href="css/variables.css?v=20261003_v14">
-  <link rel="stylesheet" href="css/style.css?v=20261005_v30">
-  <link rel="stylesheet" href="css/components.css?v=20261005_v26">
+  <link rel="stylesheet" href="css/style.css?v=20261013_v31">
+  <link rel="stylesheet" href="css/components.css?v=20261013_v27">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -379,15 +379,57 @@
       max-width: 900px !important;
     }
 
+    /* --- HERO ANIMATIONS --- */
+    @keyframes heroFadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(24px);
+        filter: blur(8px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes badgeReveal {
+      0% {
+        opacity: 0;
+        transform: translateY(12px);
+        letter-spacing: 0.05em;
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 0.16em;
+      }
+    }
+
+    @keyframes redDotGlow {
+      0%, 100% {
+        opacity: 0.9;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 6px rgba(229, 9, 20, 0.7));
+      }
+    }
+
     /* Ponto vermelho de assinatura exclusivamente em ZERO.CINCO */
     .hero-eyebrow .dot-red,
     .dot-red {
       color: #e50914 !important;
-      display: inline !important;
+      display: inline-block !important;
       font-size: inherit !important;
       font-weight: inherit !important;
       line-height: inherit !important;
       transition: color var(--transition-normal, 0.25s);
+      animation: redDotGlow 3s ease-in-out infinite;
+      animation-delay: 1.6s !important;
+      transform-origin: center;
     }
 
     [data-theme="dark"] .dot-red,
@@ -397,18 +439,22 @@
     }
 
     /* Hero Eyebrow (Cosmos Style) */
-    .hero-eyebrow {
+    .hero-eyebrow,
+    .badge-zerocinco {
       font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif !important;
       font-size: clamp(0.95rem, 1.4vw, 1.15rem) !important;
       font-weight: 500 !important;
       text-transform: uppercase !important;
-      letter-spacing: 0.15em !important;
+      letter-spacing: 0.16em;
       margin-top: 0 !important;
       margin-bottom: 0 !important;
       display: block !important;
       text-align: center !important;
       position: relative !important;
       z-index: 2 !important;
+      animation: badgeReveal 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+      animation-delay: 0.15s !important;
+      opacity: 0;
     }
 
     [data-theme="dark"] .hero-eyebrow,
@@ -436,6 +482,10 @@
       margin: 0.75rem auto 0 auto !important;
       position: relative !important;
       z-index: 2 !important;
+      animation: heroFadeUp 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+      animation-delay: 0.4s !important;
+      opacity: 0;
+      will-change: transform, opacity, filter;
     }
 
     [data-theme="dark"] .hero-title,
@@ -448,6 +498,24 @@
     [data-theme="light"] .hero-title,
     [data-theme="light"] h1.hero-title {
       color: #000000 !important;
+    }
+
+    /* Hero Accessibility (Motion-Reduced) */
+    @media (prefers-reduced-motion: reduce) {
+      .hero-eyebrow,
+      .hero-eyebrow .dot-red,
+      .dot-red,
+      .hero-title,
+      h1.hero-title,
+      html body .hero-title,
+      html body h1.hero-title {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+        letter-spacing: 0.16em !important;
+        will-change: auto !important;
+      }
     }
 
     .hero-desc {
@@ -1040,9 +1108,12 @@
     }
 
     .footer-col-title .footer-title-dot,
-    .footer-title-dot {
-      color: #e50914 !important;
-      font-weight: 500 !important;
+    .footer-title-dot,
+    .footer-col-title::after,
+    .footer-title::after,
+    .footer-column h4::after {
+      content: none !important;
+      display: none !important;
     }
 
     .footer-links a {
@@ -1576,7 +1647,7 @@
         </div>
 
         <div>
-          <h4 class="footer-col-title">Especialidades<span class="footer-title-dot">.</span></h4>
+          <h4 class="footer-col-title">Especialidades</h4>
           <div class="footer-links">
             <a href="#especialidades">Casamentos</a>
             <a href="#especialidades">Pré-Wedding</a>
@@ -1586,7 +1657,7 @@
         </div>
 
         <div>
-          <h4 class="footer-col-title">Navegação<span class="footer-title-dot">.</span></h4>
+          <h4 class="footer-col-title">Navegação</h4>
           <div class="footer-links">
             <a href="#hero">Início</a>
             <a href="#portfolio">Portfólio</a>
@@ -1595,7 +1666,7 @@
         </div>
 
         <div>
-          <h4 class="footer-col-title">Contato<span class="footer-title-dot">.</span></h4>
+          <h4 class="footer-col-title">Contato</h4>
           <div class="footer-links">
             <a href="https://wa.me/5585999616570" target="_blank" rel="noopener noreferrer">WhatsApp Direto</a>
             <a href="https://instagram.com/0.5producoes" target="_blank" rel="noopener noreferrer">Instagram @0.5producoes</a>
