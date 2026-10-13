@@ -39,7 +39,7 @@
 
   <!-- CSS Stylesheets (Cache-busted) -->
   <link rel="stylesheet" href="css/variables.css?v=20261003_v14">
-  <link rel="stylesheet" href="css/style.css?v=20261013_v31">
+  <link rel="stylesheet" href="css/style.css?v=20261013_v33">
   <link rel="stylesheet" href="css/components.css?v=20261013_v27">
 
   <style>
@@ -929,25 +929,73 @@
       color: inherit !important;
     }
 
-    /* Badges de Seção Neutros e Editoriais */
+    /* Badges de Seção Neutros e Editoriais (Pura Tipografia Idêntica a Especialidades) */
+    .eyebrow-tag,
+    span.eyebrow-tag,
+    .showcase-text .eyebrow-tag,
+    .section-header .eyebrow-tag,
+    .section-badge,
+    .section-tag,
+    .tag-pill,
     .badge-tag {
-      background: rgba(255, 255, 255, 0.05) !important;
-      border: 1px solid rgba(255, 255, 255, 0.12) !important;
-      color: #a0a0a0 !important;
-      font-weight: 500 !important;
-      letter-spacing: 0.1em !important;
+      background: transparent !important;
+      background-color: transparent !important;
+      border: 0 !important;
+      outline: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      display: inline-block !important;
       text-transform: uppercase !important;
+      font-size: 0.75rem !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.16em !important;
+      margin-bottom: 0.75rem !important;
+      line-height: 1.4 !important;
+      color: #888888 !important;
     }
 
-    .badge-tag .dot,
-    .badge-tag::before {
-      display: none !important;
+    /* Cores de contraste por tema */
+    [data-theme="dark"] .eyebrow-tag,
+    [data-theme="dark"] span.eyebrow-tag,
+    [data-theme="dark"] .showcase-text .eyebrow-tag,
+    [data-theme="dark"] .section-header .eyebrow-tag,
+    [data-theme="dark"] .section-badge,
+    [data-theme="dark"] .section-tag,
+    [data-theme="dark"] .tag-pill,
+    [data-theme="dark"] .badge-tag,
+    :root:not([data-theme="light"]) .eyebrow-tag,
+    :root:not([data-theme="light"]) span.eyebrow-tag,
+    :root:not([data-theme="light"]) .showcase-text .eyebrow-tag,
+    :root:not([data-theme="light"]) .section-header .eyebrow-tag,
+    :root:not([data-theme="light"]) .section-badge,
+    :root:not([data-theme="light"]) .section-tag,
+    :root:not([data-theme="light"]) .tag-pill,
+    :root:not([data-theme="light"]) .badge-tag {
+      color: #888888 !important;
+      background: transparent !important;
+      background-color: transparent !important;
     }
 
+    [data-theme="light"] .eyebrow-tag,
+    [data-theme="light"] span.eyebrow-tag,
+    [data-theme="light"] .showcase-text .eyebrow-tag,
+    [data-theme="light"] .section-header .eyebrow-tag,
+    [data-theme="light"] .section-badge,
+    [data-theme="light"] .section-tag,
+    [data-theme="light"] .tag-pill,
     [data-theme="light"] .badge-tag {
-      background: rgba(0, 0, 0, 0.04) !important;
-      border-color: rgba(0, 0, 0, 0.08) !important;
-      color: #555555 !important;
+      color: #666666 !important;
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+
+    .eyebrow-tag .dot,
+    .eyebrow-tag::before,
+    .badge-tag .dot,
+    .badge-tag::before,
+    .section-badge .dot,
+    .section-badge::before {
+      display: none !important;
     }
 
     /* Botões Principais Monocromáticos de Alto Impacto com Acento Vermelho no Hover */
@@ -1363,7 +1411,7 @@
   <section class="section" id="portfolio">
     <div class="container">
       <div class="section-header">
-        <div class="badge-tag">Galeria</div>
+        <span class="eyebrow-tag">GALERIA</span>
         <h2 class="section-title">Portfólio <span class="text-highlight">Selecionado</span></h2>
         <p class="section-subtitle">Trabalhos reais em foto, vídeo e storymaking sem poluição visual.</p>
       </div>
@@ -1418,7 +1466,7 @@
   <section class="section" id="calculator">
     <div class="container">
       <div class="section-header">
-        <div class="badge-tag">Orçamento Inteligente</div>
+        <span class="eyebrow-tag">ORÇAMENTO INTELIGENTE</span>
         <h2 class="section-title">Monte sua estimativa em <span class="text-highlight">3 passos simples</span></h2>
         <p class="section-subtitle">Simule seu projeto e visualize ao lado como seu conteúdo é entregue em tempo real.
         </p>
@@ -1512,7 +1560,7 @@
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <div class="badge-tag">Depoimentos</div>
+        <span class="eyebrow-tag">DEPOIMENTOS</span>
         <h2 class="section-title">O que dizem os <span class="text-highlight">nossos clientes</span></h2>
       </div>
 
@@ -1566,7 +1614,7 @@
   <section class="section" id="contact" style="padding-bottom: 5.5rem;">
     <div class="container contact-grid">
       <div>
-        <div class="badge-tag">Contato Direto</div>
+        <span class="eyebrow-tag">CONTATO DIRETO</span>
         <h2 class="section-title" style="margin-bottom: 1.25rem;">Vamos criar uma narrativa <span
             class="text-highlight">marcante</span> juntos?</h2>
         <p style="margin-bottom: 2rem;">
