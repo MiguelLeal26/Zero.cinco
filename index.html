@@ -40,7 +40,7 @@
   <!-- CSS Stylesheets (Cache-busted) -->
   <link rel="stylesheet" href="css/variables.css?v=20261003_v14">
   <link rel="stylesheet" href="css/style.css?v=20261013_v33">
-  <link rel="stylesheet" href="css/components.css?v=20261013_v27">
+  <link rel="stylesheet" href="css/components.css?v=20261115_v28">
 
   <style>
     /* CRITICAL HEADER, HERO & NAV FIXES (Cache-Proof Overrides) */
@@ -1268,9 +1268,68 @@
       border-top: 1px solid #1f1f23 !important;
     }
 
-    .modal-container {
+    /* Modal Lightbox - Preservando Fundo Escuro e Alto Contraste em Ambos os Temas */
+    .modal-container,
+    [data-theme="light"] .modal-container {
       background-color: #0f0f11 !important;
       border-color: #1f1f23 !important;
+      color: #ffffff !important;
+    }
+
+    .modal-container .portfolio-title,
+    .modal-container h3,
+    #modalTitle,
+    [data-theme="light"] .modal-container .portfolio-title,
+    [data-theme="light"] .modal-container h3,
+    [data-theme="light"] #modalTitle {
+      color: #ffffff !important;
+    }
+
+    .modal-container .portfolio-category-tag,
+    .modal-container #modalCategory,
+    [data-theme="light"] .modal-container .portfolio-category-tag,
+    [data-theme="light"] .modal-container #modalCategory {
+      color: #e50914 !important;
+    }
+
+    .modal-container #modalClient,
+    [data-theme="light"] .modal-container #modalClient {
+      color: #e5e5e5 !important;
+    }
+
+    .modal-container #modalDesc,
+    [data-theme="light"] .modal-container #modalDesc {
+      color: #a3a3a3 !important;
+    }
+
+    .modal-close-btn,
+    [data-theme="light"] .modal-close-btn {
+      color: #ffffff !important;
+      background: rgba(255, 255, 255, 0.12) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .modal-close-btn:hover,
+    [data-theme="light"] .modal-close-btn:hover {
+      background: #e50914 !important;
+      border-color: #e50914 !important;
+      color: #ffffff !important;
+    }
+
+    .modal-container .btn-primary,
+    [data-theme="light"] .modal-container .btn-primary {
+      background: #ffffff !important;
+      color: #000000 !important;
+      border: 1.5px solid #ffffff !important;
+      box-shadow: 0 4px 18px rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .modal-container .btn-primary:hover,
+    [data-theme="light"] .modal-container .btn-primary:hover {
+      background: #ffffff !important;
+      color: #000000 !important;
+      border-color: #e50914 !important;
+      box-shadow: 0 0 22px rgba(229, 9, 20, 0.35) !important;
     }
 
     /* Modo Claro - Preservando Superfícies Brancas Limpas */
@@ -1445,13 +1504,9 @@
       <div class="modal-info-wrap">
         <div>
           <span class="portfolio-category-tag" id="modalCategory">Categoria</span>
-          <h3 class="portfolio-title" id="modalTitle" style="font-size: 1.5rem; margin-top: 0.5rem; color: #FFF;">Título
-            do Projeto</h3>
-          <p style="color: var(--text-secondary); font-weight: 600; font-size: 0.92rem; margin-bottom: 1rem;"
-            id="modalClient">Cliente</p>
-          <p id="modalDesc"
-            style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; color: var(--text-secondary);">
-            Descrição...</p>
+          <h3 class="portfolio-title" id="modalTitle">Título do Projeto</h3>
+          <p id="modalClient">Cliente</p>
+          <p id="modalDesc">Descrição...</p>
         </div>
         <div>
           <a href="#calculator" class="btn btn-primary" style="width: 100%;"
