@@ -81,6 +81,7 @@ const portfolioData = [
     category: "shows",
     categoryName: "Cobertura de Show",
     image: "assets/images/arthur-bacana-1.jpg",
+    thumb: "assets/images/arthur-bacana-1.jpg",
     client: "Fortaleza / CE",
     desc: "Cobertura fotográfica autoral do show ao vivo de Arthur Bacana em Fortaleza. Registro focado na energia do palco, iluminação cênica e conexão com o público sem poluição visual."
   },
@@ -90,6 +91,7 @@ const portfolioData = [
     category: "shows",
     categoryName: "Cobertura de Show",
     image: "assets/images/arthur-bacana-2.jpg",
+    thumb: "assets/images/arthur-bacana-2.jpg",
     client: "Fortaleza / CE",
     desc: "Cobertura fotográfica autoral do show ao vivo de Arthur Bacana em Fortaleza. Registro focado na energia do palco, iluminação cênica e conexão com o público sem poluição visual."
   },
@@ -99,6 +101,7 @@ const portfolioData = [
     category: "shows",
     categoryName: "Cobertura de Show",
     image: "assets/images/arthur-bacana-3.jpg",
+    thumb: "assets/images/arthur-bacana-3.jpg",
     client: "Fortaleza / CE",
     desc: "Cobertura fotográfica autoral do show ao vivo de Arthur Bacana em Fortaleza. Registro focado na energia do palco, iluminação cênica e conexão com o público sem poluição visual."
   },
@@ -108,6 +111,7 @@ const portfolioData = [
     category: "shows",
     categoryName: "Cobertura de Show",
     image: "assets/images/arthur-bacana-4.jpg",
+    thumb: "assets/images/arthur-bacana-4.jpg",
     client: "Fortaleza / CE",
     desc: "Cobertura fotográfica autoral do show ao vivo de Arthur Bacana em Fortaleza. Registro focado na energia do palco, iluminação cênica e conexão com o público sem poluição visual."
   },
@@ -117,6 +121,7 @@ const portfolioData = [
     category: "shows",
     categoryName: "Cobertura de Show",
     image: "assets/images/arthur-bacana-5.jpg",
+    thumb: "assets/images/arthur-bacana-5.jpg",
     client: "Fortaleza / CE",
     desc: "Cobertura fotográfica autoral do show ao vivo de Arthur Bacana em Fortaleza. Registro focado na energia do palco, iluminação cênica e conexão com o público sem poluição visual."
   }
@@ -139,11 +144,12 @@ function initGallery() {
     filtered.forEach(item => {
       const card = document.createElement('div');
       card.className = 'portfolio-item';
-      const webpImage = item.image.replace(/\.(jpg|png)$/i, '.webp');
+      const imgSrc = item.thumb || item.thumbnail || item.image;
+      const webpImage = imgSrc.replace(/\.(jpg|png)$/i, '.webp');
       card.innerHTML = `
         <picture>
           <source srcset="${webpImage}" type="image/webp">
-          <img src="${item.image}" alt="${item.title}" class="portfolio-img" loading="lazy" decoding="async">
+          <img src="${imgSrc}" alt="${item.title}" class="portfolio-img" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${item.image}';">
         </picture>
         <div class="portfolio-hover-indicator">
           <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
