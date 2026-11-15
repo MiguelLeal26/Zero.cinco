@@ -80,7 +80,7 @@ const portfolioData = [
     title: "Show Ao Vivo • Arthur Bacana",
     category: "shows",
     categoryName: "Cobertura de Show",
-    image: "images/arthur-bacana-1.jpg",
+    image: "assets/images/arthur-bacana-1.jpg",
     client: "Fortaleza / CE",
     desc: "Cobertura fotográfica autoral do show ao vivo de Arthur Bacana em Fortaleza. Registro focado na energia do palco, iluminação cênica e conexão com o público sem poluição visual."
   },
@@ -89,7 +89,7 @@ const portfolioData = [
     title: "Palco & Energia • Arthur Bacana",
     category: "shows",
     categoryName: "Cobertura de Show",
-    image: "images/arthur-bacana-2.jpg",
+    image: "assets/images/arthur-bacana-2.jpg",
     client: "Fortaleza / CE",
     desc: "Cobertura fotográfica autoral do show ao vivo de Arthur Bacana em Fortaleza. Registro focado na energia do palco, iluminação cênica e conexão com o público sem poluição visual."
   },
@@ -98,7 +98,7 @@ const portfolioData = [
     title: "Interpretação • Arthur Bacana",
     category: "shows",
     categoryName: "Cobertura de Show",
-    image: "images/arthur-bacana-3.jpg",
+    image: "assets/images/arthur-bacana-3.jpg",
     client: "Fortaleza / CE",
     desc: "Cobertura fotográfica autoral do show ao vivo de Arthur Bacana em Fortaleza. Registro focado na energia do palco, iluminação cênica e conexão com o público sem poluição visual."
   },
@@ -107,7 +107,7 @@ const portfolioData = [
     title: "Acordeon & Regionalidade • Arthur Bacana",
     category: "shows",
     categoryName: "Cobertura de Show",
-    image: "images/arthur-bacana-4.jpg",
+    image: "assets/images/arthur-bacana-4.jpg",
     client: "Fortaleza / CE",
     desc: "Cobertura fotográfica autoral do show ao vivo de Arthur Bacana em Fortaleza. Registro focado na energia do palco, iluminação cênica e conexão com o público sem poluição visual."
   },
@@ -116,7 +116,7 @@ const portfolioData = [
     title: "Atmosfera de Palco • Arthur Bacana",
     category: "shows",
     categoryName: "Cobertura de Show",
-    image: "images/arthur-bacana-5.jpg",
+    image: "assets/images/arthur-bacana-5.jpg",
     client: "Fortaleza / CE",
     desc: "Cobertura fotográfica autoral do show ao vivo de Arthur Bacana em Fortaleza. Registro focado na energia do palco, iluminação cênica e conexão com o público sem poluição visual."
   }
@@ -171,7 +171,11 @@ function initGallery() {
     const webpImage = item.image.replace(/\.(jpg|png)$/i, '.webp');
     const modalImg = document.getElementById('modalImage');
     if (modalImg) {
-      modalImg.src = webpImage;
+      // Try webp first, fall back to original jpg/png if webp fails
+      const testImg = new Image();
+      testImg.onload = function() { modalImg.src = webpImage; };
+      testImg.onerror = function() { modalImg.src = item.image; };
+      testImg.src = webpImage;
       modalImg.decoding = 'async';
     }
     document.getElementById('modalCategory').textContent = item.categoryName;
@@ -197,7 +201,7 @@ function initGallery() {
   }
 
   // Initial Render
-  renderItems('all');
+  renderItems('shows');
 }
 
 document.addEventListener('DOMContentLoaded', initGallery);
