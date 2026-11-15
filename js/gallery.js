@@ -207,7 +207,7 @@ function initGallery() {
   }
 
   // Initial Render
-  renderItems('shows');
+  renderItems('all');
 }
 
 document.addEventListener('DOMContentLoaded', initGallery);
