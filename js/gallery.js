@@ -74,6 +74,51 @@ const portfolioData = [
     image: "assets/images/commercial.jpg",
     client: "Velvet Cocktail Bar",
     desc: "Fotografia de alta velocidade capturando o movimento líquido e frescor de drinks autorais para campanhas de lançamento e cardápio digital."
+  },
+  {
+    id: 9,
+    title: "Show Ao Vivo • Arthur Bacana",
+    category: "shows",
+    categoryName: "Cobertura de Show",
+    image: "images/arthur-bacana-1.jpg",
+    client: "Fortaleza / CE",
+    desc: "Cobertura fotográfica autoral do show ao vivo de Arthur Bacana em Fortaleza. Registro focado na energia do palco, iluminação cênica e conexão com o público sem poluição visual."
+  },
+  {
+    id: 10,
+    title: "Palco & Energia • Arthur Bacana",
+    category: "shows",
+    categoryName: "Cobertura de Show",
+    image: "images/arthur-bacana-2.jpg",
+    client: "Fortaleza / CE",
+    desc: "Cobertura fotográfica autoral do show ao vivo de Arthur Bacana em Fortaleza. Registro focado na energia do palco, iluminação cênica e conexão com o público sem poluição visual."
+  },
+  {
+    id: 11,
+    title: "Interpretação • Arthur Bacana",
+    category: "shows",
+    categoryName: "Cobertura de Show",
+    image: "images/arthur-bacana-3.jpg",
+    client: "Fortaleza / CE",
+    desc: "Cobertura fotográfica autoral do show ao vivo de Arthur Bacana em Fortaleza. Registro focado na energia do palco, iluminação cênica e conexão com o público sem poluição visual."
+  },
+  {
+    id: 12,
+    title: "Acordeon & Regionalidade • Arthur Bacana",
+    category: "shows",
+    categoryName: "Cobertura de Show",
+    image: "images/arthur-bacana-4.jpg",
+    client: "Fortaleza / CE",
+    desc: "Cobertura fotográfica autoral do show ao vivo de Arthur Bacana em Fortaleza. Registro focado na energia do palco, iluminação cênica e conexão com o público sem poluição visual."
+  },
+  {
+    id: 13,
+    title: "Atmosfera de Palco • Arthur Bacana",
+    category: "shows",
+    categoryName: "Cobertura de Show",
+    image: "images/arthur-bacana-5.jpg",
+    client: "Fortaleza / CE",
+    desc: "Cobertura fotográfica autoral do show ao vivo de Arthur Bacana em Fortaleza. Registro focado na energia do palco, iluminação cênica e conexão com o público sem poluição visual."
   }
 ];
 
